@@ -1,0 +1,144 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Cartograph CF Nerd Font, monospace;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: #cdd6f4;
+}
+
+tooltip {
+    background: #1e1e2e;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: #313244;
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color: #a6adc8;
+}
+
+#workspaces button.focused {
+    color: #a6adc8;
+    background: #eba0ac;
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: #11111b;
+    background: #a6e3a1;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: #11111b;
+    color: #cdd6f4;
+    border-radius: 10px;
+}
+
+#custom-weather,
+#custom-power_profile,
+#custom-spotify,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#workspaces,
+#tray,
+#backlight {
+    background: #1e1e2e;
+    padding: 0px 10px;
+    margin: 3px 0px;
+    margin-top: 10px;
+    border: 1px solid #181825;
+}
+
+#tray {
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#workspaces {
+    background: #1e1e2e;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#clock {
+    color: #fab387;
+    border-radius: 10px;
+}
+
+#network {
+    color: #f9e2af;
+}
+
+#bluetooth {
+    color: #89b4fa;
+}
+
+#pulseaudio {
+    color: #89b4fa;
+}
+
+#pulseaudio.microphone {
+    color: #cba6f7;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#memory {
+    color: #f9e2af;
+}
+
+#cpu {
+    color: #a6e3a1;
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 10px;
+}
+
+#disk {
+    color: #89b4fa;
+}
+
+#temperature {
+    border-radius: 0px 10px 10px 0px;
+}
+
+#temperature.critical {
+    color: #eba0ac;
+}
+
+#battery {
+    color: #a6e3a1;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#custom-weather {
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#custom-spotify {
+    color: #a6e3a1;
+    border-radius: 10px;
+    margin-right: 10px;
+}
