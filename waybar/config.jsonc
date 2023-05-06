@@ -6,17 +6,10 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "height": 0,
-  "modules-left": [
-    "clock",
-    "custom/weather",
-    "cpu",
-    "memory",
-    "disk",
-    "temperature"
-  ],
+  "modules-left": ["clock", "cpu", "memory", "disk", "temperature","custom/weather","hyprland/window"],
   "modules-center": ["wlr/workspaces"],
   "modules-right": [
-    "custom/spotify",
+     "custom/spotify",
     "tray",
     "battery",
     "network",
@@ -43,14 +36,18 @@
       "10": []
     }
   },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length":35
+  },
   "tray": {
     "icon-size": 13,
     "spacing": 10
   },
   "clock": {
     "interval": 1,
-    "format": "{: %T  %a %d/%m/%Y}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "format": "{: %T }",
+    "tooltip-format": "{: %A %d/%m/%Y}"
   },
   "backlight": {
     "device": "intel_backlight",
