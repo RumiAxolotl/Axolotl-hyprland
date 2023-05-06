@@ -10,7 +10,7 @@ else
     read -n1 -rep $'[\e[1;33mACTION\e[0m] - Would you like to install yay (y,n) ' INSTYAY
     if [[ $INSTYAY == "Y" || $INSTYAY == "y" ]]; then
         git clone https://aur.archlinux.org/yay.git &>> $INSTLOG
-        cd yay-git
+        cd yay
         makepkg -si --noconfirm &>> ../$INSTLOG
         cd ..
         

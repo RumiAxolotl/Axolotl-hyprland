@@ -12,7 +12,7 @@ Ensure base-devel is installed before proceeding
 
 ```
 git clone https://aur.archlinux.org/yay.git
-cd yay-bin
+cd yay
 makepkg -si
 ```
 
