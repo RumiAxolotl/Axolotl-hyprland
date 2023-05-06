@@ -24,7 +24,8 @@ pavucontrol thunar starship wl-clipboard wf-recorder swaybg   \
 grimblast-git ffmpegthumbnailer tumbler playerctl             \
 noise-suppression-for-voice thunar-archive-plugin kitty       \
 waybar-hyprland wlogout swaylock-effects sddm-git pamixer     \
-nwg-look-bin dunst   \
+nwg-look-bin dunst ttf-firacode-nerd noto-fonts \
+noto-fonts-emoji ttf-nerd-fonts-symbols-common otf-firamono-nerd \
 brightnessctl hyprpicker-git
 ```
 
