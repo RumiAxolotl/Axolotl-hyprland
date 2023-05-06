@@ -22,7 +22,9 @@
     "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate",
-    //"format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "format": "{icon}",
     "persistent_workspaces": {
       "1": [],
       "2": [],
@@ -37,7 +39,7 @@
     }
   },
   "hyprland/window": {
-    "format": "{}",
+    "format": "  {}",
     "max-length":35
   },
   "tray": {
@@ -46,7 +48,7 @@
   },
   "clock": {
     "interval": 1,
-    "format": "{: %T }",
+    "format": "{: %T}",
     "tooltip-format": "{: %A %d/%m/%Y}"
   },
   "backlight": {
