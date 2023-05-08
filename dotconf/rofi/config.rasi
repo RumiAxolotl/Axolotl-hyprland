@@ -3,8 +3,8 @@
 configuration {
   show-icons: true;
   icon-theme: "Reversal Dark";
-  display-drun: "";
-  display-window: "﩯 ";
-  display-combi: "  ";
+  display-drun: "";
+  display-window: "";
+  display-combi: " ";
 }
 @theme "themes/catppuccin-mocha.rasi"

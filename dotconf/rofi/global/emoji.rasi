@@ -1,5 +1,5 @@
 configuration {
-	display-emoji: "";
+	display-emoji: "";
 	show-icons: false;
 	me-select-entry: "";
 	me-accept-entry: "MousePrimary";
