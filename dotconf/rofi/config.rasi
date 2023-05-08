@@ -2,9 +2,9 @@
 
 configuration {
   show-icons: true;
-  icon-theme: "Reversal Dark";
-  display-drun: "";
-  display-window: "";
+  icon-theme: "Reversal-cyan-dark";
+  display-drun: " ";
+  display-window: " ";
   display-combi: " ";
 }
 @theme "themes/catppuccin-mocha.rasi"
