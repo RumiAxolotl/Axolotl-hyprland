@@ -54,7 +54,7 @@
   "backlight": {
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
-    "format-icons": ["", "", ""],
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
     "on-scroll-up": "brightnessctl set 1%+",
     "on-scroll-down": "brightnessctl set 1%-",
     "min-length": 6
@@ -63,8 +63,8 @@
     // "interface": "wlan0", (optional) to focus on the interface
     "format-wifi": "  {signalStrength}%",
     "format-ethernet": "  {ipaddr}/{cidr}",
-    "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
+    "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}",
     "max-length": 50
@@ -86,7 +86,7 @@
   },
   "cpu": {
     "interval": 1,
-    "format": " {usage}%",
+    "format": " {usage}%",
     "on-click": "kitty --start-as=fullscreen --title bpytop sh -c 'bpytop'"
   },
   "disk": {
@@ -117,7 +117,7 @@
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", "", "", ""]
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -139,15 +139,15 @@
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": " Muted",
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
     "on-click": "pamixer --default-source -t",
     "on-scroll-up": "pamixer --default-source -i 5",
     "on-scroll-down": "pamixer --default-source -d 5",
     "scroll-step": 5
   },
   "custom/spotify": {
-    "format": "  {}",
+    "format": "  {}",
     "return-type": "json",
     "exec": "playerctl -a metadata --format '{\"text\": \"{{uc(playerName)}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"class\": \"{{status}}\"}' -F",
     "max-length": 35,
