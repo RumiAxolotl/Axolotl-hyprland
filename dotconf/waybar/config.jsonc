@@ -6,10 +6,18 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "height": 0,
-  "modules-left": ["clock", "cpu", "memory", "disk", "temperature","custom/weather","hyprland/window"],
+  "modules-left": [
+    "clock",
+    "cpu",
+    "memory",
+    "disk",
+    "temperature",
+    "custom/weather",
+    "hyprland/window"
+  ],
   "modules-center": ["wlr/workspaces"],
   "modules-right": [
-     "custom/spotify",
+    "custom/spotify",
     "tray",
     "battery",
     "network",
@@ -40,7 +48,7 @@
   },
   "hyprland/window": {
     "format": "  {}",
-    "max-length":35
+    "max-length": 35
   },
   "tray": {
     "icon-size": 13,
@@ -55,8 +63,8 @@
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["󰃞", "󰃟", "󰃠"],
-    "on-scroll-up": "brightnessctl set 1%+",
-    "on-scroll-down": "brightnessctl set 1%-",
+    "on-scroll-up": "~/.config/waybar/scripts/brightness --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness --dec",
     "min-length": 6
   },
   "network": {
@@ -121,11 +129,10 @@
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "tooltip": false,
     "format-muted": " Muted",
-    "on-click": "pamixer -t",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
+    "on-click": "~/.config/waybar/scripts/volume --toggle",
+    "on-scroll-up": "~/.config/waybar/scripts/volume --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/volume --dec",
     "scroll-step": 5,
     "format-icons": {
       "headphone": "",
@@ -135,16 +142,20 @@
       "portable": "",
       "car": "",
       "default": ["", "", ""]
-    }
+    },
+    "tooltip": true,
+    "tooltip-format": "{icon} at {volume}%"
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
     "format-source": " {volume}%",
     "format-source-muted": " Muted",
-    "on-click": "pamixer --default-source -t",
-    "on-scroll-up": "pamixer --default-source -i 5",
-    "on-scroll-down": "pamixer --default-source -d 5",
-    "scroll-step": 5
+    "on-click": "~/.config/waybar/scripts/volume --toggle-mic",
+    "on-scroll-up": "~/.config/waybar/scripts/volume --mic-inc",
+    "on-scroll-down": "~/.config/waybar/scripts/volume --mic-dec",
+    "scroll-step": 5,
+    "tooltip": true,
+    "tooltip-format": " at {volume}%"
   },
   "custom/spotify": {
     "format": "  {}",
