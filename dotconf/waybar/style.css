@@ -50,6 +50,8 @@ tooltip {
 
 #custom-weather,
 #custom-spotify,
+#custom-lightmode,
+#custom-darkmode,
 #clock,
 #cpu,
 #memory,
@@ -106,7 +108,6 @@ tooltip {
 
 #pulseaudio.microphone {
     color: #cba6f7;
-    border-radius: 0px 10px 10px 0px;
 }
 
 #memory {
@@ -143,4 +144,13 @@ tooltip {
     color: #a6e3a1;
     border-radius: 10px;
     margin-right: 10px;
+}
+
+#custom-lightmode{
+    color: #fab387;
+    border-radius: 0px 10px 10px 0px;
+}
+#custom-darkmode{
+    color: #f9e2af;
+    
 }

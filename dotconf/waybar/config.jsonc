@@ -24,7 +24,9 @@
     "bluetooth",
     "backlight",
     "pulseaudio",
-    "pulseaudio#microphone"
+    "pulseaudio#microphone",
+    "custom/darkmode",
+    "custom/lightmode"
   ],
   "wlr/workspaces": {
     "disable-scroll": true,
@@ -172,5 +174,15 @@
     "interval": 1,
     "exec": "~/.config/waybar/scripts/waybar-wttr.py",
     "return-type": "json"
+  },
+  "custom/lightmode":{
+    "format": "",
+    "on-click": "~/.config/waybar/scripts/light-mode",
+    "tooltip": false
+  },
+  "custom/darkmode":{
+    "format": "",
+    "on-click": "~/.config/waybar/scripts/dark-mode",
+    "tooltip": false
   }
 }
