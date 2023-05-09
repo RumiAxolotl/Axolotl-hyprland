@@ -48,6 +48,9 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R ./dotconf/swaylock ~/.config/
     cp -R ./dotconf/waybar ~/.config/
     cp -R ./dotconf/wlogout ~/.config/
+
+    mkdir -p ~/Pictures/wallpaper
+    cp -R ./wallpaper ~/Pictures/wallpaper/
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland
