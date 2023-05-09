@@ -31,7 +31,8 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     waybar-hyprland wlogout swaylock-effects sddm-git pamixer     \
     nwg-look-bin dunst ttf-firacode-nerd noto-fonts \
     noto-fonts-emoji ttf-nerd-fonts-symbols-common otf-firamono-nerd \
-    brightnessctl hyprpicker-git
+    brightnessctl hyprpicker-git\
+    catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
 fi
 
 ### Copy Config Files ###
