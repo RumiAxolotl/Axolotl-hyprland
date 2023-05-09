@@ -38,7 +38,3 @@ catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-f
 - Configure SDDM for autologin (for security, use `swaylock` at the beginning of the script).
 - Replace `xdg-desktop-portal-wlr` with **[xdg-desktop-portal-hyprland-git](https://wiki.hyprland.org/hyprland-wiki/pages/Useful-Utilities/Hyprland-desktop-portal/)**.
 
-
-## My config base on ChrisTitus! So please take a look at his repository
-
-- ChrisTiTus's Hyprland: **[hyprland-titus](https://github.com/ChrisTitusTech/hyprland-titus)**.
