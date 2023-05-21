@@ -85,14 +85,14 @@ def format_chances(hour):
             conditions.append(chances[event]+" "+hour[event]+"%")
     return ", ".join(conditions)
 
-tempint = int(weather['current_condition'][0]['FeelsLikeC'])
+tempint = int(weather['current_condition'][0]['temp_C'])
 extrachar = ''
 if tempint > 0 and tempint < 10:
     extrachar = '+'
 
 
 data['text'] = ' '+WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + \
-    " "+extrachar+weather['current_condition'][0]['FeelsLikeC']+"°"
+    " "+extrachar+weather['current_condition'][0]['temp_C']+"°"
 
 data['tooltip'] = f"<b>{weather['current_condition'][0]['weatherDesc'][0]['value']} {weather['current_condition'][0]['temp_C']}°</b>\n"
 data['tooltip'] += f"Feels like: {weather['current_condition'][0]['FeelsLikeC']}°\n"
