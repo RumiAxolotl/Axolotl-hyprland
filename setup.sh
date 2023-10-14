@@ -24,11 +24,11 @@ fi
 read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -R --noconfirm swaylock waybar
-    yay -S --noconfirm hyprland polkit-gnome ffmpeg neovim viewnior \
+    yay -S --noconfirm hyprland-git polkit-gnome ffmpeg neovim viewnior \
     rofi pavucontrol thunar starship wl-clipboard wf-recorder     \
     swaybg grimblast-git ffmpegthumbnailer tumbler playerctl      \
     noise-suppression-for-voice thunar-archive-plugin kitty       \
-    waybar-hyprland wlogout swaylock-effects sddm-git pamixer     \
+    waybar-git wlogout swaylock-effects sddm-git pamixer     \
     nwg-look-bin dunst ttf-firacode-nerd noto-fonts \
     noto-fonts-emoji ttf-nerd-fonts-symbols-common otf-firamono-nerd \
     brightnessctl hyprpicker-git reversal-icon-theme-git\
