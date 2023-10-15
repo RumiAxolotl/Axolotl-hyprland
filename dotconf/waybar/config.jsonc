@@ -5,14 +5,14 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  "height": 24,
+  "height": 0,
   "modules-left": [
     "clock",
     "cpu",
     "memory",
     "disk",
     "temperature",
-    // "custom/weather",
+    "custom/weather",
     "hyprland/window"
     
   ],
@@ -168,12 +168,12 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "plaerctl next",
     "on-scroll-down": "playerctl previous"
+  },
+  "custom/weather": {
+    "tooltip": true,
+    "format": "{}",
+    "interval": 60,
+    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "return-type": "json"
   }
-  // "custom/weather": {
-  //   "tooltip": true,
-  //   "format": "{}",
-  //   "interval": 1,
-  //   "exec": "~/.config/waybar/scripts/waybar-wttr.py",
-  //   "return-type": "json"
-  // }
 }
