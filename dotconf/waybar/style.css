@@ -19,12 +19,6 @@ tooltip {
     border-style: solid;
     border-color: #11111b;
 }
-#workspaces {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-
 
 #workspaces button {
     padding: 5px;
@@ -91,6 +85,7 @@ tooltip {
 #window{
     border-radius: 10px;
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 #clock {
@@ -148,4 +143,5 @@ tooltip {
     color: #a6e3a1;
     border-radius: 10px;
     margin-right: 10px;
+    margin-left: 10px;
 }
