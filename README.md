@@ -1,4 +1,4 @@
-# Hyprland Configuration Files by Titus
+# Hyprland Configuration Files by RumiAxolotl
 
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/darkmode.png)
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/lightmode.png)
