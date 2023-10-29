@@ -6,7 +6,7 @@ notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Switchi
 
 #set the GTK theme
 gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Latte-Standard-Lavender-Light"
-gsettings set org.gnome.desktop.interface icon-theme "WhiteSur"
+gsettings set org.gnome.desktop.interface icon-theme "Reversal-red"
 #change the background image and be cool about it ;)
 killall swaybg
 swaybg -m fill -i ~/Pictures/wallpapers/axo2.png
