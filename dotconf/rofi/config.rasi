@@ -2,7 +2,7 @@
 
 configuration {
   show-icons: true;
-  icon-theme: "Reversal-cyan-dark";
+  icon-theme: "WhiteSur-dark";
   display-drun: " ";
   display-window: " ";
   display-combi: " ";
