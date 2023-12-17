@@ -81,15 +81,18 @@
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}",
-    "max-length": 50
+    "max-length": 50,
+    "on-click-right": "~/.config/waybar/scripts/rofi-wifi-menu"
   },
   "bluetooth": {
-    "format": " {status}",
+    "exec": "~/.config/waybar/scripts/rofi-bluetooth-menu --status",
     "format-disabled": "", // an empty format will hide the module
     "format-connected": " {num_connections}",
     "tooltip-format": "{device_alias}",
     "tooltip-format-connected": " {device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}"
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "on-click-right":"~/.config/waybar/scripts/rofi-bluetooth-menu"
+
   },
   "memory": {
     "interval": 1,
