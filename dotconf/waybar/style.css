@@ -4,8 +4,8 @@
     border-radius: 0;
     font-family: FiraCode Nerd Font;
     font-weight: bold;
-    font-size: 14px;
-    min-height: 24px;
+    font-size: 11px;
+    min-height: 10px;
 }
 
 window#waybar {
@@ -39,7 +39,7 @@ tooltip {
 
 #workspaces button.urgent {
     color: @crust;
-    background: @green;
+    background: @lavender;
     border-radius: 10px;
 }
 
@@ -50,8 +50,9 @@ tooltip {
 }
 
 #custom-weather,
-#custom-spotify,
+#custom-update,
 #clock,
+#mpris,
 #cpu,
 #memory,
 #disk,
@@ -65,33 +66,32 @@ tooltip {
 #tray,
 #backlight {
     background: @base;
-    padding: 0px 10px;
+    padding: 0px 5px;
     margin: 3px 0px;
-    margin-top: 10px;
+    margin-top: 5px;
     border: 1px solid @mantle;
 }
 
 #tray {
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 #workspaces {
     background: @base;
     border-radius: 10px;
-    margin-left: 10px;
+    margin-left: 5px;
     padding-right: 0px;
     padding-left: 5px;
 }
 #window{
     border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #clock {
     color: @peach;
-    border-radius: 10px 0px 0px 10px;
 }
 
 #network {
@@ -123,7 +123,7 @@ tooltip {
 }
 
 #temperature {
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 5px 5px 0px;
 }
 
 #temperature.critical {
@@ -137,12 +137,20 @@ tooltip {
 
 #custom-weather {
     border-radius: 10px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
-#custom-spotify {
+#mpris {
     color: @green;
     border-radius: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
+
+#custom-update{
+    border-radius: 10px;
+    margin-left: 5px ;
+    color: @sky;
+}
+
+

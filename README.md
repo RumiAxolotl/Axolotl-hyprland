@@ -27,7 +27,7 @@ noise-suppression-for-voice thunar-archive-plugin kitty       \
 waybar-hyprland wlogout swaylock-effects sddm-git pamixer     \
 nwg-look-bin dunst ttf-firacode-nerd noto-fonts \
 noto-fonts-emoji ttf-nerd-fonts-symbols-common otf-firamono-nerd \
-brightnessctl hyprpicker-git reversal-icon-theme-git\
+brightnessctl hyprpicker-git whitesur-gtk-theme\
 catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
 ```
 
