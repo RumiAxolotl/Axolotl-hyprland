@@ -8,3 +8,4 @@ configuration {
   display-combi: " ";
 }
 @theme "themes/catppuccin-mocha.rasi"
+
