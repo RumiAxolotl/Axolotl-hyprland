@@ -28,7 +28,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    color: @subtext0;
+    color: @lavender;
 }
 
 #workspaces button.focused {
@@ -39,7 +39,7 @@ tooltip {
 
 #workspaces button.urgent {
     color: @crust;
-    background: @lavender;
+    background: @mauve;
     border-radius: 10px;
 }
 
@@ -91,53 +91,42 @@ tooltip {
 }
 
 #clock {
-    color: @peach;
-}
-
-#network {
-    color: @yellow;
-}
-
-#bluetooth {
-    color: @blue;
-}
-
-#pulseaudio {
-    color: @blue;
-}
-
-#pulseaudio.microphone {
-    color: @mauve;
-}
-
-#memory {
-    color: @yellow;
+    color: @lavender;
 }
 
 #cpu {
+    color: @teal;
+}
+
+#memory {
     color: @green;
 }
 
 #disk {
-    color: @blue;
+    color: @yellow;
 }
 
 #temperature {
-    border-radius: 0px 5px 5px 0px;
+    color: @peach;
+    border-radius: 0px 10px 10px 0px;
 }
 
 #temperature.critical {
-    color: @maroon;
+    color: @red;
 }
 
-#battery {
-    color: @green;
-    border-radius: 10px 0px 0px 10px;
-}
 
 #custom-weather {
     border-radius: 10px;
     margin-left: 5px;
+}
+
+
+
+#custom-update{
+    border-radius: 10px;
+    margin-left: 5px ;
+    color: @sky;
 }
 
 #mpris {
@@ -146,11 +135,23 @@ tooltip {
     margin-right: 5px;
     margin-left: 5px;
 }
-
-#custom-update{
-    border-radius: 10px;
-    margin-left: 5px ;
-    color: @sky;
+#bluetooth {
+    color: @blue;
+    border-radius: 10px 0px 0px 10px;
 }
 
-
+#network {
+    color: @teal;
+}
+#pulseaudio {
+    color: @green;
+}
+#pulseaudio.microphone {
+    color: @yellow;
+}
+#battery {
+    color: @maroon;
+}
+#backlight {
+    color: @red;
+}
