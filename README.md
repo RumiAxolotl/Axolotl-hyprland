@@ -1,7 +1,7 @@
 # <span style="color: #b4befe;"> Hyprland Configuration Files by Rumi Axolotl </span>
 
-![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot2.png)
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot1.png)
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot2.png)
 
 ## <span style="color: #89dceb;">Installation</span>
 
