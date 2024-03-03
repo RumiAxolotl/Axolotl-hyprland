@@ -1,25 +1,25 @@
-# Hyprland Configuration Files by Rumi Axolotl
+# <span style="color: #b4befe;"> Hyprland Configuration Files by Rumi Axolotl </span>
 
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot2.png)
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot1.png)
 
-## Installation
+## <span style="color: #89dceb;">Installation</span>
 
-Ensure base-devel is installed before proceeding
+Ensure `base-devel` is installed before proceeding.
 
-### Yay
+### <span style="color: #94e2d5;">Yay</span>
 
 **Important**: Execute the following commands as a regular user, NOT as root!
 
-```
+```bash
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
 
-### Required Packages
+### <span style="color: #a6e3a1;">Required Packages</span>
 
-``` bash
+```bash
 yay -S hyprland polkit-gnome ffmpeg neovim viewnior rofi      \
 pavucontrol thunar starship wl-clipboard wf-recorder swww   \
 grimblast ffmpegthumbnailer tumbler playerctl             \
@@ -32,9 +32,8 @@ catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-f
 
 ```
 
-
-### Module Packages For Waybar
+### <span style="color: #f9e2af;">Module Packages For Waybar </span>
 
 ```bash
-yay -S wttr btop 
+yay -S wttr btop
 ```
