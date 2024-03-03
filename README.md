@@ -1,8 +1,7 @@
 # Hyprland Configuration Files by Rumi Axolotl
 
-![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/lightmode.png)
-![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/darkmode.png)
-
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot2.png)
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot1.png)
 
 ## Installation
 
@@ -22,14 +21,15 @@ makepkg -si
 
 ``` bash
 yay -S hyprland polkit-gnome ffmpeg neovim viewnior rofi      \
-pavucontrol thunar starship wl-clipboard wf-recorder swaybg   \
-grimblast-git ffmpegthumbnailer tumbler playerctl             \
+pavucontrol thunar starship wl-clipboard wf-recorder swww   \
+grimblast ffmpegthumbnailer tumbler playerctl             \
 noise-suppression-for-voice thunar-archive-plugin kitty       \
-waybar-hyprland wlogout swaylock-effects sddm-git pamixer     \
+waybar wlogout wlsunset swaylock-effects sddm pamixer     \
 nwg-look-bin dunst ttf-firacode-nerd noto-fonts \
 noto-fonts-emoji ttf-nerd-fonts-symbols-common otf-firamono-nerd \
 brightnessctl hyprpicker-git whitesur-gtk-theme\
-catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
+catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte\
+
 ```
 
 ## Important Notes

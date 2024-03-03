@@ -24,15 +24,15 @@ fi
 read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -R --noconfirm swaylock waybar
-    yay -S --noconfirm hyprland-git polkit-gnome ffmpeg neovim viewnior \
-    rofi pavucontrol thunar starship wl-clipboard wf-recorder     \
-    swaybg grimblast-git ffmpegthumbnailer tumbler playerctl      \
-    noise-suppression-for-voice thunar-archive-plugin kitty       \
-    waybar-git wlogout swaylock-effects sddm-git pamixer     \
-    nwg-look-bin dunst ttf-firacode-nerd noto-fonts \
-    noto-fonts-emoji ttf-nerd-fonts-symbols-common otf-firamono-nerd \
-    brightnessctl hyprpicker-git whitesur-gtk-theme\
-    catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
+    yay -S --noconfirm hyprland polkit-gnome ffmpeg neovim viewnior rofi      \
+pavucontrol thunar starship wl-clipboard wf-recorder swww   \
+grimblast ffmpegthumbnailer tumbler playerctl             \
+noise-suppression-for-voice thunar-archive-plugin kitty       \
+waybar wlogout wlsunset swaylock-effects sddm pamixer     \
+nwg-look-bin dunst ttf-firacode-nerd noto-fonts \
+noto-fonts-emoji ttf-nerd-fonts-symbols-common otf-firamono-nerd \
+brightnessctl hyprpicker-git whitesur-gtk-theme\
+catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte\
 fi
 
 ### Copy Config Files ###
@@ -51,6 +51,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 
     mkdir -p ~/Pictures/wallpaper
     cp -R ./wallpaper ~/Pictures/wallpaper/
+    mkdir -p ~/Pictures/Screenshots
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland
