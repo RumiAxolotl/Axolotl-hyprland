@@ -32,10 +32,9 @@ catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-f
 
 ```
 
-## Important Notes
 
-- It is recommended to use `archinstall` with Sway as the desktop environment for the base installation.
-- `SDDM-GIT` is required to avoid shutdown bugs and delays.
-- Configure SDDM for autologin (for security, use `swaylock` at the beginning of the script).
-- Replace `xdg-desktop-portal-wlr` with **[xdg-desktop-portal-hyprland-git](https://wiki.hyprland.org/hyprland-wiki/pages/Useful-Utilities/Hyprland-desktop-portal/)**.
+### Module Packages For Waybar
 
+```bash
+yay -S wttr btop 
+```
