@@ -15,10 +15,8 @@ window#waybar {
 
 tooltip {
     border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: @crust;
-    background: @base;
+    border-width: 0px;
+    background: @mantle;
 }
 
 #workspaces button {
@@ -28,12 +26,12 @@ tooltip {
 }
 
 #workspaces button.active {
-    color: @lavender;
+    color: @text;
 }
 
 #workspaces button.focused {
-    color: @subtext0;
-    background: @maroon;
+    color: @rosewater;
+    background: @surface0;
     border-radius: 10px;
 }
 
@@ -65,11 +63,11 @@ tooltip {
 #window,
 #tray,
 #backlight {
-    background: @base;
+    background: @mantle;
     padding: 0px 5px;
     margin: 3px 0px;
     margin-top: 5px;
-    border: 1px solid @mantle;
+    border: 0;
 }
 
 #tray {
@@ -78,7 +76,7 @@ tooltip {
 }
 
 #workspaces {
-    background: @base;
+    background: @mantle;
     border-radius: 10px;
     margin-left: 5px;
     padding-right: 0px;
