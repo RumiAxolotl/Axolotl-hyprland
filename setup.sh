@@ -28,10 +28,10 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 pavucontrol thunar starship wl-clipboard wf-recorder swww   \
 grimblast ffmpegthumbnailer tumbler playerctl             \
 noise-suppression-for-voice thunar-archive-plugin kitty       \
-waybar wlogout wlsunset swaylock-effects sddm pamixer     \
+waybar wlogout wlsunset sddm pamixer     \
 nwg-look-bin dunst ttf-firacode-nerd noto-fonts \
 noto-fonts-emoji ttf-nerd-fonts-symbols-common otf-firamono-nerd \
-brightnessctl hyprpicker-git whitesur-gtk-theme\
+brightnessctl hyprpicker hypridle hyprlock whitesur-gtk-theme\
 catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte\
 fi
 
@@ -45,7 +45,6 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R ./dotconf/neofetch ~/.config/
     cp -R ./dotconf/pipewire ~/.config/
     cp -R ./dotconf/rofi ~/.config/
-    cp -R ./dotconf/swaylock ~/.config/
     cp -R ./dotconf/waybar ~/.config/
     cp -R ./dotconf/wlogout ~/.config/
 
