@@ -1,0 +1,108 @@
+/*
+This is the custom styles file where you can add anything you want.
+The styles here will be injected into Caprine and will override default styles.
+If you want to disable styles but keep the config, just comment the lines that you don't want to be used.
+
+Here are some dark mode color variables to get you started.
+Edit them to change color scheme of Caprine.
+Press Command/Ctrl+R in Caprine to see your changes.
+*/
+
+:root {
+  --mocha-rosewater: #f5e0dc;
+  --mocha-flamingo: #f2cdcd;
+  --mocha-pink: #f5c2e7;
+  --mocha-mauve: #cba6f7;
+  --mocha-red: #f38ba8;
+  --mocha-maroon: #eba0ac;
+  --mocha-peach: #fab387;
+  --mocha-yellow: #f9e2af;
+  --mocha-green: #a6e3a1;
+  --mocha-teal: #94e2d5;
+  --mocha-sky: #89dceb;
+  --mocha-sapphire: #74c7ec;
+  --mocha-blue: #89b4fa;
+  --mocha-lavender: #b4befe;
+  --mocha-text: #cdd6f4;
+  --mocha-subtext1: #bac2de;
+  --mocha-subtext0: #a6adc8;
+  --mocha-overlay2: #9399b2;
+  --mocha-overlay1: #7f849c;
+  --mocha-overlay0: #6c7086;
+  --mocha-surface2: #585b70;
+  --mocha-surface1: #45475a;
+  --mocha-surface0: #313244;
+  --mocha-base: #1e1e2e;
+  --mocha-mantle: #181825;
+  --mocha-crust: #11111b;
+
+  --latte-rosewater: #dc8a78;
+  --latte-flamingo: #dd7878;
+  --latte-pink: #ea76cb;
+  --latte-mauve: #8839ef;
+  --latte-red: #d20f39;
+  --latte-maroon: #e64553;
+  --latte-peach: #fe640b;
+  --latte-yellow: #df8e1d;
+  --latte-green: #40a02b;
+  --latte-teal: #179299;
+  --latte-sky: #04a5e5;
+  --latte-sapphire: #209fb5;
+  --latte-blue: #1e66f5;
+  --latte-lavender: #7287fd;
+  --latte-text: #4c4f69;
+  --latte-subtext1: #5c5f77;
+  --latte-subtext0: #6c6f85;
+  --latte-overlay2: #7c7f93;
+  --latte-overlay1: #8c8fa1;
+  --latte-overlay0: #9ca0b0;
+  --latte-surface2: #acb0be;
+  --latte-surface1: #bcc0cc;
+  --latte-surface0: #ccd0da;
+  --latte-base: #eff1f5;
+  --latte-mantle: #e6e9ef;
+  --latte-crust: #dce0e8;
+}
+
+/* !important spam needed for the colors to actually work in Caprine. */
+.__fb-dark-mode {
+  --card-background: var(--mocha-base) !important;
+  --comment-background: var(--mocha-mantle) !important;
+  --card-background-flat: var(--mocha-mantle) !important;
+  --disabled-button-background: var(--mocha-lavender) !important;
+  --divider: var(--mocha-mantle) !important;
+  --hosted-view-selected-state: var(--mocha-mantle) !important;
+  --messenger-card-background: var(--mocha-base) !important;
+  --messenger-reply-background: var(--mocha-mantle) !important;
+  --popover-background: var(--mocha-mantle) !important;
+  --primary-icon: var(--mocha-mauve) !important;
+  --primary-text: var(--mocha-text) !important;
+  --scroll-thumb: var(--mocha-lavender) !important;
+  --secondary-button-background: var(--mocha-surface0) !important;
+  --secondary-icon: var(--mocha-lavender) !important;
+  --secondary-text: var(--mocha-subtext1) !important;
+  --surface-background: var(--mocha-surface0) !important;
+  --wash: var(--mocha-mantle) !important;
+  --web-wash: var(--mocha-mantle) !important;
+}
+
+.__fb-light-mode {
+    --card-background: var(--latte-base) !important;
+    --comment-background: var(--latte-mantle) !important;
+    --card-background-flat: var(--latte-mantle) !important;
+    --disabled-button-background: var(--latte-rosewater) !important;
+    --divider: var(--latte-mantle) !important;
+    --hosted-view-selected-state: var(--latte-mantle) !important;
+    --messenger-card-background: var(--latte-base) !important;
+    --messenger-reply-background: var(--latte-mantle) !important;
+    --popover-background: var(--latte-mantle) !important;
+    --primary-icon: var(--latte-flamingo) !important;
+    --primary-text: var(--latte-text) !important;
+    --scroll-thumb: var(--latte-rosewater) !important;
+    --secondary-button-background: var(--latte-surface0) !important;
+    --secondary-icon: var(--latte-rosewater) !important;
+    --secondary-text: var(--latte-subtext1) !important;
+    --surface-background: var(--latte-surface0) !important;
+    --wash: var(--latte-mantle) !important;
+    --web-wash: var(--latte-mantle) !important;
+}
