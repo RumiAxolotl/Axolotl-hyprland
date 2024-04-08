@@ -19,73 +19,32 @@ tooltip {
     background: @mantle;
 }
 
-#workspaces button {
-    padding: 5px;
-    color: @surface0;
-    margin-right: 5px;
-}
 
-#workspaces button.active {
-    color: @text;
-}
-
-#workspaces button.focused {
-    color: @rosewater;
-    background: @surface0;
-    border-radius: 10px;
-}
-
-#workspaces button.urgent {
-    color: @crust;
-    background: @mauve;
-    border-radius: 10px;
-}
-
-#workspaces button:hover {
-    background: @crust;
-    color: @text;
-    border-radius: 10px;
-}
-
-#custom-weather,
-#custom-update,
 #clock,
-#mpris,
 #cpu,
 #memory,
 #disk,
 #temperature,
-#battery,
-#pulseaudio,
-#network,
-#bluetooth,
+#custom-weather,
+#custom-update,
 #workspaces,
-#window,
+#mpris,
 #tray,
+#custom-notifications,
+#bluetooth,
+#network,
+#pulseaudio,
+#battery,
+
+
+#window,
+
 #backlight {
     background: @mantle;
     padding: 0px 5px;
     margin: 3px 0px;
     margin-top: 5px;
     border: 0;
-}
-
-#tray {
-    border-radius: 10px;
-    margin-right: 5px;
-}
-
-#workspaces {
-    background: @mantle;
-    border-radius: 10px;
-    margin-left: 5px;
-    padding-right: 0px;
-    padding-left: 5px;
-}
-#window{
-    border-radius: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 #clock {
@@ -127,12 +86,65 @@ tooltip {
     color: @sky;
 }
 
+#window {
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#workspaces {
+    background: @mantle;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+#workspaces button {
+    padding: 5px;
+    color: @surface0;
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color: @text;
+}
+
+#workspaces button.focused {
+    color: @rosewater;
+    background: @surface0;
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: @crust;
+    background: @mauve;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: @crust;
+    color: @text;
+    border-radius: 10px;
+}
+
+#tray {
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
 #mpris {
     color: @green;
     border-radius: 10px;
     margin-right: 5px;
     margin-left: 5px;
 }
+
+#custom-notifications{
+    border-radius: 10px;
+    margin-right: 5px;
+    color: @lavender;
+}
+
 #bluetooth {
     color: @blue;
     border-radius: 10px 0px 0px 10px;

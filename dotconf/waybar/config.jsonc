@@ -20,6 +20,7 @@
   "modules-right": [
     "mpris",
     "tray",
+    "custom/notifications",
     "bluetooth",
     "network",
     "pulseaudio",
@@ -27,40 +28,9 @@
     "battery",
     "backlight"
   ],
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "format": "{icon}",
-    // "format-icons": {
-    //   "active": "",
-    //   "default": ""
-    // },
-    "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
-      "10": []
-    }
-  },
-  "hyprland/window": {
-    "format": "󰣇 {}"
-  },
-  "tray": {
-    "icon-size": 13,
-    "spacing": 10
-  },
   "clock": {
     "format": " {:%T}",
-    "interval":1,
+    "interval": 1,
     "format-alt": " {:%A, %B %d, %Y, %T} ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -84,25 +54,6 @@
       "on-scroll-up": "shift_up",
       "on-scroll-down": "shift_down"
     }
-  },
-  "network": {
-    // "interface": "wlan0", (optional) to focus on the interface
-    "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "  {ipaddr}/{cidr}",
-    "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}",
-    "on-click-right": "~/.config/waybar/scripts/rofi-wifi-menu"
-  },
-  "bluetooth": {
-    "exec": "~/.config/waybar/scripts/rofi-bluetooth-menu --status",
-    "format-disabled": "", // an empty format will hide the module
-    "format-connected": " {num_connections}",
-    "tooltip-format": "{device_alias}",
-    "tooltip-format-connected": " {device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}",
-    "on-click-right": "~/.config/waybar/scripts/rofi-bluetooth-menu"
   },
   "memory": {
     "interval": 1,
@@ -148,17 +99,77 @@
     "on-click": "~/.config/waybar/scripts/update update",
     "tooltip": false
   },
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 20
+  "hyprland/window": {
+    "format": "󰣇 {}"
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "format": "{icon}",
+    // "format-icons": {
+    //   "active": "",
+    //   "default": ""
+    // },
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    }
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵"
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    "status-icons": {
+      "paused": "⏸"
+    },
+    "interval": 1,
+    "max-length": 60
+  },
+  "tray": {
+    "icon-size": 13,
+    "spacing": 10
+  },
+  "custom/notifications": {
+    "format": "{}",
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/notification",
+    "on-click": "~/.config/waybar/scripts/notification pop",
+    "on-click-right": "~/.config/waybar/scripts/notification close",
+    "on-click-middle": "~/.config/waybar/scripts/notification clear",
+    "tooltip": false
+  },
+  "bluetooth": {
+    "exec": "~/.config/waybar/scripts/rofi-bluetooth-menu --status",
+    "format-disabled": "", // an empty format will hide the module
+    "format-connected": " {num_connections}",
+    "tooltip-format": "{device_alias}",
+    "tooltip-format-connected": " {device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "on-click-right": "~/.config/waybar/scripts/rofi-bluetooth-menu"
+  },
+  "network": {
+    // "interface": "wlan0", (optional) to focus on the interface
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "  {ipaddr}/{cidr}",
+    "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}",
+    "on-click-right": "~/.config/waybar/scripts/rofi-wifi-menu"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -192,18 +203,18 @@
     "tooltip": true,
     "tooltip-format": " at {volume}%"
   },
-  "mpris": {
-    "format": "{player_icon} {dynamic}",
-    "format-paused": "{status_icon} <i>{dynamic}</i>",
-    "player-icons": {
-      "default": "▶",
-      "mpv": "🎵"
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
     },
-    "status-icons": {
-      "paused": "⏸"
-    },
-    "interval": 1,
-    "max-length": 60
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
   "backlight": {
     "device": "intel_backlight",
