@@ -1,0 +1,19 @@
+#!/bin/bash
+
+NOTI=$(dunstctl count history)
+
+echo " $NOTI";
+
+if [ "$1" = "pop" ]; then
+    while [ $(dunstctl count history) -gt 0 ]; do
+        dunstctl history-pop
+    done
+fi
+
+if [ "$1" = "clear" ]; then
+    dunstctl history-clear
+fi
+
+if [ "$1" = "close" ]; then
+    dunstctl close-all
+fi
