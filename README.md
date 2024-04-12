@@ -2,7 +2,7 @@
 
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot1.png)
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot2.png)
-
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot3.png)
 ## <span style="color: #89dceb;">Installation</span>
 
 Ensure `base-devel` is installed before proceeding.
