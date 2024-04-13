@@ -107,8 +107,8 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R ./dotconf/waybar ~/.config/ 2>&1 | tee -a $LOG
     cp -R ./dotconf/wlogout ~/.config/ 2>&1 | tee -a $LOG
 
-    mkdir -p ~/Pictures/wallpaper
-    cp -R ./wallpaper ~/Pictures/wallpaper/
+    mkdir -p ~/Pictures/wallpapers
+    cp -R ./wallpapers ~/Pictures/wallpapers/
     mkdir -p ~/Pictures/Screenshots
     
     # Set some files as exacutable 
