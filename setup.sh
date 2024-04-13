@@ -24,8 +24,9 @@ If you are worried about entering your password, you can cancel the script now w
 
 sleep 3
 #### Check for yay ####
-ISYAY=/sbin/yay
-if [ -f "$ISyay" ]; then
+ISYAY=/usr/bin/yay
+
+if [ -f "$ISYAY" ]; then
     printf "\n%s - yay was located, moving on.\n" "$GREEN"
 else 
     printf "\n%s - yay was NOT located\n" "$YELLOW"
