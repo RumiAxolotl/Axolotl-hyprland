@@ -1,13 +1,13 @@
-# <span style="color: #b4befe;"> Hyprland Configuration Files by Rumi Axolotl </span>
+# Hyprland Configuration Files by Rumi Axolotl
 
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot1.png)
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot2.png)
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot3.png)
-## <span style="color: #89dceb;">Installation</span>
+## Installation
 
 Ensure `base-devel` is installed before proceeding.
 
-### <span style="color: #94e2d5;">Yay</span>
+### Yay
 
 **Important**: Execute the following commands as a regular user, NOT as root!
 
@@ -17,7 +17,7 @@ cd yay
 makepkg -si
 ```
 
-### <span style="color: #a6e3a1;">Required Packages</span>
+### Required Packages
 
 ```bash
 yay -S hyprland polkit-gnome ffmpeg neovim viewnior rofi      \
@@ -28,11 +28,12 @@ waybar wlogout wlsunset sddm pamixer     \
 nwg-look-bin dunst ttf-firacode-nerd noto-fonts \
 noto-fonts-emoji ttf-nerd-fonts-symbols-common otf-firamono-nerd \
 brightnessctl hyprpicker hypridle hyprlock whitesur-gtk-theme\
-catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte\
+catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato\
+catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
 
 ```
 
-### <span style="color: #f9e2af;">Module Packages For Waybar </span>
+### Module Packages For Waybar 
 
 ```bash
 yay -S wttr btop
