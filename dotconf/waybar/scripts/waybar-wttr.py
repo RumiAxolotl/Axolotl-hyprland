@@ -94,11 +94,15 @@ if tempint > 0 and tempint < 10:
 data['text'] = ' '+WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + \
     " "+extrachar+weather['current_condition'][0]['temp_C']+"°"
 
-data['tooltip'] = f"<b>{WEATHER_CODES[weather['current_condition'][0]['weatherCode']]}{weather['current_condition'][0]['weatherDesc'][0]['value']}</b>\n" 
+data['tooltip'] = f"<b>{WEATHER_CODES[weather['current_condition'][0]['weatherCode']]}{weather['current_condition'][0]['weatherDesc'][0]['value']}</b>\n"
+data['tooltip'] += f"🏙 Location: {weather['nearest_area'][0]['areaName'][0]['value']}\n" 
 data['tooltip'] +=f" Temperature: {weather['current_condition'][0]['temp_C']}°\n"
 data['tooltip'] += f" Feels like: {weather['current_condition'][0]['FeelsLikeC']}°\n"
 data['tooltip'] += f" Wind: {weather['current_condition'][0]['windspeedKmph']}Km/h\n"
 data['tooltip'] += f" Humidity: {weather['current_condition'][0]['humidity']}%\n"
+
+
+
 for i, day in enumerate(weather['weather']):
     data['tooltip'] += f"\n<b>"
     if i == 0:

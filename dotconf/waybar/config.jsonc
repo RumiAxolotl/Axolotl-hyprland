@@ -141,7 +141,8 @@
   },
   "tray": {
     "icon-size": 13,
-    "spacing": 10
+    "spacing": 10,
+    "show-passive-items": true
   },
   "custom/notifications": {
     "format": "{}",
