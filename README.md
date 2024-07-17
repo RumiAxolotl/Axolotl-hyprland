@@ -17,24 +17,17 @@ cd yay
 makepkg -si
 ```
 
-### Required Packages
+### Clone the repository
 
 ```bash
-yay -S hyprland polkit-gnome ffmpeg neovim viewnior rofi      \
-pavucontrol thunar starship wl-clipboard wf-recorder swww   \
-grimblast ffmpegthumbnailer tumbler playerctl             \
-noise-suppression-for-voice thunar-archive-plugin kitty       \
-waybar wlogout wlsunset sddm pamixer     \
-nwg-look-bin dunst ttf-firacode-nerd noto-fonts \
-noto-fonts-emoji ttf-nerd-fonts-symbols-common otf-firamono-nerd \
-brightnessctl hyprpicker hypridle hyprlock whitesur-gtk-theme\
-catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato\
-catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
-
+git clone https://gitub.com/RumiAxolotl/hyprland-config/
+cd hyprland-config
 ```
 
-### Module Packages For Waybar 
+
+
+### Running the setup script
 
 ```bash
-yay -S wttr btop
-```
+./setup.sh
+``` 
