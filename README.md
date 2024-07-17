@@ -20,7 +20,7 @@ makepkg -si
 ### Clone the repository
 
 ```bash
-git clone https://gitub.com/RumiAxolotl/hyprland-config/
+git clone https://github.com/RumiAxolotl/hyprland-config/
 cd hyprland-config
 ```
 
