@@ -13,9 +13,9 @@ get_icon() {
 	current=$(get_volume)
 	if [[ "$current" -eq "0" ]]; then
 		echo "$iDIR/volume-mute.png"
-	elif [[ ("$current" -ge "0") && ("$current" -le "30") ]]; then
+	elif [[ ("$current" -ge "0") && ("$current" -lt "30") ]]; then
 		echo "$iDIR/volume-low.png"
-	elif [[ ("$current" -ge "30") && ("$current" -le "60") ]]; then
+	elif [[ ("$current" -ge "30") && ("$current" -lt "60") ]]; then
 		echo "$iDIR/volume-mid.png"
 	elif [[ ("$current" -ge "60") && ("$current" -le "100") ]]; then
 		echo "$iDIR/volume-high.png"
@@ -24,7 +24,7 @@ get_icon() {
 
 # Notify
 notify_user() {
-	notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Volume : $(get_volume) %"
+	notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Volume : $(get_volume) %" 
 }
 
 # Increase Volume

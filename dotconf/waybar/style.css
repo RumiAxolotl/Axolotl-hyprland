@@ -132,6 +132,19 @@ tooltip {
     margin-right: 5px;
 }
 
+#tray > .active {
+    color: @text;
+}
+
+#tray > .passive {
+    color: @overlay0;
+}
+
+#tray > .needs-attention {
+    color: @peach;
+}
+
+
 #mpris {
     color: @green;
     border-radius: 10px;

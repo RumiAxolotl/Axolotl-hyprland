@@ -29,9 +29,9 @@
     "backlight"
   ],
   "clock": {
-    "format": " {:%T}",
+    "format": " {:%T}",
     "interval": 1,
-    "format-alt": " {:%A, %B %d, %Y, %T} ",
+    "format-alt": "󰃭 {:%A, %B %d, %Y, %T} ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "year",
@@ -165,9 +165,9 @@
   "network": {
     // "interface": "wlan0", (optional) to focus on the interface
     "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "  {ipaddr}/{cidr}",
-    "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
+    "format-ethernet": "󰈀 {ifname}",
+    "tooltip-format": "{essid} - {ifname} via {gwaddr}",
+    "format-linked": " {ifname} ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}",
     "on-click-right": "~/.config/waybar/scripts/rofi-wifi-menu"
@@ -224,5 +224,5 @@
     "on-scroll-up": "~/.config/waybar/scripts/brightness --inc",
     "on-scroll-down": "~/.config/waybar/scripts/brightness --dec",
     "min-length": 6
-  }
+  },
 }
