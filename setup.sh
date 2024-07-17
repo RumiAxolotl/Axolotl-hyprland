@@ -143,8 +143,6 @@ else
     printf "${YELLOW} No bluetooth packages installed..\n"
 	fi
 
-	fi
-
 ### Script is done ###
 printf "\n${GREEN} Installation Completed.\n"
 echo -e "${GREEN} You can start Hyprland by typing Hyprland (note the capital H).\n"
