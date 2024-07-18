@@ -127,8 +127,9 @@
     }
   },
   "mpris": {
-    "format": "{player_icon} {dynamic}",
+    "format": "{player_icon} <i>{dynamic}</i>",
     "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "dynamic-order": ["title", "artist", "position", "length"],
     "player-icons": {
       "default": "▶",
       "mpv": "🎵"
