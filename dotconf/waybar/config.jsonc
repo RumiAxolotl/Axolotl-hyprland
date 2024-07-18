@@ -190,7 +190,7 @@
       "default": ["", "", ""]
     },
     "tooltip": true,
-    "tooltip-format": "{icon} at {volume}%"
+    "tooltip-format": "{icon} {volume}%"
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
@@ -202,7 +202,7 @@
     "on-scroll-down": "~/.config/waybar/scripts/volume --mic-dec",
     "scroll-step": 5,
     "tooltip": true,
-    "tooltip-format": " at {volume}%"
+    "tooltip-format": "{format_source}"
   },
 
   "battery": {
