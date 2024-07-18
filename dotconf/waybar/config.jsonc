@@ -154,13 +154,13 @@
     "tooltip": false
   },
   "bluetooth": {
-    "exec": "~/.config/waybar/scripts/rofi-bluetooth-menu --status",
+    "exec": "~/.config/rofi/scripts/rofi-bluetooth-menu --status",
     "format-disabled": "", // an empty format will hide the module
     "format-connected": " {num_connections}",
     "tooltip-format": "{device_alias}",
     "tooltip-format-connected": " {device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}",
-    "on-click-right": "~/.config/waybar/scripts/rofi-bluetooth-menu"
+    "on-click-right": "~/.config/rofi/scripts/rofi-bluetooth-menu"
   },
   "network": {
     // "interface": "wlan0", (optional) to focus on the interface
@@ -170,7 +170,7 @@
     "format-linked": " {ifname} ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}",
-    "on-click-right": "~/.config/waybar/scripts/rofi-wifi-menu"
+    "on-click-right": "~/.config/rofi/scripts/rofi-wifi-menu"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
