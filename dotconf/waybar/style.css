@@ -35,10 +35,7 @@ tooltip {
 #network,
 #pulseaudio,
 #battery,
-
-
 #window,
-
 #backlight {
     background: @mantle;
     padding: 0px 5px;
@@ -49,6 +46,8 @@ tooltip {
 
 #clock {
     color: @lavender;
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 5px;
 }
 
 #cpu {
@@ -177,4 +176,6 @@ tooltip {
 }
 #backlight {
     color: @red;
+    margin-right: 5px;
+    border-radius: 0px 10px 10px 0px;
 }
