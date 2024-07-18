@@ -31,7 +31,7 @@
   "clock": {
     "format": " {:%T}",
     "interval": 1,
-    "format-alt": "󰃭 {:%A, %B %d, %Y, %T} ",
+    "format-alt": "󰃭 {:%A, %d %B, %Y, %T} ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "year",
@@ -224,5 +224,5 @@
     "on-scroll-up": "~/.config/waybar/scripts/brightness --inc",
     "on-scroll-down": "~/.config/waybar/scripts/brightness --dec",
     "min-length": 6
-  },
+  }
 }
