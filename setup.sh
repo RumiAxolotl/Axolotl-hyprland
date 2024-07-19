@@ -140,7 +140,7 @@ if [[ $BLUETOOTH =~ ^[Yy]$ ]]; then
     sleep 2
     fi
 else
-    printf "${YELLOW} No bluetooth packages installed..\n"
+    printf "${YELLOW} No bluetooth packages installed...\n"
 	fi
 
 ### Script is done ###
