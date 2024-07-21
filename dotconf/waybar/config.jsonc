@@ -224,6 +224,8 @@
     "format-icons": ["󰃞", "󰃟", "󰃠"],
     "on-scroll-up": "~/.config/waybar/scripts/brightness --inc",
     "on-scroll-down": "~/.config/waybar/scripts/brightness --dec",
-    "min-length": 6
+    "min-length": 6,
+    "on-click": "~/.config/waybar/scripts/theme --dark",
+    "on-click-right": "~/.config/waybar/scripts/theme --light"
   }
 }

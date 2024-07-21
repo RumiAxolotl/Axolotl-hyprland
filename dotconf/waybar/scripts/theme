@@ -1,0 +1,34 @@
+#!/bin/bash
+
+dark_mode(){
+    MODESTR="Dark"
+    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Switching To $MODESTR Mode"
+
+    # #set the GTK theme
+    gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-lavender-standard+default"
+    gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple-dark"
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    
+    #set the wallpaper
+    swww img ~/Pictures/wallpapers/axo1.png
+}
+
+
+light_mode(){
+    MODESTR="Light"
+    
+    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Switching To $MODESTR Mode"
+    #set the GTK theme
+    gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-latte-lavender-standard+default"
+    gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple"
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+    
+    #set the wallpaper
+    swww img ~/Pictures/wallpapers/axo2.png
+}
+
+if [ "$1" == "--dark" ]; then
+    dark_mode
+    elif [ "$1" == "--light" ]; then
+    light_mode
+fi
