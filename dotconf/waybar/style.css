@@ -104,6 +104,8 @@ tooltip {
 
 #workspaces button.active {
     color: @text;
+    background: @mantle;
+    border-radius: 10px;
 }
 
 #workspaces button.focused {
