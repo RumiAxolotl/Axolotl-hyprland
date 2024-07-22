@@ -1,8 +1,11 @@
 # Hyprland Configuration Files by Rumi Axolotl
 
-![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot1.png)
-![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot2.png)
-![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshot3.png)
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/dark1.png)
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/dark2.png)
+
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/light1.png)
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/light2.png)
+
 ## Installation
 
 Ensure `base-devel` is installed before proceeding.
