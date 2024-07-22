@@ -71,14 +71,14 @@
         "keyColor": "blue"
       },
       {
-        "type": "gpu",
-        "format": "{3}",
-        "key": "   GPU Driver",
+        "type": "memory",
+        "key": "  󰍛 Memory",
         "keyColor": "magenta"
       },
       {
-        "type": "memory",
-        "key": "  󰍛 Memory",
+        "type": "disk",
+        "format": "{1} / {2} ({3})",
+        "key": "  󰋊 Disk",
         "keyColor": "magenta"
       },
       {
