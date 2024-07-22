@@ -11,6 +11,19 @@ dark_mode(){
     
     #set the wallpaper
     swww img ~/Pictures/wallpapers/axo1.png
+
+
+    #set Discord css theme
+    cat ~/.config/Vencord/themes/Mocha.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
+
+
+    #set the waybar theme
+
+    killall waybar
+    sleep 1
+    cat ~/.config/waybar/mocha-style.css > ~/.config/waybar/style.css
+    sleep 1
+    waybar
 }
 
 
@@ -25,6 +38,17 @@ light_mode(){
     
     #set the wallpaper
     swww img ~/Pictures/wallpapers/axo2.png
+
+     #set Discord css theme
+    cat ~/.config/Vencord/themes/Latte.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
+
+    #set the waybar theme
+
+    killall waybar
+    sleep 1
+    cat ~/.config/waybar/latte-style.css > ~/.config/waybar/style.css
+    sleep 1
+    waybar
 }
 
 if [ "$1" == "--dark" ]; then

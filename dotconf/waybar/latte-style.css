@@ -1,4 +1,4 @@
-@import "mocha.css";
+@import "latte.css";
 * {
     border: none;
     border-radius: 0;
@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background: rgba(30, 30, 46, 0);
+    background: rgba(239,241,245, 0);
     color: @text;
 }
 
