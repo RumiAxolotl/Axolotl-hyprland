@@ -20,6 +20,7 @@
   "modules-right": [
     "mpris",
     "tray",
+    "keyboard-state",
     "custom/notifications",
     "bluetooth",
     "network",
@@ -145,6 +146,16 @@
     "spacing": 10,
     "show-passive-items": true
   },
+  "keyboard-state": {
+    // "numlock": true,
+    "capslock": true,
+    "format": "{}",
+    "format-icons": {
+      "locked": " ",
+      "unlocked": ""
+    }
+  },
+
   "custom/notifications": {
     "format": "{}",
     "interval": 1,
