@@ -3,26 +3,30 @@
 dark_mode(){
     MODESTR="Dark"
     notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Switching To $MODESTR Mode"
-
+    
     # #set the GTK theme
     gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-lavender-standard+default"
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple-dark"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
     
     #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo1.png --transition-fps 60
+    swww img ~/Pictures/wallpapers/axo1.png --transition-duration 1
+    
+    #set the kitty theme
+    kitty +kitten themes --reload-in=all Catppuccin-Mocha
 
 
     #set Discord css theme
     cat ~/.config/Vencord/themes/Mocha.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
-
-
+    
+    
     #set the waybar theme
-
+    
     killall waybar
     cat ~/.config/waybar/mocha-style.css > ~/.config/waybar/style.css
     sleep 1
     waybar
+
 }
 
 
@@ -36,13 +40,16 @@ light_mode(){
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
     
     #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo2.png --transition-fps 60
+    swww img ~/Pictures/wallpapers/axo2.png --transition-duration 1
 
-     #set Discord css theme
+    #set the kitty theme
+    kitty +kitten themes --reload-in=all Catppuccin-Latte
+    
+    #set Discord css theme
     cat ~/.config/Vencord/themes/Latte.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
-
+     
     #set the waybar theme
-
+    
     killall waybar
     cat ~/.config/waybar/latte-style.css > ~/.config/waybar/style.css
     sleep 1
