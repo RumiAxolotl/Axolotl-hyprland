@@ -10,7 +10,7 @@ dark_mode(){
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
     
     #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo1.png --transition-duration 1
+    swww img ~/Pictures/wallpapers/axo-dark.png --transition-duration 1
     
     #set the kitty theme
     kitty +kitten themes --reload-in=all Catppuccin-Mocha
@@ -40,7 +40,7 @@ light_mode(){
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
     
     #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo2.png --transition-duration 1
+    swww img ~/Pictures/wallpapers/axo-light.png --transition-duration 1
 
     #set the kitty theme
     kitty +kitten themes --reload-in=all Catppuccin-Latte
