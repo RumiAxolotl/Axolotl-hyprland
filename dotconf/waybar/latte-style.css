@@ -29,6 +29,7 @@ tooltip {
 #workspaces,
 #mpris,
 #tray,
+#keyboard-state,
 #custom-notifications,
 #bluetooth,
 #network,
@@ -127,8 +128,7 @@ tooltip {
 }
 
 #tray {
-    border-radius: 10px;
-    margin-right: 5px;
+    border-radius: 10px 0px 0px 10px;
 }
 
 #tray > .active {
@@ -151,9 +151,18 @@ tooltip {
     margin-left: 5px;
 }
 
+
+#keyboard-state{
+    border-radius: 0px 10px 10px 0px;
+    color: @mauve;
+}
+
+
+
 #custom-notifications{
     border-radius: 10px;
     margin-right: 5px;
+    margin-left: 5px;
     color: @lavender;
 }
 

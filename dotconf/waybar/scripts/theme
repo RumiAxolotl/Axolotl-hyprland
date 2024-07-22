@@ -10,7 +10,7 @@ dark_mode(){
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
     
     #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo1.png
+    swww img ~/Pictures/wallpapers/axo1.png --transition-fps 60
 
 
     #set Discord css theme
@@ -20,7 +20,6 @@ dark_mode(){
     #set the waybar theme
 
     killall waybar
-    sleep 1
     cat ~/.config/waybar/mocha-style.css > ~/.config/waybar/style.css
     sleep 1
     waybar
@@ -37,7 +36,7 @@ light_mode(){
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
     
     #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo2.png
+    swww img ~/Pictures/wallpapers/axo2.png --transition-fps 60
 
      #set Discord css theme
     cat ~/.config/Vencord/themes/Latte.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
@@ -45,7 +44,6 @@ light_mode(){
     #set the waybar theme
 
     killall waybar
-    sleep 1
     cat ~/.config/waybar/latte-style.css > ~/.config/waybar/style.css
     sleep 1
     waybar
