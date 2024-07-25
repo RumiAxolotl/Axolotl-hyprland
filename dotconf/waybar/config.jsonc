@@ -112,7 +112,7 @@
     "format": "{icon}",
     "format-icons": {
       "active": "",
-      "default": ""
+      "default": ""
     },
     "persistent_workspaces": {
       "1": [],
