@@ -4,7 +4,7 @@
     border-radius: 0;
     font-family: FiraCode Nerd Font;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 11px;
     min-height: 0;
 }
 
@@ -14,7 +14,7 @@ window#waybar {
 }
 
 tooltip {
-    border-radius: 5px;
+    border-radius: 2px;
     border-width: 0px;
     background: @mantle;
     color: @text;
@@ -40,14 +40,12 @@ tooltip {
 #backlight {
     background: @mantle;
     padding: 0px 5px;
-    margin: 4px 0px 4px 0px ;
     border: 0;
 }
 
 #clock {
     color: @lavender;
-    border-radius: 5px 0px 0px 5px;
-    margin-left: 5px;
+    border-radius: 2px 0px 0px 2px;
 }
 
 #cpu {
@@ -64,7 +62,7 @@ tooltip {
 
 #temperature {
     color: @peach;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 2px 2px 0px;
 }
 
 #temperature.critical {
@@ -73,27 +71,27 @@ tooltip {
 
 
 #custom-weather {
-    border-radius: 5px;
+    border-radius: 2px;
     margin-left: 5px;
 }
 
 
 
 #custom-update{
-    border-radius: 5px;
+    border-radius: 2px;
     margin-left: 5px ;
     color: @sky;
 }
 
 #window {
-    border-radius: 5px;
+    border-radius: 2px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
 #workspaces {
     background: @mantle;
-    border-radius: 5px;
+    border-radius: 2px;
     margin-left: 5px;
     padding-right: 0px;
     padding-left: 5px;
@@ -107,29 +105,29 @@ tooltip {
 #workspaces button.active {
     color: @text;
     background: @mantle;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 #workspaces button.focused {
     color: @rosewater;
     background: @surface0;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 #workspaces button.urgent {
     color: @crust;
     background: @mauve;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 #workspaces button:hover {
     background: @crust;
     color: @text;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 #tray {
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 2px 0px 0px 2px;
 }
 
 #tray > .active {
@@ -147,21 +145,21 @@ tooltip {
 
 #mpris {
     color: @green;
-    border-radius: 5px;
+    border-radius: 2px;
     margin-right: 5px;
     margin-left: 5px;
 }
 
 
 #keyboard-state{
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 2px 2px 0px;
     color: @mauve;
 }
 
 
 
 #custom-notifications{
-    border-radius: 5px;
+    border-radius: 2px;
     margin-right: 5px;
     margin-left: 5px;
     color: @lavender;
@@ -169,7 +167,7 @@ tooltip {
 
 #bluetooth {
     color: @blue;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 2px 0px 0px 2px;
 }
 
 #network {
@@ -186,6 +184,5 @@ tooltip {
 }
 #backlight {
     color: @red;
-    margin-right: 5px;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 2px 2px 0px;
 }
