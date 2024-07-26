@@ -19,12 +19,13 @@ dark_mode(){
     #set Discord css theme
     cat ~/.config/Vencord/themes/Mocha.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
     
+    #set Zathura theme
+    cat ~/.config/zathura/catppuccin-mocha > ~/.config/zathura/zathurarc
     
     #set the waybar theme
     
     killall waybar
     cat ~/.config/waybar/mocha-style.css > ~/.config/waybar/style.css
-    sleep 1
     waybar
 
 }
@@ -48,11 +49,15 @@ light_mode(){
     #set Discord css theme
     cat ~/.config/Vencord/themes/Latte.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
      
+    #set Zathura theme
+    cat ~/.config/zathura/catppuccin-latte > ~/.config/zathura/zathurarc
+
+
+
     #set the waybar theme
     
     killall waybar
     cat ~/.config/waybar/latte-style.css > ~/.config/waybar/style.css
-    sleep 1
     waybar
 }
 
