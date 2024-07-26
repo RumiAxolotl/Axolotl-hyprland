@@ -94,14 +94,12 @@ tooltip {
 #workspaces {
     background: @mantle;
     border-radius: 10px;
-    margin-left: 5px;
-    padding-right: 0px;
-    padding-left: 5px;
+    padding-right: 2px;
+    padding-left: 2px;
 }
 #workspaces button {
     padding: 5px;
     color: @surface0;
-    margin-right: 5px;
 }
 
 #workspaces button.active {

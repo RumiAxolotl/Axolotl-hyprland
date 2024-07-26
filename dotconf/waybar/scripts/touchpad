@@ -23,3 +23,9 @@ else
     enable_touchpad
   fi
 fi
+
+if $1 = "enable"; then
+  enable_touchpad
+elif $1 = "disable"; then
+  disable_touchpad
+fi
