@@ -9,6 +9,11 @@ dark_mode(){
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple-dark"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
     
+
+    #set hyprland theme
+    cat ~/.config/hypr/mocha.conf > ~/.config/hypr/style.conf
+
+
     #set the wallpaper
     swww img ~/Pictures/wallpapers/axo-dark.png --transition-duration 1
     
@@ -40,6 +45,11 @@ light_mode(){
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
     
+
+    #set hyprland theme
+    cat ~/.config/hypr/latte.conf > ~/.config/hypr/style.conf
+
+
     #set the wallpaper
     swww img ~/Pictures/wallpapers/axo-light.png --transition-duration 1
 
