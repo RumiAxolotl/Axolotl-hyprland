@@ -20,7 +20,6 @@
   "modules-right": [
     "mpris",
     "tray",
-    "keyboard-state",
     "custom/notifications",
     "bluetooth",
     "network",
@@ -111,10 +110,9 @@
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "format": "{icon}",
     "format-icons": {
-      "urgent":"",
+      "urgent": "",
       "active": "",
       "default": ""
-
     },
     "persistent_workspaces": {
       "1": [],
@@ -144,20 +142,10 @@
     "max-length": 60
   },
   "tray": {
-    "icon-size": 13,
+    "icon-size": 12,
     "spacing": 10,
     "show-passive-items": true
   },
-  "keyboard-state": {
-    // "numlock": true,
-    "capslock": true,
-    "format": "{icon}",
-    "format-icons": {
-      "locked": " ",
-      "unlocked": ""
-    }
-  },
-
   "custom/notifications": {
     "format": "{}",
     "interval": 1,
