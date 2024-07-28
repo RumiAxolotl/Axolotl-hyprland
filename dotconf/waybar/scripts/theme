@@ -20,6 +20,9 @@ dark_mode(){
     #set the kitty theme
     kitty +kitten themes --reload-in=all Catppuccin-Mocha
 
+    #set rofi theme
+    cat ~/.config/rofi/dark.rasi > ~/.config/rofi/config.rasi
+
 
     #set Discord css theme
     cat ~/.config/Vencord/themes/Mocha.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
@@ -55,6 +58,9 @@ light_mode(){
 
     #set the kitty theme
     kitty +kitten themes --reload-in=all Catppuccin-Latte
+
+    #set rofi theme
+    cat ~/.config/rofi/light.rasi > ~/.config/rofi/config.rasi
     
     #set Discord css theme
     cat ~/.config/Vencord/themes/Latte.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
