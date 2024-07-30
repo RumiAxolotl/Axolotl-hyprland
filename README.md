@@ -1,10 +1,10 @@
 # Hyprland Configuration Files by Rumi Axolotl
 
-![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/dark1.png)
-![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/dark2.png)
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshots/dark1.png)
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshots/dark2.png)
 
-![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/light1.png)
-![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/light2.png)
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshots/light1.png)
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshots/light2.png)
 
 ## Installation
 
