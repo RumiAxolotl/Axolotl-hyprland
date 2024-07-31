@@ -1,7 +1,10 @@
 #!/bin/bash
 
 dark_mode(){
-
+    
+    #set the wallpaper
+    swww img ~/Pictures/wallpapers/axo-dark.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
+    
     # #set the GTK theme
     gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-lavender-standard+default"
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple-dark"
@@ -24,24 +27,24 @@ dark_mode(){
     
     #set dunst theme
     cat ~/.config/dunst/mocha-dunst > ~/.config/dunst/dunstrc
+    sleep 1
     killall dunst
+    sleep 1
     dunst
-    
-    #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo-dark.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
-    
-    #set the notification
-    MODESTR="Dark"
-    notify-send -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low "Switching To $MODESTR Mode"
     
     #set the waybar theme
     cat ~/.config/waybar/mocha-style.css > ~/.config/waybar/style.css
+    sleep 1
     killall waybar
+    sleep 1
     waybar
 }
 
 
 light_mode(){
+    
+    #set the wallpaper
+    swww img ~/Pictures/wallpapers/axo-light.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
     
     #set the GTK theme
     gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-latte-lavender-standard+default"
@@ -65,19 +68,16 @@ light_mode(){
     
     #set dunst theme
     cat ~/.config/dunst/latte-dunst > ~/.config/dunst/dunstrc
+    sleep 1
     killall dunst
+    sleep 1
     dunst
-    
-    #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo-light.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
-    
-    #set the notification
-    MODESTR="Light"
-    notify-send -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low "Switching To $MODESTR Mode"
     
     #set the waybar theme
     cat ~/.config/waybar/latte-style.css > ~/.config/waybar/style.css
+    sleep 1
     killall waybar
+    sleep 1
     waybar
 }
 
