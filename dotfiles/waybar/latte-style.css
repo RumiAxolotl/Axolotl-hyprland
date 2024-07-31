@@ -13,7 +13,7 @@ window#waybar {
   color: @text;
 }
 tooltip {
-  border-radius: 10px;
+  border-radius: 5px;
   border-width: 0px;
   background: @mantle;
   color: @lavender;
@@ -44,25 +44,38 @@ tooltip {
 
 #clock {
   color: @lavender;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 5px 0px 0px 5px;
   margin-left: 5px;
+  border: 1px @lavender solid;
+  border-right: none;
 }
 
 #cpu {
   color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 
 #memory {
   color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 
 #disk {
   color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 
 #temperature {
   color: @lavender;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 5px 5px 0px;
+  border: 1px @lavender solid;
+  border-left: none;
 }
 
 #temperature.critical {
@@ -70,27 +83,31 @@ tooltip {
 }
 
 #custom-weather {
-  border-radius: 10px;
+  border-radius: 5px;
   margin-left: 5px;
+  border: 1px @lavender solid;
 }
 
 #custom-update {
-  border-radius: 10px;
+  border-radius: 5px;
   margin-left: 5px;
   color: @lavender;
+  border: 1px @lavender solid;
 }
 
 #window {
-  border-radius: 10px;
+  border-radius: 5px;
   margin-left: 5px;
   margin-right: 5px;
+  border: 1px @lavender solid;
 }
 
 #workspaces {
   background: @mantle;
-  border-radius: 10px;
+  border-radius: 5px;
   padding-right: 2px;
   padding-left: 2px;
+  border: 1px @lavender solid;
 }
 #workspaces button {
   padding: 5px;
@@ -100,29 +117,30 @@ tooltip {
 #workspaces button.active {
   color: @lavender;
   background: @mantle;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #workspaces button.focused {
   color: @rosewater;
   background: @surface0;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #workspaces button.urgent {
   color: @crust;
   background: @mauve;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #workspaces button:hover {
   background: @crust;
   color: @lavender;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #tray {
-  border-radius: 10px;
+  border-radius: 5px;
+  border: 1px @lavender solid;
 }
 
 #tray > .active {
@@ -139,37 +157,55 @@ tooltip {
 
 #mpris {
   color: @lavender;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-right: 5px;
   margin-left: 5px;
+  border: 1px @lavender solid;
 }
 
 #custom-notifications {
-  border-radius: 10px;
+  border-radius: 5px;
   margin-right: 5px;
   margin-left: 5px;
   color: @lavender;
+  border: 1px @lavender solid;
 }
 
 #bluetooth {
   color: @lavender;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px @lavender solid;
+  border-right: none;
 }
 
 #network {
   color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 #pulseaudio {
   color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 #pulseaudio.microphone {
   color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 #battery {
   color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 #backlight {
   color: @lavender;
   margin-right: 5px;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 5px 5px 0px;
+  border: 1px @lavender solid;
+  border-left: none;
 }
