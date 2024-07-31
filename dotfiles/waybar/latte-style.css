@@ -1,23 +1,22 @@
 @import "latte.css";
 * {
-    border: none;
-    border-radius: 0;
-    font-family: FiraCode Nerd Font;
-    font-weight: bold;
-    font-size: 11px;
-    min-height: 10px;
+  border: none;
+  border-radius: 0;
+  font-family: FiraCode Nerd Font;
+  font-weight: bold;
+  font-size: 11px;
+  min-height: 10px;
 }
 
 window#waybar {
-    background: rgba(239,241,245, 0);
-    color: @text;
+  background: rgba(239, 241, 245, 0);
+  color: @text;
 }
-
 tooltip {
-    border-radius: 10px;
-    border-width: 0px;
-    background: @mantle;
-    color: @text;
+  border-radius: 10px;
+  border-width: 0px;
+  background: @mantle;
+  color: @lavender;
 }
 
 #clock,
@@ -37,148 +36,140 @@ tooltip {
 #battery,
 #window,
 #backlight {
-    background: @mantle;
-    padding: 0px 5px;
-    margin: 4px 0px 4px 0px ;
-    border: 0;
+  background: @mantle;
+  padding: 0px 5px;
+  margin: 4px 0px 4px 0px;
+  border: 0;
 }
 
 #clock {
-    color: @lavender;
-    border-radius: 10px 0px 0px 10px;
-    margin-left: 5px;
+  color: @lavender;
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 5px;
 }
 
 #cpu {
-    color: @teal;
+  color: @lavender;
 }
 
 #memory {
-    color: @green;
+  color: @lavender;
 }
 
 #disk {
-    color: @yellow;
+  color: @lavender;
 }
 
 #temperature {
-    color: @peach;
-    border-radius: 0px 10px 10px 0px;
+  color: @lavender;
+  border-radius: 0px 10px 10px 0px;
 }
 
 #temperature.critical {
-    color: @red;
+  color: @red;
 }
-
 
 #custom-weather {
-    border-radius: 10px;
-    margin-left: 5px;
+  border-radius: 10px;
+  margin-left: 5px;
 }
 
-
-
-#custom-update{
-    border-radius: 10px;
-    margin-left: 5px ;
-    color: @sky;
+#custom-update {
+  border-radius: 10px;
+  margin-left: 5px;
+  color: @lavender;
 }
 
 #window {
-    border-radius: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #workspaces {
-    background: @mantle;
-    border-radius: 10px;
-    padding-right: 2px;
-    padding-left: 2px;
+  background: @mantle;
+  border-radius: 10px;
+  padding-right: 2px;
+  padding-left: 2px;
 }
 #workspaces button {
-    padding: 5px;
-    color: @surface0;
+  padding: 5px;
+  color: @surface0;
 }
 
 #workspaces button.active {
-    color: @text;
-    background: @mantle;
-    border-radius: 10px;
+  color: @lavender;
+  background: @mantle;
+  border-radius: 10px;
 }
 
 #workspaces button.focused {
-    color: @rosewater;
-    background: @surface0;
-    border-radius: 10px;
+  color: @rosewater;
+  background: @surface0;
+  border-radius: 10px;
 }
 
 #workspaces button.urgent {
-    color: @crust;
-    background: @mauve;
-    border-radius: 10px;
+  color: @crust;
+  background: @mauve;
+  border-radius: 10px;
 }
 
 #workspaces button:hover {
-    background: @crust;
-    color: @text;
-    border-radius: 10px;
+  background: @crust;
+  color: @lavender;
+  border-radius: 10px;
 }
 
 #tray {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 #tray > .active {
-    color: @text;
+  color: @lavender;
 }
 
 #tray > .passive {
-    color: @overlay0;
+  color: @overlay0;
 }
 
 #tray > .needs-attention {
-    color: @peach;
+  color: @peach;
 }
-
 
 #mpris {
-    color: @green;
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
+  color: @lavender;
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
-
-
-
-
-#custom-notifications{
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    color: @lavender;
+#custom-notifications {
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: @lavender;
 }
 
 #bluetooth {
-    color: @blue;
-    border-radius: 10px 0px 0px 10px;
+  color: @lavender;
+  border-radius: 10px 0px 0px 10px;
 }
 
 #network {
-    color: @teal;
+  color: @lavender;
 }
 #pulseaudio {
-    color: @green;
+  color: @lavender;
 }
 #pulseaudio.microphone {
-    color: @yellow;
+  color: @lavender;
 }
 #battery {
-    color: @maroon;
+  color: @lavender;
 }
 #backlight {
-    color: @red;
-    margin-right: 5px;
-    border-radius: 0px 10px 10px 0px;
+  color: @lavender;
+  margin-right: 5px;
+  border-radius: 0px 10px 10px 0px;
 }

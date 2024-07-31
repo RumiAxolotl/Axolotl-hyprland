@@ -17,7 +17,7 @@ tooltip {
     border-radius: 10px;
     border-width: 0px;
     background: @mantle;
-    color: @text;
+    color: @lavender;
 }
 
 #clock,
@@ -50,19 +50,19 @@ tooltip {
 }
 
 #cpu {
-    color: @teal;
+    color: @lavender;
 }
 
 #memory {
-    color: @green;
+    color: @lavender;
 }
 
 #disk {
-    color: @yellow;
+    color: @lavender;
 }
 
 #temperature {
-    color: @peach;
+    color: @lavender;
     border-radius: 0px 10px 10px 0px;
 }
 
@@ -81,7 +81,7 @@ tooltip {
 #custom-update{
     border-radius: 10px;
     margin-left: 5px ;
-    color: @sky;
+    color: @lavender;
 }
 
 #window {
@@ -102,7 +102,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    color: @text;
+    color: @lavender;
     background: @mantle;
     border-radius: 10px;
 }
@@ -121,7 +121,7 @@ tooltip {
 
 #workspaces button:hover {
     background: @crust;
-    color: @text;
+    color: @lavender;
     border-radius: 10px;
 }
 
@@ -130,7 +130,7 @@ tooltip {
 }
 
 #tray > .active {
-    color: @text;
+   color: @lavender;
 }
 
 #tray > .passive {
@@ -143,7 +143,7 @@ tooltip {
 
 
 #mpris {
-    color: @green;
+    color: @lavender;
     border-radius: 10px;
     margin-right: 5px;
     margin-left: 5px;
@@ -161,24 +161,24 @@ tooltip {
 }
 
 #bluetooth {
-    color: @blue;
+   color: @lavender;
     border-radius: 10px 0px 0px 10px;
 }
 
 #network {
-    color: @teal;
+    color: @lavender;
 }
 #pulseaudio {
-    color: @green;
+    color: @lavender;
 }
 #pulseaudio.microphone {
-    color: @yellow;
+    color: @lavender;
 }
 #battery {
-    color: @maroon;
+    color: @lavender;
 }
 #backlight {
-    color: @red;
+    color: @lavender;
     margin-right: 5px;
     border-radius: 0px 10px 10px 0px;
 }
