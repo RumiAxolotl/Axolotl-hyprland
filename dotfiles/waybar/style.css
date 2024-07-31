@@ -46,7 +46,6 @@ tooltip {
 #clock {
   color: @lavender;
   border-radius: 5px 0px 0px 5px;
-  margin-left: 5px;
   border: 1px @lavender solid;
   border-right: none;
 }
@@ -205,7 +204,6 @@ tooltip {
 }
 #backlight {
   color: @lavender;
-  margin-right: 5px;
   border-radius: 0px 5px 5px 0px;
   border: 1px @lavender solid;
   border-left: none;
