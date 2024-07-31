@@ -1,10 +1,26 @@
 # Hyprland Configuration Files by Rumi Axolotl
 
+## Screenshots
+
+<details>
+<summary> Dark Theme
+</summary>
+
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshots/dark.png)
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshots/dark1.png)
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshots/dark2.png)
 
+</details>
+
+<details>
+<summary> Light Theme
+</summary>
+
+![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshots/light.png)
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshots/light1.png)
 ![Screenshot](https://github.com/RumiAxolotl/hyprland-config/raw/main/Screenshots/light2.png)
+
+</details>
 
 ## Installation
 
@@ -27,10 +43,8 @@ git clone https://github.com/RumiAxolotl/hyprland-config/
 cd hyprland-config
 ```
 
-
-
 ### Running the setup script
 
 ```bash
 ./setup.sh
-``` 
+```
