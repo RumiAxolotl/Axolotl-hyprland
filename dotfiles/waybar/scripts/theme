@@ -9,21 +9,20 @@ dark_mode(){
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple-dark"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
     
-
+    
     #set hyprland theme
     cat ~/.config/hypr/mocha.conf > ~/.config/hypr/style.conf
-
-
+    
+    
     #set the wallpaper
     swww img ~/Pictures/wallpapers/axo-dark.png --transition-duration 1
     
     #set the kitty theme
     kitty +kitten themes --reload-in=all Catppuccin-Mocha
-
+    
     #set rofi theme
     cat ~/.config/rofi/dark.rasi > ~/.config/rofi/config.rasi
-
-
+    
     #set Discord css theme
     cat ~/.config/Vencord/themes/Mocha.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
     
@@ -35,7 +34,13 @@ dark_mode(){
     killall waybar
     cat ~/.config/waybar/mocha-style.css > ~/.config/waybar/style.css
     waybar
-
+    
+    #set dunst theme
+    cat ~/.config/dunst/mocha-dunst > ~/.config/dunst/dunstrc
+    killall dunst
+    sleep 1
+    dunst
+    
 }
 
 
@@ -48,33 +53,35 @@ light_mode(){
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
     
-
+    
     #set hyprland theme
     cat ~/.config/hypr/latte.conf > ~/.config/hypr/style.conf
-
-
+    
     #set the wallpaper
     swww img ~/Pictures/wallpapers/axo-light.png --transition-duration 1
-
+    
     #set the kitty theme
     kitty +kitten themes --reload-in=all Catppuccin-Latte
-
+    
     #set rofi theme
     cat ~/.config/rofi/light.rasi > ~/.config/rofi/config.rasi
     
     #set Discord css theme
     cat ~/.config/Vencord/themes/Latte.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
-     
+    
     #set Zathura theme
     cat ~/.config/zathura/catppuccin-latte > ~/.config/zathura/zathurarc
-
-
-
-    #set the waybar theme
     
+    #set the waybar theme
     killall waybar
     cat ~/.config/waybar/latte-style.css > ~/.config/waybar/style.css
     waybar
+    
+    #set dunst theme
+    cat ~/.config/dunst/latte-dunst > ~/.config/dunst/dunstrc
+    killall dunst
+    sleep 1
+    dunst
 }
 
 if [ "$1" == "--dark" ]; then

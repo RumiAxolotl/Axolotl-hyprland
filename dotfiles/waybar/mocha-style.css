@@ -1,23 +1,23 @@
 @import "mocha.css";
 * {
-    border: none;
-    border-radius: 0;
-    font-family: FiraCode Nerd Font;
-    font-weight: bold;
-    font-size: 11px;
-    min-height: 10px;
+  border: none;
+  border-radius: 0;
+  font-family: FiraCode Nerd Font;
+  font-weight: bold;
+  font-size: 11px;
+  min-height: 5px;
 }
 
 window#waybar {
-    background: rgba(30, 30, 46, 0);
-    color: @text;
+  background: rgba(30, 30, 46, 0);
+  color: @text;
 }
 
 tooltip {
-    border-radius: 10px;
-    border-width: 0px;
-    background: @mantle;
-    color: @lavender;
+  border-radius: 5px;
+  border-width: 0px;
+  background: @mantle;
+  color: @lavender;
 }
 
 #clock,
@@ -37,148 +37,176 @@ tooltip {
 #battery,
 #window,
 #backlight {
-    background: @mantle;
-    padding: 0px 5px;
-    margin: 4px 0px 4px 0px ;
-    border: 0;
+  background: @mantle;
+  padding: 0px 5px;
+  margin: 4px 0px 4px 0px;
+  border: 0;
 }
 
 #clock {
-    color: @lavender;
-    border-radius: 10px 0px 0px 10px;
-    margin-left: 5px;
+  color: @lavender;
+  border-radius: 5px 0px 0px 5px;
+  margin-left: 5px;
+  border: 1px @lavender solid;
+  border-right: none;
 }
 
 #cpu {
-    color: @lavender;
+  color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 
 #memory {
-    color: @lavender;
+  color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 
 #disk {
-    color: @lavender;
+  color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 
 #temperature {
-    color: @lavender;
-    border-radius: 0px 10px 10px 0px;
+  color: @lavender;
+  border-radius: 0px 5px 5px 0px;
+  border: 1px @lavender solid;
+  border-left: none;
 }
 
 #temperature.critical {
-    color: @red;
+  color: @red;
 }
-
 
 #custom-weather {
-    border-radius: 10px;
-    margin-left: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  border: 1px @lavender solid;
 }
 
-
-
-#custom-update{
-    border-radius: 10px;
-    margin-left: 5px ;
-    color: @lavender;
+#custom-update {
+  border-radius: 5px;
+  margin-left: 5px;
+  color: @lavender;
+  border: 1px @lavender solid;
 }
 
 #window {
-    border-radius: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px @lavender solid;
 }
 
 #workspaces {
-    background: @mantle;
-    border-radius: 10px;
-    padding-right: 2px;
-    padding-left: 2px;
+  background: @mantle;
+  border-radius: 5px;
+  padding-right: 2px;
+  padding-left: 2px;
+  border: 1px @lavender solid;
 }
 #workspaces button {
-    padding: 5px;
-    color: @surface0;
+  padding: 5px;
+  color: @surface0;
 }
 
 #workspaces button.active {
-    color: @lavender;
-    background: @mantle;
-    border-radius: 10px;
+  color: @lavender;
+  background: @mantle;
+  border-radius: 5px;
 }
 
 #workspaces button.focused {
-    color: @rosewater;
-    background: @surface0;
-    border-radius: 10px;
+  color: @rosewater;
+  background: @surface0;
+  border-radius: 5px;
 }
 
 #workspaces button.urgent {
-    color: @crust;
-    background: @mauve;
-    border-radius: 10px;
+  color: @crust;
+  background: @mauve;
+  border-radius: 5px;
 }
 
 #workspaces button:hover {
-    background: @crust;
-    color: @lavender;
-    border-radius: 10px;
+  background: @crust;
+  color: @lavender;
+  border-radius: 5px;
 }
 
 #tray {
-    border-radius: 10px;
+  border-radius: 5px;
+  border: 1px @lavender solid;
 }
 
 #tray > .active {
-   color: @lavender;
+  color: @lavender;
 }
 
 #tray > .passive {
-    color: @overlay0;
+  color: @overlay0;
 }
 
 #tray > .needs-attention {
-    color: @peach;
+  color: @peach;
 }
-
 
 #mpris {
-    color: @lavender;
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
+  color: @lavender;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 1px @lavender solid;
 }
 
-
-
-
-
-#custom-notifications{
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    color: @lavender;
+#custom-notifications {
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: @lavender;
+  border: 1px @lavender solid;
 }
 
 #bluetooth {
-   color: @lavender;
-    border-radius: 10px 0px 0px 10px;
+  color: @lavender;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px @lavender solid;
+  border-right: none;
 }
 
 #network {
-    color: @lavender;
+  color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 #pulseaudio {
-    color: @lavender;
+  color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 #pulseaudio.microphone {
-    color: @lavender;
+  color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 #battery {
-    color: @lavender;
+  color: @lavender;
+  border: 1px @lavender solid;
+  border-right: none;
+  border-left: none;
 }
 #backlight {
-    color: @lavender;
-    margin-right: 5px;
-    border-radius: 0px 10px 10px 0px;
+  color: @lavender;
+  margin-right: 5px;
+  border-radius: 0px 5px 5px 0px;
+  border: 1px @lavender solid;
+  border-left: none;
 }
