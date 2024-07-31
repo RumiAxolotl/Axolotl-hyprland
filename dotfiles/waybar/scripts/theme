@@ -2,20 +2,13 @@
 
 dark_mode(){
     MODESTR="Dark"
-    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Switching To $MODESTR Mode"
-    
     # #set the GTK theme
     gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-lavender-standard+default"
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple-dark"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
     
-    
     #set hyprland theme
     cat ~/.config/hypr/mocha.conf > ~/.config/hypr/style.conf
-    
-    
-    #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo-dark.png --transition-duration 1
     
     #set the kitty theme
     kitty +kitten themes --reload-in=all Catppuccin-Mocha
@@ -29,36 +22,33 @@ dark_mode(){
     #set Zathura theme
     cat ~/.config/zathura/catppuccin-mocha > ~/.config/zathura/zathurarc
     
-    #set the waybar theme
-    
-    killall waybar
-    cat ~/.config/waybar/mocha-style.css > ~/.config/waybar/style.css
-    waybar
-    
     #set dunst theme
     cat ~/.config/dunst/mocha-dunst > ~/.config/dunst/dunstrc
     killall dunst
-    sleep 1
     dunst
     
+    #set the wallpaper
+    swww img ~/Pictures/wallpapers/axo-dark.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
+    
+    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Switching To $MODESTR Mode"
+    
+    #set the waybar theme
+    cat ~/.config/waybar/mocha-style.css > ~/.config/waybar/style.css
+    killall waybar
+    waybar
 }
 
 
 light_mode(){
     MODESTR="Light"
     
-    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Switching To $MODESTR Mode"
     #set the GTK theme
     gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-latte-lavender-standard+default"
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
     
-    
     #set hyprland theme
     cat ~/.config/hypr/latte.conf > ~/.config/hypr/style.conf
-    
-    #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo-light.png --transition-duration 1
     
     #set the kitty theme
     kitty +kitten themes --reload-in=all Catppuccin-Latte
@@ -72,16 +62,20 @@ light_mode(){
     #set Zathura theme
     cat ~/.config/zathura/catppuccin-latte > ~/.config/zathura/zathurarc
     
-    #set the waybar theme
-    killall waybar
-    cat ~/.config/waybar/latte-style.css > ~/.config/waybar/style.css
-    waybar
-    
     #set dunst theme
     cat ~/.config/dunst/latte-dunst > ~/.config/dunst/dunstrc
     killall dunst
-    sleep 1
     dunst
+    
+    #set the wallpaper
+    swww img ~/Pictures/wallpapers/axo-light.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
+    
+    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Switching To $MODESTR Mode"
+    
+    #set the waybar theme
+    cat ~/.config/waybar/latte-style.css > ~/.config/waybar/style.css
+    killall waybar
+    waybar
 }
 
 if [ "$1" == "--dark" ]; then
