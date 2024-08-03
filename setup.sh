@@ -99,14 +99,14 @@ fi
 read -n1 -rep 'Would you like to copy config files? (y,n)' CFG
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "Copying config files...\n"
-    cp -R ./dotconf/dunst ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotconf/hypr ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotconf/kitty ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotconf/neofetch ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotconf/pipewire ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotconf/rofi ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotconf/waybar ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotconf/wlogout ~/.config/ 2>&1 | tee -a $LOG
+    cp -R ./dotfiles/dunst ~/.config/ 2>&1 | tee -a $LOG
+    cp -R ./dotfiles/hypr ~/.config/ 2>&1 | tee -a $LOG
+    cp -R ./dotfiles/kitty ~/.config/ 2>&1 | tee -a $LOG
+    cp -R ./dotfiles/neofetch ~/.config/ 2>&1 | tee -a $LOG
+    cp -R ./dotfiles/pipewire ~/.config/ 2>&1 | tee -a $LOG
+    cp -R ./dotfiles/rofi ~/.config/ 2>&1 | tee -a $LOG
+    cp -R ./dotfiles/waybar ~/.config/ 2>&1 | tee -a $LOG
+    cp -R ./dotfiles/wlogout ~/.config/ 2>&1 | tee -a $LOG
 
     mkdir -p ~/Pictures/wallpapers
     cp -R ./wallpapers ~/Pictures/wallpapers/
