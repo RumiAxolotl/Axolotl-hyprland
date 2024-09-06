@@ -75,9 +75,9 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     hypr_pkgs="hyprland wl-clipboard wf-recorder wlsunset rofi rofi-emoji wlogout hyprpicker hypridle hyprlock brightnessctl dunst swww kitty"    
     font_pkgs="ttf-nerd-fonts-symbols-common otf-firamono-nerd inter-font otf-sora ttf-fantasque-nerd noto-fonts noto-fonts-emoji ttf-comfortaa"
     font_pkgs2="ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd adobe-source-code-pro-fonts ttf-firacode-nerd ttf-pacifico"
-    app_pkgs="nwg-look-bin qt5ct btop jq gvfs ffmpegthumbs mousepad mpv  playerctl pamixer noise-suppression-for-voice xarchiver wttr"
+    app_pkgs="nwg-look qt5ct btop jq gvfs ffmpegthumbs mousepad mpv  playerctl pamixer noise-suppression-for-voice xarchiver wttr"
     app_pkgs2="polkit-gnome ffmpeg neovim viewnior pavucontrol thunar ffmpegthumbnailer tumbler thunar-archive-plugin xdg-user-dirs"
-    theme_pkgs="catppuccin-gtk-theme-mocha reversal-icon-theme-git"
+    theme_pkgs="catppuccin-gtk-theme-mocha catppuccin-gtk-theme-latte reversal-icon-theme-git"
 
 
 
@@ -102,14 +102,12 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R ./dotfiles/dunst ~/.config/ 2>&1 | tee -a $LOG
     cp -R ./dotfiles/hypr ~/.config/ 2>&1 | tee -a $LOG
     cp -R ./dotfiles/kitty ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotfiles/neofetch ~/.config/ 2>&1 | tee -a $LOG
     cp -R ./dotfiles/pipewire ~/.config/ 2>&1 | tee -a $LOG
     cp -R ./dotfiles/rofi ~/.config/ 2>&1 | tee -a $LOG
     cp -R ./dotfiles/waybar ~/.config/ 2>&1 | tee -a $LOG
     cp -R ./dotfiles/wlogout ~/.config/ 2>&1 | tee -a $LOG
 
-    mkdir -p ~/Pictures/wallpapers
-    cp -R ./wallpapers ~/Pictures/wallpapers/
+    cp -R ./wallpapers ~/Pictures/
     mkdir -p ~/Pictures/Screenshots
     
     # Set some files as exacutable 
