@@ -21,3 +21,12 @@ user_pref("browser.urlbar.trimURLs", true);
 user_pref("browser.compactmode.show", true);
 
 user_pref("browser.tabs.cardPreview.showThumbnails", true);
+
+// Enable hardware acceleration
+user_pref("layers.acceleration.force-enabled", true);
+
+// Enable WebRender for all content
+user_pref("gfx.webrender.all", true);
+
+// Enable SVG context properties for content
+user_pref("svg.context-properties.content.enabled", true);

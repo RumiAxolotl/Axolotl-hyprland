@@ -1,8 +1,3 @@
-/*
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at https://mozilla.org/MPL/2.0/.
- */
 
 @import url("browser/main.css");
 
@@ -25,16 +20,21 @@
     }
 
     @media (prefers-color-scheme: light) {
-        --user-bg: rgb(239, 239, 242) !important;
+        --user-bg: rgb(239, 241, 245) !important;
+        --sfwindow: #e6e9ef;
+        --sfsecondary: #eff1f5;
+
         @media (-moz-bool-pref: "uc.tweak.translucency") {
-            --user-bg: color-mix(in srgb, rgb(239, 239, 242), transparent 20%) !important;
+            --user-bg: color-mix(in srgb, rgb(239, 241, 245), transparent 20%) !important;
         }
     }
 
     @media (prefers-color-scheme: dark) {
-        --user-bg: rgb(27, 26, 32) !important;
+        --user-bg: rgb(30, 30, 46) !important;
+        --sfwindow: #181825;
+        --sfsecondary: #1e1e2e;
         @media (-moz-bool-pref: "uc.tweak.translucency") {
-            --user-bg: color-mix(in srgb, rgb(27, 26, 32), transparent 20%) !important;
+            --user-bg: color-mix(in srgb, rgb(30, 30, 46), transparent 20%) !important;
         }
     }
 
@@ -44,4 +44,43 @@
             --user-bg: color-mix(in srgb, var(--lwt-accent-color), transparent 20%) !important;
         }
     }
+}
+
+
+
+/*─────────────────────────────*/
+
+
+/* Tabs colors  */
+#tabbrowser-tabs:not([movingtab])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab
+  > .tab-stack
+  > .tab-background[multiselected='true'],
+#tabbrowser-tabs:not([movingtab])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab
+  > .tab-stack
+  > .tab-background[selected='true'] {
+  background-image: none !important;
+  background-color: var(--toolbar-bgcolor) !important;
+}
+
+/* Inactive tabs color */
+#navigator-toolbox {
+  background-color: var(--sfwindow) !important;
+}
+
+/* Window colors  */
+:root {
+  --toolbar-bgcolor: var(--sfsecondary) !important;
+  --tabs-border-color: var(--sfsecondary) !important;
+  --lwt-sidebar-background-color: var(--sfwindow) !important;
+  --lwt-toolbar-field-focus: var(--sfsecondary) !important;
+}
+
+/* Sidebar color  */
+#sidebar-box,
+.sidebar-placesTree {
+  background-color: var(--sfwindow) !important;
 }
