@@ -71,17 +71,17 @@ if [[ $inst =~ ^[Nn]$ ]]; then
 
 if [[ $INST == "Y" || $INST == "y" ]]; then
 
-    git_pkgs="grimblast-git sddm-git waybar-git"
-    hypr_pkgs="hyprland wl-clipboard wf-recorder wlsunset rofi rofi-emoji wlogout hyprpicker hypridle hyprlock brightnessctl dunst swww kitty"    
+    git_pkgs="grimblast-gi waybar-git"
+    hypr_pkgs="hyprland hyprpicker hypridle hyprlock"    
     font_pkgs="ttf-nerd-fonts-symbols-common otf-firamono-nerd inter-font otf-sora ttf-fantasque-nerd noto-fonts noto-fonts-emoji ttf-comfortaa"
-    font_pkgs2="ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd adobe-source-code-pro-fonts ttf-firacode-nerd ttf-pacifico"
-    app_pkgs="nwg-look qt5ct btop jq gvfs ffmpegthumbs mousepad mpv  playerctl pamixer noise-suppression-for-voice xarchiver wttr"
-    app_pkgs2="polkit-gnome ffmpeg neovim viewnior pavucontrol thunar ffmpegthumbnailer tumbler thunar-archive-plugin xdg-user-dirs"
-    theme_pkgs="catppuccin-gtk-theme-mocha catppuccin-gtk-theme-latte reversal-icon-theme-git"
+    font_pkgs2="ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd adobe-source-code-pro-fonts ttf-firacode-nerd"
+    app_pkgs="brightnessctl dunst swww kitty sddm wl-clipboard wf-recorder wlsunset rofi rofi-emoji wlogout"
+    app_pkgs2="nwg-look qt5ct btop jq gvfs ffmpegthumbs mousepad mpv  playerctl pamixer noise-suppression-for-voice xarchiver wttr"
+    app_pkgs3="polkit-gnome ffmpeg neovim viewnior pavucontrol thunar ffmpegthumbnailer tumbler thunar-archive-plugin xdg-user-dirs"
+    
 
 
-
-    if ! yay -S --noconfirm $git_pkgs $hypr_pkgs $font_pkgs $font_pkgs2 $app_pkgs $app_pkgs2 $theme_pkgs 2>&1 | tee -a $LOG; then
+    if ! yay -S --noconfirm $git_pkgs $hypr_pkgs $font_pkgs $font_pkgs2 $app_pkgs $app_pkgs2 $app_pkgs3 2>&1 | tee -a $LOG; then
         print_error " Failed to install additional packages - please check the install.log \n"
         exit 1
     fi
