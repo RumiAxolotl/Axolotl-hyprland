@@ -44,37 +44,37 @@ tooltip {
 }
 
 #clock {
-  color: @lavender;
+  color: @pink;
   border-radius: 5px 0px 0px 5px;
-  border: 1px @lavender solid;
+  border: 1px @pink solid;
   border-right: none;
 }
 
 #cpu {
-  color: @lavender;
-  border: 1px @lavender solid;
+  color: @red;
+  border: 1px @red solid;
   border-right: none;
   border-left: none;
 }
 
 #memory {
-  color: @lavender;
-  border: 1px @lavender solid;
+  color: @maroon;
+  border: 1px @maroon solid;
   border-right: none;
   border-left: none;
 }
 
 #disk {
-  color: @lavender;
-  border: 1px @lavender solid;
+  color: @peach;
+  border: 1px @peach solid;
   border-right: none;
   border-left: none;
 }
 
 #temperature {
-  color: @lavender;
+  color: @yellow;
   border-radius: 0px 5px 5px 0px;
-  border: 1px @lavender solid;
+  border: 1px @yellow solid;
   border-left: none;
 }
 
@@ -179,32 +179,32 @@ tooltip {
 }
 
 #network {
-  color: @lavender;
-  border: 1px @lavender solid;
+  color: @blue;
+  border: 1px @blue solid;
   border-right: none;
   border-left: none;
 }
 #pulseaudio {
-  color: @lavender;
-  border: 1px @lavender solid;
+  color: @sapphire;
+  border: 1px @sapphire solid;
   border-right: none;
   border-left: none;
 }
 #pulseaudio.microphone {
-  color: @lavender;
-  border: 1px @lavender solid;
+  color: @sky;
+  border: 1px @sky solid;
   border-right: none;
   border-left: none;
 }
 #battery {
-  color: @lavender;
-  border: 1px @lavender solid;
+  color: @teal;
+  border: 1px @teal solid;
   border-right: none;
   border-left: none;
 }
 #backlight {
-  color: @lavender;
+  color: @green;
   border-radius: 0px 5px 5px 0px;
-  border: 1px @lavender solid;
+  border: 1px @green solid;
   border-left: none;
 }
