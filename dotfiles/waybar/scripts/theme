@@ -9,7 +9,9 @@ dark_mode(){
     gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-lavender-standard+default"
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple-dark"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-    
+    gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Mocha-Light
+    gsettings set org.gnome.desktop.interface cursor-size 24
+    hyprctl setcursor catppuccin-mocha-light 24
     #set hyprland theme
     cat ~/.config/hypr/mocha.conf > ~/.config/hypr/style.conf
     
@@ -50,6 +52,10 @@ light_mode(){
     gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-latte-lavender-standard+default"
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+
+    gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Latte-Dark
+    gsettings set org.gnome.desktop.interface cursor-size 24
+    hyprctl setcursor catppuccin-latte-dark 24
     
     #set hyprland theme
     cat ~/.config/hypr/latte.conf > ~/.config/hypr/style.conf

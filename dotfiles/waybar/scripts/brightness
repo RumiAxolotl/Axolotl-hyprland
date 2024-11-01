@@ -4,9 +4,9 @@ iDIR="$HOME/.config/dunst/icons"
 
 # Get brightness
 get_backlight() {
-	LIGHT=$(printf "%.0f\n" $(brightnessctl g))
-	light=$((LIGHT*100/200))
-	echo "${light}"
+	LIGHT=$(brightnessctl g)
+	light=$((LIGHT * 100 / $(brightnessctl m)))
+	echo "$light"
 }
 
 # Get icons
@@ -25,19 +25,22 @@ get_icon() {
 	fi
 }
 
+
 # Notify
 notify_user() {
-	notify-send -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Brightness : $(get_backlight) %"
+	brightness=$(get_backlight)
+	brightness_icon=$(get_icon)
+	dunstify -t 1000 -h string:x-canonical-private-synchronous:sys-notify -h string:x-dunst-stack-tag:brightness_notif -h int:value:$brightness -u low -i "$brightness_icon" "Brightness: $brightness%"
 }
 
 # Increase brightness
 inc_backlight() {
-	brightnessctl set 2%+ && get_icon && notify_user
+	brightnessctl set 5%+ && notify_user
 }
 
 # Decrease brightness
 dec_backlight() {
-	brightnessctl set 2%- && get_icon && notify_user
+	brightnessctl set 5%- && notify_user
 }
 
 # Execute accordingly
