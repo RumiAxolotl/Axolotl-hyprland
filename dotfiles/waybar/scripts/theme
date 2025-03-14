@@ -6,7 +6,7 @@ dark_mode(){
     swww img ~/Pictures/wallpapers/axo-dark.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
     
     # #set the GTK theme
-    gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-lavender-standard+default"
+    gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Mocha-Standard-Lavender-Dark
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple-dark"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
     gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Mocha-Light
@@ -49,7 +49,7 @@ light_mode(){
     swww img ~/Pictures/wallpapers/axo-light.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
     
     #set the GTK theme
-    gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-latte-lavender-standard+default"
+    gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Latte-Standard-Lavender-Light
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 
