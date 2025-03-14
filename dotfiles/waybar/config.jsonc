@@ -55,18 +55,21 @@
       "on-scroll-down": "shift_down"
     }
   },
-  "memory": {
-    "interval": 1,
-    "format": " {}%",
-    "tooltip": true,
-    "tooltip-format": "Memory - {used:0.1f}GB used",
-    "on-click": "kitty --title btop sh -c 'btop'"
-  },
   "cpu": {
     "interval": 1,
     "format": " {usage}%",
     "on-click": "kitty --title btop sh -c 'btop'"
   },
+  "memory": {
+    "interval": 1,
+    "format": " {}%",
+    "format-alt": " {used:0.1f}GB",
+    "format-alt-click": "click-right",
+    "tooltip": true,
+    "tooltip-format": "Memory - {used:0.1f}GB/{total:0.1f}GB ({percentage}%) ",
+    "on-click": "kitty --title btop sh -c 'btop'"
+  },
+
   "disk": {
     "interval": 1,
     "format": "󰋊 {percentage_used}%",
@@ -109,11 +112,8 @@
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "format": "{icon}",
-    "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": ""
-    },
+    //
+
     "persistent_workspaces": {
       "1": [],
       "2": [],

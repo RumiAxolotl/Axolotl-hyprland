@@ -14,7 +14,7 @@ window#waybar {
 }
 
 tooltip {
-  border-radius: 5px;
+  border-radius: 10px;
   border-width: 0px;
   background: @mantle;
   color: @lavender;
@@ -45,36 +45,36 @@ tooltip {
 
 #clock {
   color: @pink;
-  border-radius: 5px 0px 0px 5px;
-  border: 1px @pink solid;
+  border-radius: 10px 0px 0px 10px;
+  border: 2px @pink solid;
   border-right: none;
 }
 
 #cpu {
   color: @red;
-  border: 1px @red solid;
+  border: 2px @red solid;
   border-right: none;
   border-left: none;
 }
 
 #memory {
   color: @maroon;
-  border: 1px @maroon solid;
+  border: 2px @maroon solid;
   border-right: none;
   border-left: none;
 }
 
 #disk {
   color: @peach;
-  border: 1px @peach solid;
+  border: 2px @peach solid;
   border-right: none;
   border-left: none;
 }
 
 #temperature {
   color: @yellow;
-  border-radius: 0px 5px 5px 0px;
-  border: 1px @yellow solid;
+  border-radius: 0px 10px 10px 0px;
+  border: 2px @yellow solid;
   border-left: none;
 }
 
@@ -83,31 +83,31 @@ tooltip {
 }
 
 #custom-weather {
-  border-radius: 5px;
+  border-radius: 10px;
   margin-left: 5px;
-  border: 1px @lavender solid;
+  border: 2px @lavender solid;
 }
 
 #custom-update {
-  border-radius: 5px;
+  border-radius: 10px;
   margin-left: 5px;
   color: @lavender;
-  border: 1px @lavender solid;
+  border: 2px @lavender solid;
 }
 
 #window {
-  border-radius: 5px;
+  border-radius: 10px;
   margin-left: 5px;
   margin-right: 5px;
-  border: 1px @lavender solid;
+  border: 2px @lavender solid;
 }
 
 #workspaces {
   background: @mantle;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-right: 2px;
   padding-left: 2px;
-  border: 1px @lavender solid;
+  border: 2px @lavender solid;
 }
 #workspaces button {
   padding: 5px;
@@ -117,30 +117,30 @@ tooltip {
 #workspaces button.active {
   color: @lavender;
   background: @mantle;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 #workspaces button.focused {
   color: @rosewater;
   background: @surface0;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 #workspaces button.urgent {
   color: @crust;
   background: @mauve;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 #workspaces button:hover {
   background: @crust;
   color: @lavender;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 #tray {
-  border-radius: 5px;
-  border: 1px @lavender solid;
+  border-radius: 10px;
+  border: 2px @lavender solid;
 }
 
 #tray > .active {
@@ -157,54 +157,54 @@ tooltip {
 
 #mpris {
   color: @lavender;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-right: 5px;
   margin-left: 5px;
-  border: 1px @lavender solid;
+  border: 2px @lavender solid;
 }
 
 #custom-notifications {
-  border-radius: 5px;
+  border-radius: 10px;
   margin-right: 5px;
   margin-left: 5px;
   color: @lavender;
-  border: 1px @lavender solid;
+  border: 2px @lavender solid;
 }
 
 #bluetooth {
   color: @lavender;
-  border-radius: 5px 0px 0px 5px;
-  border: 1px @lavender solid;
+  border-radius: 10px 0px 0px 10px;
+  border: 2px @lavender solid;
   border-right: none;
 }
 
 #network {
   color: @blue;
-  border: 1px @blue solid;
+  border: 2px @blue solid;
   border-right: none;
   border-left: none;
 }
 #pulseaudio {
   color: @sapphire;
-  border: 1px @sapphire solid;
+  border: 2px @sapphire solid;
   border-right: none;
   border-left: none;
 }
 #pulseaudio.microphone {
   color: @sky;
-  border: 1px @sky solid;
+  border: 2px @sky solid;
   border-right: none;
   border-left: none;
 }
 #battery {
   color: @teal;
-  border: 1px @teal solid;
+  border: 2px @teal solid;
   border-right: none;
   border-left: none;
 }
 #backlight {
   color: @green;
-  border-radius: 0px 5px 5px 0px;
-  border: 1px @green solid;
+  border-radius: 0px 10px 10px 0px;
+  border: 2px @green solid;
   border-left: none;
 }

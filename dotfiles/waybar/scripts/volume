@@ -4,7 +4,8 @@ iDIR="$HOME/.config/dunst/icons"
 
 # Get Volume
 get_volume() {
-    volume=$(pamixer --get-volume)
+    volume_string=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+    volume=$(echo "$volume_string" | awk '{print $2 * 100}' | cut -d. -f1)
     echo "$volume"
 }
 
@@ -30,12 +31,12 @@ get_icon() {
 notify_user() {
     volume=$(get_volume)
     volume_icon=$(get_icon)
-    dunstify -t 1000 -h string:x-canonical-private-synchronous:sys-notify -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume -u low -i "$volume_icon" "Volume: $volume%"
+    notify-send  -t 1000 -h string:x-canonical-private-synchronous:sys-notify -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume -u low -i "$volume_icon" "Volume: $volume%"
 }
 
 # Increase Volume
 inc_volume() {
-    pamixer -i 5 && notify_user
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ && notify_user
 }
 
 # Decrease Volume
@@ -46,9 +47,9 @@ dec_volume() {
 # Toggle Mute
 toggle_mute() {
     if [ "$(pamixer --get-mute)" == "false" ]; then
-        pamixer -m && dunstify -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/volume-mute.png" "Volume Switched OFF"
+        pamixer -m && notify-send  -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/volume-mute.png" "Volume Switched OFF"
         elif [ "$(pamixer --get-mute)" == "true" ]; then
-        pamixer -u && dunstify -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Volume Switched ON"
+        pamixer -u && notify-send  -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Volume Switched ON"
     fi
 }
 
@@ -61,9 +62,9 @@ toggle_mute() {
 # Toggle Mic
 toggle_mic() {
     if [ "$(pamixer --default-source --get-mute)" == "false" ]; then
-        pamixer --default-source -m && dunstify -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/microphone-mute.png" "Microphone Switched OFF"
+        pamixer --default-source -m && notify-send  -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/microphone-mute.png" "Microphone Switched OFF"
         elif [ "$(pamixer --default-source --get-mute)" == "true" ]; then
-        pamixer -u --default-source u && dunstify -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/microphone.png" "Microphone Switched ON"
+        pamixer -u --default-source u && notify-send  -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/microphone.png" "Microphone Switched ON"
     fi
 }
 
@@ -87,7 +88,7 @@ get_mic_icon() {
 notify_mic_user() {
     volume=$(pamixer --default-source --get-volume)
     volume_icon=$(get_mic_icon)
-    dunstify -t 1000 -h string:x-canonical-private-synchronous:sys-notify -h string:x-dunst-stack-tag:mic_notif -h int:value:$volume -u low -i "$volume_icon" "Mic-Level: $volume%"
+    notify-send  -t 1000 -h string:x-canonical-private-synchronous:sys-notify -h string:x-dunst-stack-tag:mic_notif -h int:value:$volume -u low -i "$volume_icon" "Mic-Level: $volume%"
 }
 
 # Increase MIC Volume
