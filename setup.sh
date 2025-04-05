@@ -99,13 +99,20 @@ fi
 read -n1 -rep 'Would you like to copy config files? (y,n)' CFG
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "Copying config files...\n"
-    cp -R ./dotfiles/dunst ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotfiles/hypr ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotfiles/kitty ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotfiles/pipewire ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotfiles/rofi ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotfiles/waybar ~/.config/ 2>&1 | tee -a $LOG
-    cp -R ./dotfiles/wlogout ~/.config/ 2>&1 | tee -a $LOG
+    # Copy all files from dotfiles directory to ~/.config/
+    cp -R ./dotfiles/* ~/.config/ 2>&1 | tee -a $LOG
+    # Create fonts directory if it doesn't exist
+    mkdir -p ~/.local/share/fonts
+
+    # Copy fonts
+    if [ -d "./fonts" ]; then
+        cp -R ./fonts/* ~/.local/share/fonts/ 2>&1 | tee -a $LOG
+        # Update font cache
+        fc-cache -fv 2>&1 | tee -a $LOG
+        echo "Fonts copied to ~/.local/share/fonts"
+    else
+        echo "No fonts directory found to copy"
+    fi
 
     cp -R ./wallpapers ~/Pictures/
     mkdir -p ~/Pictures/Screenshots

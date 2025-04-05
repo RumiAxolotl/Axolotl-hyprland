@@ -13,12 +13,12 @@
     "disk",
     "temperature",
     "custom/weather",
-    "custom/update"
-    // "hyprland/window"
+    "custom/update",
+    "hyprland/window"
   ],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
-    // "mpris",
+    "mpris",
     "tray",
     "custom/notifications",
     "bluetooth",
