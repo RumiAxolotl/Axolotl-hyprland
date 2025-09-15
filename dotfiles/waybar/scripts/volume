@@ -31,7 +31,7 @@ get_icon() {
 notify_user() {
     volume=$(get_volume)
     volume_icon=$(get_icon)
-    notify-send  -t 1000 -h string:x-canonical-private-synchronous:sys-notify -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume -u low -i "$volume_icon" "Volume: $volume%"
+    notify-send -a "Volume" -t 1000 -h string:x-canonical-private-synchronous:sys-notify -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume -u low -i "$volume_icon" "Volume: $volume%"
 }
 
 # Increase Volume
@@ -47,9 +47,9 @@ dec_volume() {
 # Toggle Mute
 toggle_mute() {
     if [ "$(pamixer --get-mute)" == "false" ]; then
-        pamixer -m && notify-send  -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/volume-mute.png" "Volume Switched OFF"
+        pamixer -m && notify-send -a "Volume" -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/volume-mute.png" "Volume Switched OFF"
         elif [ "$(pamixer --get-mute)" == "true" ]; then
-        pamixer -u && notify-send  -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Volume Switched ON"
+        pamixer -u && notify-send -a "Volume" -t 1000 -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Volume Switched ON"
     fi
 }
 
