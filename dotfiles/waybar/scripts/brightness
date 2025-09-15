@@ -30,7 +30,7 @@ get_icon() {
 notify_user() {
 	brightness=$(get_backlight)
 	brightness_icon=$(get_icon)
-	notify-send -t 1000 -h string:x-canonical-private-synchronous:sys-notify -h string:x-dunst-stack-tag:brightness_notif -h int:value:$brightness -u low -i "$brightness_icon" "Brightness: $brightness%"
+	notify-send -a "Brightness" -t 1000 -h string:x-canonical-private-synchronous:sys-notify -h string:x-dunst-stack-tag:brightness_notif -h int:value:$brightness -u low -i "$brightness_icon" "Brightness: $brightness%"
 }
 
 # Increase brightness

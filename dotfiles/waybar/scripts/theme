@@ -6,12 +6,12 @@ dark_mode(){
     swww img ~/Pictures/wallpapers/axo-dark.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
     
     # #set the GTK theme
-    gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Mocha-Standard-Lavender-Dark
+    gsettings set org.gnome.desktop.interface gtk-theme catppuccin-mocha-lavender-standard+default
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple-dark"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
     gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Mocha-Light
     gsettings set org.gnome.desktop.interface cursor-size 24
-    hyprctl setcursor catppuccin-mocha-light 24
+    hyprctl setcursor catppuccin-mocha-light-cursors 24
     #set hyprland theme
     cat ~/.config/hypr/mocha.conf > ~/.config/hypr/style.conf
     
@@ -49,13 +49,13 @@ light_mode(){
     swww img ~/Pictures/wallpapers/axo-light.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
     
     #set the GTK theme
-    gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Latte-Standard-Lavender-Light
+    gsettings set org.gnome.desktop.interface gtk-theme catppuccin-latte-lavender-standard+default
     gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple"
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 
     gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Latte-Dark
     gsettings set org.gnome.desktop.interface cursor-size 24
-    hyprctl setcursor catppuccin-latte-dark 24
+    hyprctl setcursor catppuccin-latte-dark-cursors 24
     
     #set hyprland theme
     cat ~/.config/hypr/latte.conf > ~/.config/hypr/style.conf
