@@ -3,7 +3,7 @@
 dark_mode(){
     
     #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo-dark.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
+    awww img ~/Pictures/wallpapers/axo-dark.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
     
     # #set the GTK theme
     gsettings set org.gnome.desktop.interface gtk-theme catppuccin-mocha-lavender-standard+default
@@ -46,7 +46,7 @@ dark_mode(){
 light_mode(){
     
     #set the wallpaper
-    swww img ~/Pictures/wallpapers/axo-light.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
+    awww img ~/Pictures/wallpapers/axo-light.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
     
     #set the GTK theme
     gsettings set org.gnome.desktop.interface gtk-theme catppuccin-latte-lavender-standard+default
