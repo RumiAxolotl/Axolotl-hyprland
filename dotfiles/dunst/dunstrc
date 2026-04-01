@@ -2,17 +2,19 @@
     follow = mouse
     indicate_hidden = yes
 
-    offset = 10x10
+    # Fixed syntax and matched Hyprland gaps
+    offset = (8, 8)
 
-    notification_height = 10
-
+    # Removed invalid notification_height setting
     separator_height = 2
 
-    padding = 8
-    horizontal_padding = 8
-    text_icon_padding = 0
+    padding = 10
+    horizontal_padding = 10
+    text_icon_padding = 10
+    
+    # Matched Hyprland border size and rounding
     frame_width = 2
-
+    corner_radius = 8
 
     sort = yes
     idle_threshold = 120
@@ -36,24 +38,38 @@
     title = Dunst
     class = Dunst
 
-    corner_radius = 5
     timeout = 5
 
     mouse_left_click = do_action, close_current
 
-[global]
-frame_color = "#b4befe"
-separator_color= frame
+    # Monochrome minimal styling to match your Hyprland/Waybar
+    frame_color = "#cdd6f4"
+    separator_color = frame
+
+    mouse_left_click = do_action, close_current
+    mouse_middle_click = close_all
+    mouse_right_click = close_current
 
 [urgency_low]
-background = "#1E1E2E"
-foreground = "#CDD6F4"
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
 
 [urgency_normal]
-background = "#1E1E2E"
-foreground = "#CDD6F4"
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
 
 [urgency_critical]
-background = "#1E1E2E"
-foreground = "#CDD6F4"
-frame_color = "#FAB387"
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    # Keeping a warning color (Peach) just for critical alerts
+    frame_color = "#FAB387"
+
+# --- Custom Rules ---
+
+[ignore_volume]
+    appname = "Volume"
+    history_ignore = yes
+
+[ignore_brightness]
+    appname = "Brightness"
+    history_ignore = yes

@@ -1,8 +1,9 @@
 @import "mocha.css";
+
 * {
   border: none;
   border-radius: 0;
-  font-family: FiraCode Nerd Font;
+  font-family: Maple Mono NF CN;
   font-weight: bold;
   font-size: 11px;
   min-height: 5px;
@@ -15,196 +16,61 @@ window#waybar {
 
 tooltip {
   border-radius: 10px;
-  border-width: 0px;
   background: @mantle;
-  color: @lavender;
+  color: @text;
 }
 
-#clock,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#custom-weather,
-#custom-update,
+/* Unified styling for your remaining active modules */
 #workspaces,
-#mpris,
+#window,
 #tray,
 #custom-notifications,
-#bluetooth,
-#network,
-#pulseaudio,
-#battery,
-#window,
-#backlight {
-  background: @mantle;
-  padding: 0px 5px;
-  margin: 4px 0px 4px 0px;
-  border: 0;
-}
-
 #clock {
-  color: @pink;
-  border-radius: 10px 0px 0px 10px;
-  border: 2px @pink solid;
-  border-right: none;
-}
-
-#cpu {
-  color: @red;
-  border: 2px @red solid;
-  border-right: none;
-  border-left: none;
-}
-
-#memory {
-  color: @maroon;
-  border: 2px @maroon solid;
-  border-right: none;
-  border-left: none;
-}
-
-#disk {
-  color: @peach;
-  border: 2px @peach solid;
-  border-right: none;
-  border-left: none;
-}
-
-#temperature {
-  color: @yellow;
-  border-radius: 0px 10px 10px 0px;
-  border: 2px @yellow solid;
-  border-left: none;
-}
-
-#temperature.critical {
-  color: @red;
-}
-
-#custom-weather {
-  border-radius: 10px;
-  margin-left: 5px;
-  border: 2px @lavender solid;
-}
-
-#custom-update {
-  border-radius: 10px;
-  margin-left: 5px;
-  color: @lavender;
-  border: 2px @lavender solid;
-}
-
-#window {
-  border-radius: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  border: 2px @lavender solid;
-}
-
-#workspaces {
   background: @mantle;
+  color: @text;
+  padding: 0px 10px;
+  margin: 4px 5px;
   border-radius: 10px;
-  padding-right: 2px;
-  padding-left: 2px;
-  border: 2px @lavender solid;
 }
+
+/* Specific Workspaces Styling */
+#workspaces {
+  padding: 0px 5px;
+}
+
 #workspaces button {
   padding: 5px;
-  color: @surface0;
+  color: @surface1; /* Dimmed text for inactive workspaces */
 }
 
-#workspaces button.active {
-  color: @lavender;
-  background: @mantle;
-  border-radius: 10px;
-}
-
+#workspaces button.active,
 #workspaces button.focused {
-  color: @rosewater;
-  background: @surface0;
+  color: @text;
+  background: @base; /* Subtle contrast against the mantle background */
   border-radius: 10px;
 }
 
 #workspaces button.urgent {
   color: @crust;
-  background: @mauve;
+  background: @text; /* High contrast inversion for urgent */
   border-radius: 10px;
 }
 
 #workspaces button:hover {
-  background: @crust;
-  color: @lavender;
+  background: @surface0;
+  color: @text;
   border-radius: 10px;
 }
 
-#tray {
-  border-radius: 10px;
-  border: 2px @lavender solid;
-}
-
+/* Specific Tray Styling */
 #tray > .active {
-  color: @lavender;
+  color: @text;
 }
 
 #tray > .passive {
-  color: @overlay0;
+  color: @surface1;
 }
 
 #tray > .needs-attention {
-  color: @peach;
-}
-
-#mpris {
-  color: @lavender;
-  border-radius: 10px;
-  margin-right: 5px;
-  margin-left: 5px;
-  border: 2px @lavender solid;
-}
-
-#custom-notifications {
-  border-radius: 10px;
-  margin-right: 5px;
-  margin-left: 5px;
-  color: @lavender;
-  border: 2px @lavender solid;
-}
-
-#bluetooth {
-  color: @lavender;
-  border-radius: 10px 0px 0px 10px;
-  border: 2px @lavender solid;
-  border-right: none;
-}
-
-#network {
-  color: @blue;
-  border: 2px @blue solid;
-  border-right: none;
-  border-left: none;
-}
-#pulseaudio {
-  color: @sapphire;
-  border: 2px @sapphire solid;
-  border-right: none;
-  border-left: none;
-}
-#pulseaudio.microphone {
-  color: @sky;
-  border: 2px @sky solid;
-  border-right: none;
-  border-left: none;
-}
-#battery {
-  color: @teal;
-  border: 2px @teal solid;
-  border-right: none;
-  border-left: none;
-}
-#backlight {
-  color: @green;
-  border-radius: 0px 10px 10px 0px;
-  border: 2px @green solid;
-  border-left: none;
+  color: @text;
 }
