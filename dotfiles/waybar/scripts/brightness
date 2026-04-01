@@ -1,55 +1,22 @@
 #!/bin/bash
 
-iDIR="$HOME/.config/dunst/icons"
+NOTIFY="notify-send -a Brightness -t 1000 -h string:x-canonical-private-synchronous:sys-notify"
 
-# Get brightness
+# --- Get Percentage ---
 get_backlight() {
-	LIGHT=$(brightnessctl g)
-	light=$((LIGHT * 100 / $(brightnessctl m)))
-	echo "$light"
+    echo $(( $(brightnessctl g) * 100 / $(brightnessctl m) ))
 }
 
-# Get icons
-get_icon() {
-	current=$(get_backlight)
-	if [[ ("$current" -ge "0") && ("$current" -le "20") ]]; then
-		echo "$iDIR/brightness-20.png"
-	elif [[ ("$current" -ge "20") && ("$current" -le "40") ]]; then
-		echo "$iDIR/brightness-40.png"
-	elif [[ ("$current" -ge "40") && ("$current" -le "60") ]]; then
-		echo "$iDIR/brightness-60.png"
-	elif [[ ("$current" -ge "60") && ("$current" -le "80") ]]; then
-		echo "$iDIR/brightness-80.png"
-	elif [[ ("$current" -ge "80") && ("$current" -le "100") ]]; then
-		echo "$iDIR/brightness-100.png"
-	fi
+# --- Notify Logic ---
+notify_brightness() {
+    percent=$(get_backlight)
+    $NOTIFY -h string:x-dunst-stack-tag:brightness_notif -h int:value:"$percent" -u low "Brightness: ${percent}%"
 }
 
-
-# Notify
-notify_user() {
-	brightness=$(get_backlight)
-	brightness_icon=$(get_icon)
-	notify-send -a "Brightness" -t 1000 -h string:x-canonical-private-synchronous:sys-notify -h string:x-dunst-stack-tag:brightness_notif -h int:value:$brightness -u low -i "$brightness_icon" "Brightness: $brightness%"
-}
-
-# Increase brightness
-inc_backlight() {
-	brightnessctl set 5%+ && notify_user
-}
-
-# Decrease brightness
-dec_backlight() {
-	brightnessctl set 5%- && notify_user
-}
-
-# Execute accordingly
-if [[ "$1" == "--get" ]]; then
-	brightnessctl g
-elif [[ "$1" == "--inc" ]]; then
-	inc_backlight
-elif [[ "$1" == "--dec" ]]; then
-	dec_backlight
-else
-	get_backlight
-fi
+# --- Execute Command ---
+case "$1" in
+    --inc) brightnessctl set 5%+ && notify_brightness ;;
+    --dec) brightnessctl set 5%- && notify_brightness ;;
+    --get) brightnessctl g ;;
+    *) get_backlight ;;
+esac

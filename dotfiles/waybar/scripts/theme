@@ -1,94 +1,82 @@
 #!/bin/bash
 
-dark_mode(){
+set_theme() {
+    local mode="$1"
     
-    #set the wallpaper
-    awww img ~/Pictures/wallpapers/axo-dark.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
+    # Define variables based on the selected mode
+    if [ "$mode" == "dark" ]; then
+        wall_img="mocha-unix.png"
+        gtk_theme="catppuccin-mocha-lavender-standard+default"
+        icon_theme="Reversal-purple-dark"
+        color_scheme="prefer-dark"
+        cursor_theme="Catppuccin-Mocha-Light"
+        hypr_cursor="catppuccin-mocha-light-cursors"
+        hypr_conf="mocha.conf"
+        kitty_theme="Catppuccin-Mocha"
+        rofi_conf="dark.rasi"
+        vencord_theme="Mocha.theme.css"
+        zathura_conf="catppuccin-mocha"
+        dunst_conf="mocha-dunst"
+        waybar_conf="mocha-style.css"
+    else
+        wall_img="latte-unix.png"
+        gtk_theme="catppuccin-latte-lavender-standard+default"
+        icon_theme="Reversal-purple"
+        color_scheme="prefer-light"
+        cursor_theme="Catppuccin-Latte-Dark"
+        hypr_cursor="catppuccin-latte-dark-cursors"
+        hypr_conf="latte.conf"
+        kitty_theme="Catppuccin-Latte"
+        rofi_conf="light.rasi"
+        vencord_theme="Latte.theme.css"
+        zathura_conf="catppuccin-latte"
+        dunst_conf="latte-dunst"
+        waybar_conf="latte-style.css"
+    fi
+
+    # Set the wallpaper (Decreased duration to 0.2s and increased FPS to 144)
+    awww img ~/Pictures/wallpapers/"$wall_img" --transition-duration=0.2 --transition-step=1 --transition-type=fade
     
-    # #set the GTK theme
-    gsettings set org.gnome.desktop.interface gtk-theme catppuccin-mocha-lavender-standard+default
-    gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple-dark"
-    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-    gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Mocha-Light
+    # Set the GTK theme
+    gsettings set org.gnome.desktop.interface gtk-theme "$gtk_theme"
+    gsettings set org.gnome.desktop.interface icon-theme "$icon_theme"
+    gsettings set org.gnome.desktop.interface color-scheme "$color_scheme"
+    gsettings set org.gnome.desktop.interface cursor-theme "$cursor_theme"
     gsettings set org.gnome.desktop.interface cursor-size 24
-    hyprctl setcursor catppuccin-mocha-light-cursors 24
-    #set hyprland theme
-    cat ~/.config/hypr/mocha.conf > ~/.config/hypr/style.conf
     
-    #set the kitty theme
-    kitty +kitten themes --reload-in=all Catppuccin-Mocha
+    # Set Hyprland cursor and theme
+    hyprctl setcursor "$hypr_cursor" 24
+    cp -f ~/.config/hypr/"$hypr_conf" ~/.config/hypr/style.conf
     
-    #set rofi theme
-    cat ~/.config/rofi/dark.rasi > ~/.config/rofi/config.rasi
+    # Set the kitty theme
+    kitty +kitten themes --reload-in=all "$kitty_theme"
     
-    #set Discord css theme
-    cat ~/.config/Vencord/themes/Mocha.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
+    # Set rofi theme
+    cp -f ~/.config/rofi/"$rofi_conf" ~/.config/rofi/config.rasi
     
-    #set Zathura theme
-    cat ~/.config/zathura/catppuccin-mocha > ~/.config/zathura/zathurarc
+    # Set Discord css theme
+    cp -f ~/.config/Vencord/themes/"$vencord_theme" ~/.config/Vencord/themes/Catppuccin.theme.css
     
-    #set dunst theme
-    cat ~/.config/dunst/mocha-dunst > ~/.config/dunst/dunstrc
-    sleep 1
-    killall dunst
-    sleep 1
-    dunst
+    # Set Zathura theme
+    cp -f ~/.config/zathura/"$zathura_conf" ~/.config/zathura/zathurarc
     
-    #set the waybar theme
-    cat ~/.config/waybar/mocha-style.css > ~/.config/waybar/style.css
-    sleep 1
-    killall waybar
-    sleep 1
-    waybar
+    # Set dunst theme and restart cleanly in the background
+    cp -f ~/.config/dunst/"$dunst_conf" ~/.config/dunst/dunstrc
+    killall -q dunst
+    dunst & disown
+    
+    # Set the waybar theme and restart cleanly in the background
+    cp -f ~/.config/waybar/"$waybar_conf" ~/.config/waybar/style.css
+    killall -q waybar
+    waybar > /dev/null 2>&1 & disown
 }
 
-
-light_mode(){
-    
-    #set the wallpaper
-    awww img ~/Pictures/wallpapers/axo-light.png --transition-duration=1 --transition-step=1 --transition-fps=60 --transition-type=wave
-    
-    #set the GTK theme
-    gsettings set org.gnome.desktop.interface gtk-theme catppuccin-latte-lavender-standard+default
-    gsettings set org.gnome.desktop.interface icon-theme "Reversal-purple"
-    gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
-
-    gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Latte-Dark
-    gsettings set org.gnome.desktop.interface cursor-size 24
-    hyprctl setcursor catppuccin-latte-dark-cursors 24
-    
-    #set hyprland theme
-    cat ~/.config/hypr/latte.conf > ~/.config/hypr/style.conf
-    
-    #set the kitty theme
-    kitty +kitten themes --reload-in=all Catppuccin-Latte
-    
-    #set rofi theme
-    cat ~/.config/rofi/light.rasi > ~/.config/rofi/config.rasi
-    
-    #set Discord css theme
-    cat ~/.config/Vencord/themes/Latte.theme.css > ~/.config/Vencord/themes/Catppuccin.theme.css
-    
-    #set Zathura theme
-    cat ~/.config/zathura/catppuccin-latte > ~/.config/zathura/zathurarc
-    
-    #set dunst theme
-    cat ~/.config/dunst/latte-dunst > ~/.config/dunst/dunstrc
-    sleep 1
-    killall dunst
-    sleep 1
-    dunst
-    
-    #set the waybar theme
-    cat ~/.config/waybar/latte-style.css > ~/.config/waybar/style.css
-    sleep 1
-    killall waybar
-    sleep 1
-    waybar
-}
-
+# Execute based on arguments
 if [ "$1" == "--dark" ]; then
-    dark_mode
-    elif [ "$1" == "--light" ]; then
-    light_mode
+    set_theme "dark"
+elif [ "$1" == "--light" ]; then
+    set_theme "light"
+else
+    echo "Usage: $0 [--dark|--light]"
+    exit 1
 fi
