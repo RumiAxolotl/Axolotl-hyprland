@@ -50,6 +50,9 @@ set_theme() {
     hyprctl setcursor "$hypr_cursor" 24
     cp -f ~/.config/hypr/"$hypr_conf" ~/.config/hypr/style.conf
     
+    # Set hyprlock background to match theme wallpaper
+    sed -i "s|path = .*|path = $HOME/Pictures/wallpapers/$wall_img|" ~/.config/hypr/hyprlock.conf
+    
     # Set the kitty theme
     kitty +kitten themes --reload-in=all "$kitty_theme"
     
