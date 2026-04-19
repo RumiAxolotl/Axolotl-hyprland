@@ -18,6 +18,7 @@ set_theme() {
         zathura_conf="catppuccin-mocha"
         dunst_conf="mocha-dunst"
         waybar_conf="mocha-style.css"
+        nwg_dock_conf="mocha-style.css"
     else
         wall_img="latte-unix.png"
         gtk_theme="catppuccin-latte-lavender-standard+default"
@@ -32,6 +33,7 @@ set_theme() {
         zathura_conf="catppuccin-latte"
         dunst_conf="latte-dunst"
         waybar_conf="latte-style.css"
+        nwg_dock_conf="latte-style.css"
     fi
 
     # Set the wallpaper (Decreased duration to 0.2s and increased FPS to 144)
@@ -69,6 +71,12 @@ set_theme() {
     cp -f ~/.config/waybar/"$waybar_conf" ~/.config/waybar/style.css
     killall -q waybar
     waybar > /dev/null 2>&1 & disown
+
+    # Set the nwg-dock-hyprland theme and restart cleanly in the background
+    cp -f ~/.config/nwg-dock-hyprland/"$nwg_dock_conf" ~/.config/nwg-dock-hyprland/style.css
+    killall -q nwg-dock-hyprland
+    sleep 0.2 # Brief pause to ensure the old instance releases the socket completely
+    nwg-dock-hyprland -r -p bottom -a center -mb 15 -ml 15 -mr 15 -i 36 -c "rofi -show drun" > /dev/null 2>&1 & disown
 }
 
 # Execute based on arguments
