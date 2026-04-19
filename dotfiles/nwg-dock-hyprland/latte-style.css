@@ -1,0 +1,47 @@
+window {
+    /* Latte 'Base' color (#eff1f5) with 85% opacity */
+    background: rgba(239, 241, 245, 0.85); 
+    border-radius: 20px; 
+    border-style: solid; 
+    border-width: 1px;
+    /* Latte 'Surface 1' color (#bcc0cc) */
+    border-color: rgba(188, 192, 204, 0.8);
+}
+
+#box {
+    padding: 6px 12px; 
+}
+
+#active {
+    border-bottom: solid 2px;
+    /* Catppuccin Latte Mauve Accent (#8839ef) */
+    border-color: rgba(136, 57, 239, 0.9);
+}
+
+button, image {
+    background: none;
+    border-style: none;
+    box-shadow: none;
+    /* Latte 'Subtext 0' (#6c6f85) */
+    color: #6c6f85;
+    transition: all 0.2s ease-in-out; 
+}
+
+button {
+    padding: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+    /* Latte 'Text' (#4c4f69) */
+    color: #4c4f69;
+    font-size: 14px; 
+    border-radius: 10px; 
+}
+
+button:hover {
+    /* Latte 'Surface 0' (#ccd0da) */
+    background-color: rgba(204, 208, 218, 0.8);
+}
+
+button:focus {
+    box-shadow: none;
+}

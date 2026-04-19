@@ -1,0 +1,47 @@
+window {
+    /* Mocha 'Base' color (#1e1e2e) with 85% opacity */
+    background: rgba(30, 30, 46, 0.85); 
+    border-radius: 20px; 
+    border-style: solid; 
+    border-width: 1px;
+    /* Mocha 'Surface 1' color (#45475a) */
+    border-color: rgba(69, 71, 90, 0.8);
+}
+
+#box {
+    padding: 6px 12px; 
+}
+
+#active {
+    border-bottom: solid 2px;
+    /* Catppuccin Mauve Accent (#cba6f7) */
+    border-color: rgba(203, 166, 247, 0.9);
+}
+
+button, image {
+    background: none;
+    border-style: none;
+    box-shadow: none;
+    /* Mocha 'Subtext 0' (#a6adc8) */
+    color: #a6adc8;
+    transition: all 0.2s ease-in-out; 
+}
+
+button {
+    padding: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+    /* Mocha 'Text' (#cdd6f4) */
+    color: #cdd6f4;
+    font-size: 14px; 
+    border-radius: 10px; 
+}
+
+button:hover {
+    /* Mocha 'Surface 0' (#313244) */
+    background-color: rgba(49, 50, 68, 0.8);
+}
+
+button:focus {
+    box-shadow: none;
+}

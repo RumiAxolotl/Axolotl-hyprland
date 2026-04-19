@@ -21,6 +21,7 @@ FOLDERS=(
     "gtk-4.0"
     "hypr"
     "kitty"
+    "nwg-dock-hyprland"
     "neofetch"
     "pipewire"
     "rofi"
