@@ -19,6 +19,7 @@ set_theme() {
         dunst_conf="mocha-dunst"
         waybar_conf="mocha-style.css"
         nwg_dock_conf="mocha-style.css"
+        hyprshell_conf="mocha.css"
     else
         wall_img="latte-unix.png"
         gtk_theme="catppuccin-latte-lavender-standard+default"
@@ -34,6 +35,7 @@ set_theme() {
         dunst_conf="latte-dunst"
         waybar_conf="latte-style.css"
         nwg_dock_conf="latte-style.css"
+        hyprshell_conf="latte.css"
     fi
 
     # Set the wallpaper (Decreased duration to 0.2s and increased FPS to 144)
@@ -80,6 +82,10 @@ set_theme() {
     killall -q nwg-dock-hyprland
     sleep 0.2 # Brief pause to ensure the old instance releases the socket completely
     nwg-dock-hyprland -r -p bottom -a center -mb 15 -ml 15 -mr 15 -i 36 -c "rofi -show drun" > /dev/null 2>&1 & disown
+
+    # Set the hyprshell theme and restart
+    cp -f ~/.config/hyprshell/"$hyprshell_conf" ~/.config/hyprshell/styles.css
+    hyprshell socat '"Restart"' > /dev/null 2>&1 || true
 }
 
 # Execute based on arguments
