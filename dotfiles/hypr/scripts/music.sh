@@ -65,6 +65,7 @@ get_art() {
     # Hash the URL to detect changes
     url_hash=$(echo "$art_url" | md5sum | cut -d' ' -f1)
     hash_file="$cache_dir/current_hash"
+    downloading_file="$cache_dir/downloading"
 
     # Check if art has changed
     if [ -f "$hash_file" ] && [ "$(cat "$hash_file")" = "$url_hash" ] && [ -f "$cache_file" ]; then
@@ -72,19 +73,41 @@ get_art() {
         return
     fi
 
+    # If currently downloading, just return existing art to avoid blocking
+    if [ -f "$downloading_file" ] && [ "$(cat "$downloading_file")" = "$url_hash" ]; then
+        if [ -f "$cache_file" ]; then
+            echo "$cache_file"
+        else
+            echo "$placeholder"
+        fi
+        return
+    fi
+
+    # Record that we are downloading this specific hash
+    echo "$url_hash" > "$downloading_file"
+
     # Download new art
     if [[ "$art_url" == file://* ]]; then
         local_path="${art_url#file://}"
         cp "$local_path" "$cache_file" 2>/dev/null
-    else
-        curl -sL "$art_url" -o "$cache_file" 2>/dev/null
-    fi
-
-    if [ -f "$cache_file" ] && [ -s "$cache_file" ]; then
         echo "$url_hash" > "$hash_file"
+        rm -f "$downloading_file"
         echo "$cache_file"
     else
-        echo "$placeholder"
+        (
+            curl --max-time 5 -sL "$art_url" -o "${cache_file}.tmp" 2>/dev/null
+            if [ -s "${cache_file}.tmp" ]; then
+                mv "${cache_file}.tmp" "$cache_file"
+                echo "$url_hash" > "$hash_file"
+            fi
+            rm -f "$downloading_file"
+        ) &
+        
+        if [ -f "$cache_file" ]; then
+            echo "$cache_file"
+        else
+            echo "$placeholder"
+        fi
     fi
 }
 
