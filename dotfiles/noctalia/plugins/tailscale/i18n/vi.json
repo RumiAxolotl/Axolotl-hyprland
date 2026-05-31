@@ -1,0 +1,115 @@
+{
+  "settings": {
+    "title": "Cài đặt Tailscale",
+    "description": "Cấu hình hiển thị trạng thái và hành vi của Tailscale",
+    "refresh-interval": "Khoảng thời gian làm mới",
+    "refresh-interval-desc": "Tần suất kiểm tra trạng thái Tailscale",
+    "display-options": "Tùy chọn hiển thị",
+    "compact-mode": "Chế độ thu gọn",
+    "compact-mode-desc": "Chỉ hiển thị biểu tượng trên thanh",
+    "show-ip": "Hiển thị địa chỉ IP",
+    "show-ip-desc": "Hiển thị IP Tailscale trên tiện ích thanh ngang/dọc",
+    "show-peers": "Hiển thị số lượng thiết bị",
+    "show-peers-desc": "Hiển thị số thiết bị đang kết nối trên thanh ngang/dọc",
+    "hide-disconnected": "Ẩn thiết bị ngắt kết nối",
+    "hide-disconnected-desc": "Chỉ hiển thị các thiết bị đang trực tuyến trong bảng",
+    "hide-mullvad-exit-nodes": "Ẩn exit node Mullvad",
+    "hide-mullvad-exit-nodes-desc": "Ẩn các exit node VPN Mullvad khỏi danh sách thiết bị",
+    "show-search-bar": "Hiển thị thanh tìm kiếm",
+    "show-search-bar-desc": "Hiển thị ô tìm kiếm phía trên danh sách nút trong bảng",
+    "terminal": "Cấu hình terminal",
+    "terminal-command": "Lệnh terminal",
+    "terminal-command-desc": "Lệnh để mở terminal cho SSH/ping (ví dụ: 'ghostty', 'alacritty', 'kitty')",
+    "ssh-username": "Tên người dùng SSH",
+    "ssh-username-desc": "Tên người dùng cho kết nối SSH. Để trống để dùng tên mặc định của hệ thống.",
+    "ssh-username-placeholder": "ví dụ: pi, ubuntu, admin",
+    "ping-count": "Số lượng ping",
+    "ping-count-desc": "Số gói tin ping gửi khi kiểm tra kết nối",
+    "peer-action": "Hành động khi nhấn vào thiết bị",
+    "default-peer-action": "Hành động mặc định",
+    "default-peer-action-desc": "Hành động khi nhấn vào một thiết bị trong bảng",
+    "taildrop": "Taildrop",
+    "taildrop-enabled": "Bật Taildrop",
+    "taildrop-enabled-desc": "Cho phép gửi và nhận tệp qua Taildrop",
+    "taildrop-download-dir": "Thư mục tải xuống",
+    "taildrop-download-dir-desc": "Thư mục lưu các tệp nhận được (ví dụ: ~/Downloads)",
+    "taildrop-receive-mode": "Chế độ nhận",
+    "taildrop-receive-mode-desc": "Cách chạy 'tailscale file get'. Chế độ operator không cần xác nhận nếu đã chạy 'sudo tailscale set --operator $USER'.",
+    "taildrop-receive-mode-operator": "Operator (không cần xác nhận)",
+    "taildrop-receive-mode-pkexec": "pkexec (xác nhận mỗi lần)",
+    "authentication": "Xác thực",
+    "login-server": "Máy chủ đăng nhập",
+    "login-server-desc": "URL máy chủ đăng nhập tùy chỉnh (ví dụ: Headscale). Để trống để sử dụng máy chủ Tailscale mặc định."
+  },
+  "actions": {
+    "widget-settings": "Cài đặt tiện ích"
+  },
+  "context": {
+    "connect": "Kết nối",
+    "disconnect": "Ngắt kết nối",
+    "not-installed": "Chưa cài đặt Tailscale",
+    "settings": "Cài đặt",
+    "copy-ip": "Sao chép IP",
+    "copy-fqdn": "Sao chép FQDN",
+    "ssh": "SSH tới máy",
+    "ping": "Ping máy",
+    "use-exit-node": "Dùng làm exit node",
+    "send-file": "Gửi tệp",
+    "login": "Đăng nhập"
+  },
+  "toast": {
+    "title": "Tailscale",
+    "connected": "Tailscale đã kết nối",
+    "disconnected": "Tailscale đã ngắt kết nối",
+    "exit-node-enabled": "Đã bật exit node",
+    "exit-node-disabled": "Đã tắt exit node",
+    "ip-copied": {
+      "title": "Đã sao chép IP"
+    },
+    "fqdn-copied": {
+      "title": "Đã sao chép FQDN"
+    },
+    "terminal-not-configured": {
+      "title": "Chưa cấu hình terminal",
+      "message": "Vui lòng thiết lập lệnh terminal trong cài đặt plugin"
+    },
+    "login-browser-opened": "Trang xác thực đã mở trong trình duyệt",
+    "login-failed": "Đăng nhập thất bại"
+  },
+  "panel": {
+    "title": "Mạng Tailscale",
+    "peers": "thiết bị",
+    "not-connected": "Chưa kết nối",
+    "not-authenticated": "Chưa xác thực",
+    "no-peers": "Không có thiết bị nào đang kết nối",
+    "search-placeholder": "Tìm kiếm nút...",
+    "no-search-results": "Không có nút nào khớp với tìm kiếm của bạn",
+    "admin-console": "Bảng điều khiển quản trị",
+    "terminal-warning": {
+      "title": "Chưa cấu hình terminal",
+      "message": "Thiết lập lệnh terminal trong cài đặt để sử dụng SSH và ping"
+    },
+    "exit-node": {
+      "active": "Exit node đang hoạt động",
+      "online": "Trực tuyến",
+      "offline": "Ngoại tuyến",
+      "disable": "Tắt exit node"
+    },
+    "taildrop": {
+      "receive": "Nhận qua Taildrop"
+    }
+  },
+  "taildrop": {
+    "toast": {
+      "no-files": "Không có tệp nào được nhận",
+      "sent": "Gửi tệp thành công"
+    },
+    "error": {
+      "unknown": "Đã xảy ra lỗi không mong muốn",
+      "file-exists": "Tệp đã tồn tại trong thư mục tải xuống"
+    }
+  },
+  "file-picker": {
+    "title": "Chọn tệp để gửi qua Taildrop"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "lang": "nl",
+    "name": "Nederlands",
+    "author": "Ximo & AI"
+  },
+  "widget": {
+    "tooltip": "Hyprland Visual Editor",
+    "menu_settings": "Plugin-instellingen"
+  },
+  "panel": {
+    "header_title": "Hyprland Visueel",
+    "header_subtitle": "Esthetisch Controlecentrum",
+    "tabs": {
+      "home": "Home",
+      "animations": "Animaties",
+      "borders": "Randen",
+      "effects": "Effecten"
+    }
+  },
+  "welcome": {
+    "toast": {
+      "enabled": "Visuele Editor Ingeschakeld",
+      "disabled": "Visuele Editor Uitgeschakeld"
+    },
+    "activation_title": "Systeemactivatie",
+    "system_active": "Het systeem is operationeel. Visuele effecten worden veilig beheerd door HVE.",
+    "system_inactive": "Systeem gestopt. Vereist acceptatie van het persistentiecontract om door te gaan.",
+    "enable_label": "Visuele Editor Inschakelen",
+    "warning": {
+      "title": "VEILIG PERSISTENTIECONTRACT",
+      "text": "Bij activatie zal HVE een <b>beschermingsschild</b> implementeren en een veilige pad injecteren in uw <code>hyprland.conf</code>. Als u de plugin uit de Shell verwijdert, zal het systeem zichzelf schoonmaken bij de volgende herstart zonder Hyprland-fouten te veroorzaken."
+    },
+    "features": {
+      "title": "Functies & Voordelen",
+      "description": "Hyprland Visual Editor is de esthetische evolutie van uw bureaublad.",
+      "list": {
+        "fluid_anim": "✨ <b>Vloeibare Animaties</b>",
+        "smart_borders": "🎨 <b>Slimme Randen</b>",
+        "realtime_shaders": "🕶️ <b>Realtime Shaders</b>",
+        "non_destructive": "🛡️ <b>Niet-destructief</b>"
+      }
+    },
+    "docs": {
+      "title": "Architectuur & Documentatie",
+      "description": "Ontdek hoe HVE onder de motoren werkt.",
+      "summary": "<b>Hyprland Visual Editor</b> gebruikt een realtime <i>Fragments en Assembly</i> systeem. Het raakt uw hoofdconfiguratie nooit aan. Alles wordt veilig gegenereerd in een geïsoleerd <code>overlay.conf</code> hoofdbestand.",
+      "btn_readme": "Lees Volledige Handleiding",
+      "btn_folder": "Bladeren Door Bestanden"
+    },
+    "credits": {
+      "title": "Credits",
+      "description": "Speciale dank aan het <b>HyDE Project</b>.",
+      "btn_hyde": "Geïnspireerd door HyDE Project",
+      "ai_title": "AI Gecodeerd",
+      "ai_desc": "QML-architectuur en pad-ontwikkeling bijgestaan door Gemini (Google)."
+    }
+  },
+  "animations": {
+    "header_title": "Bewegingsbibliotheek",
+    "header_subtitle": "Selecteer de animatiestijl voor uw bureaublad",
+    "presets": {
+      "01_relampago": {
+        "title": "Bliksem",
+        "desc": "Maximale visuele respons."
+      },
+      "02_inercia_elastica": {
+        "title": "Elastische Tragedie",
+        "desc": "Organische beweging. Vensters krijgen momentum bij verlaten en veeren bij binnenkomst."
+      },
+      "03_seda_minimalista": {
+        "title": "Minimalistisch Zijdew",
+        "desc": "Absolute soepelheid. Geen veerbewegingen, alleen perfecte macOS-stijl landingen."
+      },
+      "04_minimalismo_snappy": {
+        "title": "Snelle Minimalisme",
+        "desc": "Optimaliseerd voor maximale snelheid. Alleen venster- en werkruimtebeheer."
+      },
+      "05_material_moderno": {
+        "title": "Modern Materiaal",
+        "desc": "Google Pixel esthetiek. Organische animaties, subtiele schaling en tactiele respons."
+      },
+      "06_impacto_clasico": {
+        "title": "Classieke Impact",
+        "desc": "\"Jelly\" effect. Elastische veerbeweging bij binnenkomst en anticipatie bij verlaten."
+      },
+      "07_lineal": {
+        "title": "Lineair",
+        "desc": "Wiskundige precisie. Constante beweging, \"Sci-Fi HUD\" stijl."
+      },
+      "08_cristal": {
+        "title": "Glas",
+        "desc": "Etherele glijding. Gevoel van glas dat zweeft zonder wrijving."
+      },
+      "09_seda_silk": {
+        "title": "Zijde",
+        "desc": "Verfijnde JaKooLit stijl. Energetische binnenkomsten, vluchtige uitgangen en stabiele werkruimtes."
+      },
+      "10_retro_arcade": {
+        "title": "Retro Arcade",
+        "desc": "\"Toon/Arcade\" effect. Vensters springen en veeren overdreven."
+      },
+      "11_futurista": {
+        "title": "Toekomstig",
+        "desc": "Holografisch interface. Digitale precisie, nul veerbewegingen en verticale datastroom."
+      },
+      "12_rebote": {
+        "title": "Veerbeweging",
+        "desc": "Verticale veerfysica. Vensters vallen en veeren bij openen."
+      },
+      "13_organico": {
+        "title": "Organisch",
+        "desc": "\"Sproei\" beweging. Soepele verticale groei en langzame verversingen."
+      },
+      "14_elastico": {
+        "title": "Elastisch",
+        "desc": "Rubberband fysica. Vensters komen aan, rekken en veeren verticaal."
+      },
+      "15_desvanecido": {
+        "title": "Vervaag",
+        "desc": "Spectrale materialisatie. Vensters verschijnen soepel met nauwelijks beweging."
+      },
+      "16_dinamico": {
+        "title": "Dynamisch",
+        "desc": "Organisch ritme. Combinatie van snelheid en soepele neerslag."
+      },
+      "17_sutil": {
+        "title": "Subtiel",
+        "desc": "Nooit afleidingen. Absolute soepelheid zonder veerbewegingen of abrupte bewegingen."
+      },
+      "18_energico": {
+        "title": "Energetisch",
+        "desc": "Maximale visuele impact. Overdreven veerbewegingen (56%) en kickback uitgangen."
+      }
+    }
+  },
+  "borders": {
+    "geometry": {
+      "title": "Randdikte",
+      "desc": "Definieer lijndikte (0-5px)"
+    },
+    "header_title": "Visuele Stijlen",
+    "header_subtitle": "Definieer de persoonlijkheid van uw vensters",
+    "presets": {
+      "01_cascade": {
+        "title": "Cascade",
+        "desc": "Zachte verticale gradiënt op 50%."
+      },
+      "02_diagonal": {
+        "title": "Diagonaal",
+        "desc": "Dynamische hoekvervaging."
+      },
+      "03_duo": {
+        "title": "Duo Contrast",
+        "desc": "Sterk Primaire/Secundaire contrast."
+      },
+      "04_tri": {
+        "title": "Trijd",
+        "desc": "Driekleurige elegantie met goud."
+      },
+      "05_spectrum": {
+        "title": "Spectrum",
+        "desc": "Vier kleuren voor maximale zichtbaarheid."
+      },
+      "06_pulse": {
+        "title": "Puls",
+        "desc": "Draait één keer bij vensterselectie."
+      },
+      "07_infinity": {
+        "title": "Oneindigheid",
+        "desc": "Constante kleurrotatie."
+      },
+      "08_neon": {
+        "title": "Neon Ademhaling",
+        "desc": "Langzaam en ontspannend oscillatie."
+      },
+      "09_glitch": {
+        "title": "Cyber Glitch",
+        "desc": "Agressief, snel en foutkleuren."
+      },
+      "10_golden": {
+        "title": "Gouden Luxe",
+        "desc": "Gouden metalen reflecties."
+      },
+      "11_toxic": {
+        "title": "Toxisch Groen",
+        "desc": "Fluorescerend groen metalen reflecties."
+      },
+      "12_neon_cyberpunk": {
+        "title": "Neon Cyber-Glow (Dubbel)",
+        "desc": "Simulatie van bicolor helderheid met een wit/violet lichtbasis."
+      },
+      "13_the_joker": {
+        "title": "De Joker",
+        "desc": "Joker esthetiek: Zuur groen en diep paars met een elektrische gloed."
+      }
+    }
+  },
+  "shaders": {
+    "header_title": "Schermfilters",
+    "header_subtitle": "Realtime beeld post-verwerking",
+    "presets": {
+      "01_night": {
+        "title": "Nachtlicht",
+        "desc": "Warm filter om gezichtsbescherming."
+      },
+      "02_mono": {
+        "title": "Monochroom",
+        "desc": "Grijstinten voor concentratie."
+      },
+      "03_vibrant": {
+        "title": "Vibrant",
+        "desc": "Intelligent versterkt kleuren."
+      },
+      "04_sharp": {
+        "title": "HD Scherpheid",
+        "desc": "Verbeterd rand- en tekstdefinitie."
+      },
+      "05_ink": {
+        "title": "E-Ink Papier",
+        "desc": "Sepia elektronisch papier textuur."
+      },
+      "06_invert": {
+        "title": "Geekeerd",
+        "desc": "Keert alle kleuren om."
+      },
+      "07_oled": {
+        "title": "OLED Modus",
+        "desc": "Pure zwart en dramatisch contrast."
+      },
+      "08_vision": {
+        "title": "Nachtzicht",
+        "desc": "Militair groen fosfor effect."
+      },
+      "09_hybrid": {
+        "title": "Hybride",
+        "desc": "Balans tussen correctie en stijl."
+      }
+    }
+  },
+  "settings": {
+    "preview_label": "Voorbeeld",
+    "change_icon_button": "Wijzig Widget Icoon",
+    "icon_color_label": "Icoonkleur",
+    "autoapply_label": "Automatisch Toepassen",
+    "autoapply_description": "Hyprland direct opnieuw laden bij opslaan",
+    "path_label": "Configuratiepad",
+    "path_desc": "Absoluut pad voor het satellietconfiguratiebestand."
+  }
+}

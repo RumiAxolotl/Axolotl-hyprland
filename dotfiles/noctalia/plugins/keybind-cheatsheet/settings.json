@@ -1,0 +1,581 @@
+{
+  "cheatsheetData": [
+    {
+      "title": "Keybinds",
+      "binds": [
+        {
+          "keys": "Super + BACKSPACE",
+          "desc": "exec ~/.config/hypr/keybind",
+          "_verb": "exec",
+          "_param": "~/.config/hypr/keybind",
+          "_mods": "Super",
+          "_mainKey": "BACKSPACE"
+        },
+        {
+          "keys": "Super + B",
+          "desc": "exec xdg-open https://rumiaxolotl.github.io/newtab/",
+          "_verb": "exec",
+          "_param": "xdg-open https://rumiaxolotl.github.io/newtab/",
+          "_mods": "Super",
+          "_mainKey": "B"
+        },
+        {
+          "keys": "Super + C",
+          "desc": "exec code",
+          "_verb": "exec",
+          "_param": "code",
+          "_mods": "Super",
+          "_mainKey": "C"
+        },
+        {
+          "keys": "Super + O",
+          "desc": "exec obsidian",
+          "_verb": "exec",
+          "_param": "obsidian",
+          "_mods": "Super",
+          "_mainKey": "O"
+        },
+        {
+          "keys": "Super + RETURN",
+          "desc": "exec kitty",
+          "_verb": "exec",
+          "_param": "kitty",
+          "_mods": "Super",
+          "_mainKey": "RETURN"
+        },
+        {
+          "keys": "Super + E",
+          "desc": "exec thunar",
+          "_verb": "exec",
+          "_param": "thunar",
+          "_mods": "Super",
+          "_mainKey": "E"
+        },
+        {
+          "keys": "Super + W",
+          "desc": "exec killall waybar || waybar",
+          "_verb": "exec",
+          "_param": "killall waybar || waybar",
+          "_mods": "Super",
+          "_mainKey": "W"
+        },
+        {
+          "keys": "Super + Shift + W",
+          "desc": "exec killall qs || qs -c noctalia-shell",
+          "_verb": "exec",
+          "_param": "killall qs || qs -c noctalia-shell",
+          "_mods": "Super+Shift",
+          "_mainKey": "W"
+        },
+        {
+          "keys": "Super + D",
+          "desc": "exec killall -35 nwg-dock-hyprland",
+          "_verb": "exec",
+          "_param": "killall -35 nwg-dock-hyprland",
+          "_mods": "Super",
+          "_mainKey": "D"
+        },
+        {
+          "keys": "Super + M",
+          "desc": "exec killall spotify || spotify",
+          "_verb": "exec",
+          "_param": "killall spotify || spotify",
+          "_mods": "Super",
+          "_mainKey": "M"
+        },
+        {
+          "keys": "Bright Down",
+          "desc": "exec $SCRIPT/brightness --dec",
+          "_verb": "exec",
+          "_param": "$SCRIPT/brightness --dec",
+          "_mods": "",
+          "_mainKey": "XF86MONBRIGHTNESSDOWN"
+        },
+        {
+          "keys": "Bright Up",
+          "desc": "exec $SCRIPT/brightness --inc",
+          "_verb": "exec",
+          "_param": "$SCRIPT/brightness --inc",
+          "_mods": "",
+          "_mainKey": "XF86MONBRIGHTNESSUP"
+        },
+        {
+          "keys": "Vol Up",
+          "desc": "exec $SCRIPT/volume --inc",
+          "_verb": "exec",
+          "_param": "$SCRIPT/volume --inc",
+          "_mods": "",
+          "_mainKey": "XF86AUDIORAISEVOLUME"
+        },
+        {
+          "keys": "Vol Down",
+          "desc": "exec $SCRIPT/volume --dec",
+          "_verb": "exec",
+          "_param": "$SCRIPT/volume --dec",
+          "_mods": "",
+          "_mainKey": "XF86AUDIOLOWERVOLUME"
+        },
+        {
+          "keys": "Mic Mute",
+          "desc": "exec $SCRIPT/volume --toggle-mic",
+          "_verb": "exec",
+          "_param": "$SCRIPT/volume --toggle-mic",
+          "_mods": "",
+          "_mainKey": "XF86AUDIOMICMUTE"
+        },
+        {
+          "keys": "Mute",
+          "desc": "exec $SCRIPT/volume --toggle",
+          "_verb": "exec",
+          "_param": "$SCRIPT/volume --toggle",
+          "_mods": "",
+          "_mainKey": "XF86AUDIOMUTE"
+        },
+        {
+          "keys": "Play",
+          "desc": "exec playerctl play-pause",
+          "_verb": "exec",
+          "_param": "playerctl play-pause",
+          "_mods": "",
+          "_mainKey": "XF86AUDIOPLAY"
+        },
+        {
+          "keys": "Pause",
+          "desc": "exec playerctl play-pause",
+          "_verb": "exec",
+          "_param": "playerctl play-pause",
+          "_mods": "",
+          "_mainKey": "XF86AUDIOPAUSE"
+        },
+        {
+          "keys": "Next",
+          "desc": "exec playerctl next",
+          "_verb": "exec",
+          "_param": "playerctl next",
+          "_mods": "",
+          "_mainKey": "XF86AUDIONEXT"
+        },
+        {
+          "keys": "Prev",
+          "desc": "exec playerctl previous",
+          "_verb": "exec",
+          "_param": "playerctl previous",
+          "_mods": "",
+          "_mainKey": "XF86AUDIOPREV"
+        },
+        {
+          "keys": "Super + Shift + M",
+          "desc": "exec $SCRIPT/volume --toggle-mic",
+          "_verb": "exec",
+          "_param": "$SCRIPT/volume --toggle-mic",
+          "_mods": "Super+Shift",
+          "_mainKey": "M"
+        },
+        {
+          "keys": "Super + Shift + D",
+          "desc": "exec $SCRIPT/volume --toggle",
+          "_verb": "exec",
+          "_param": "$SCRIPT/volume --toggle",
+          "_mods": "Super+Shift",
+          "_mainKey": "D"
+        },
+        {
+          "keys": "Super + Shift + T",
+          "desc": "exec $SCRIPT/touchpad",
+          "_verb": "exec",
+          "_param": "$SCRIPT/touchpad",
+          "_mods": "Super+Shift",
+          "_mainKey": "T"
+        },
+        {
+          "keys": "Ctrl + Alt + M",
+          "desc": "exec pactl load-module module-loopback latency_msec=10",
+          "_verb": "exec",
+          "_param": "pactl load-module module-loopback latency_msec=10",
+          "_mods": "Ctrl+Alt",
+          "_mainKey": "M"
+        },
+        {
+          "keys": "Ctrl + Alt + N",
+          "desc": "exec pactl unload-module module-loopback",
+          "_verb": "exec",
+          "_param": "pactl unload-module module-loopback",
+          "_mods": "Ctrl+Alt",
+          "_mainKey": "N"
+        },
+        {
+          "keys": "Super + Shift + S",
+          "desc": "exec $screenshotarea",
+          "_verb": "exec",
+          "_param": "$screenshotarea",
+          "_mods": "Super+Shift",
+          "_mainKey": "S"
+        },
+        {
+          "keys": "PrtSc",
+          "desc": "exec grimblast --notify --cursor copysave screen $(xdg-user-dir PICTURES)/Screenshots/$(date +'%d-%m-%Y+%H:%M:%S.png')",
+          "_verb": "exec",
+          "_param": "grimblast --notify --cursor copysave screen $(xdg-user-dir PICTURES)/Screenshots/$(date +'%d-%m-%Y+%H:%M:%S.png')",
+          "_mods": "",
+          "_mainKey": "PRINT"
+        },
+        {
+          "keys": "Alt + PrtSc",
+          "desc": "exec grimblast --notify --cursor copysave active $(xdg-user-dir PICTURES)/Screenshots/$(date +'%d-%m-%Y+%H:%M:%S.png')",
+          "_verb": "exec",
+          "_param": "grimblast --notify --cursor copysave active $(xdg-user-dir PICTURES)/Screenshots/$(date +'%d-%m-%Y+%H:%M:%S.png')",
+          "_mods": "Alt",
+          "_mainKey": "PRINT"
+        },
+        {
+          "keys": "Ctrl + PrtSc",
+          "desc": "exec grimblast --notify --cursor copysave output $(xdg-user-dir PICTURES)/Screenshots/$(date +'%d-%m-%Y+%H:%M:%S.png')",
+          "_verb": "exec",
+          "_param": "grimblast --notify --cursor copysave output $(xdg-user-dir PICTURES)/Screenshots/$(date +'%d-%m-%Y+%H:%M:%S.png')",
+          "_mods": "Ctrl",
+          "_mainKey": "PRINT"
+        },
+        {
+          "keys": "Super + Shift + X",
+          "desc": "exec hyprpicker -a -n",
+          "_verb": "exec",
+          "_param": "hyprpicker -a -n",
+          "_mods": "Super+Shift",
+          "_mainKey": "X"
+        },
+        {
+          "keys": "Super + Shift + K",
+          "desc": "exec hyprctl kill",
+          "_verb": "exec",
+          "_param": "hyprctl kill",
+          "_mods": "Super+Shift",
+          "_mainKey": "K"
+        },
+        {
+          "keys": "Super + L",
+          "desc": "exec hyprlock",
+          "_verb": "exec",
+          "_param": "hyprlock",
+          "_mods": "Super",
+          "_mainKey": "L"
+        },
+        {
+          "keys": "Super + R",
+          "desc": "exec killall rofi || rofi -show drun",
+          "_verb": "exec",
+          "_param": "killall rofi || rofi -show drun",
+          "_mods": "Super",
+          "_mainKey": "R"
+        },
+        {
+          "keys": "Super + PERIOD",
+          "desc": "exec killall rofi || rofi -show emoji",
+          "_verb": "exec",
+          "_param": "killall rofi || rofi -show emoji",
+          "_mods": "Super",
+          "_mainKey": "PERIOD"
+        },
+        {
+          "keys": "Super + Shift + ESCAPE",
+          "desc": "exit",
+          "_verb": "exit",
+          "_param": "",
+          "_mods": "Super+Shift",
+          "_mainKey": "ESCAPE"
+        },
+        {
+          "keys": "Ctrl + Alt + DELETE",
+          "desc": "exec killall wlogout || wlogout --protocol layer-shell -b 5 -T 400 -B 400",
+          "_verb": "exec",
+          "_param": "killall wlogout || wlogout --protocol layer-shell -b 5 -T 400 -B 400",
+          "_mods": "Ctrl+Alt",
+          "_mainKey": "DELETE"
+        },
+        {
+          "keys": "Super + Q",
+          "desc": "killactive",
+          "_verb": "killactive",
+          "_param": "",
+          "_mods": "Super",
+          "_mainKey": "Q"
+        },
+        {
+          "keys": "Super + F",
+          "desc": "fullscreen",
+          "_verb": "fullscreen",
+          "_param": "",
+          "_mods": "Super",
+          "_mainKey": "F"
+        },
+        {
+          "keys": "Super + SPACE",
+          "desc": "togglefloating",
+          "_verb": "togglefloating",
+          "_param": "",
+          "_mods": "Super",
+          "_mainKey": "SPACE"
+        },
+        {
+          "keys": "Super + P",
+          "desc": "pseudo # dwindle",
+          "_verb": "pseudo",
+          "_param": "# dwindle",
+          "_mods": "Super",
+          "_mainKey": "P"
+        },
+        {
+          "keys": "Super + S",
+          "desc": "layoutmsg togglesplit # dwindle",
+          "_verb": "layoutmsg",
+          "_param": "togglesplit # dwindle",
+          "_mods": "Super",
+          "_mainKey": "S"
+        },
+        {
+          "keys": "Super + LEFT",
+          "desc": "movefocus l",
+          "_verb": "movefocus",
+          "_param": "l",
+          "_mods": "Super",
+          "_mainKey": "LEFT"
+        },
+        {
+          "keys": "Super + RIGHT",
+          "desc": "movefocus r",
+          "_verb": "movefocus",
+          "_param": "r",
+          "_mods": "Super",
+          "_mainKey": "RIGHT"
+        },
+        {
+          "keys": "Super + UP",
+          "desc": "movefocus u",
+          "_verb": "movefocus",
+          "_param": "u",
+          "_mods": "Super",
+          "_mainKey": "UP"
+        },
+        {
+          "keys": "Super + DOWN",
+          "desc": "movefocus d",
+          "_verb": "movefocus",
+          "_param": "d",
+          "_mods": "Super",
+          "_mainKey": "DOWN"
+        },
+        {
+          "keys": "Super + Shift + LEFT",
+          "desc": "movewindow l",
+          "_verb": "movewindow",
+          "_param": "l",
+          "_mods": "Super+Shift",
+          "_mainKey": "LEFT"
+        },
+        {
+          "keys": "Super + Shift + RIGHT",
+          "desc": "movewindow r",
+          "_verb": "movewindow",
+          "_param": "r",
+          "_mods": "Super+Shift",
+          "_mainKey": "RIGHT"
+        },
+        {
+          "keys": "Super + Shift + UP",
+          "desc": "movewindow u",
+          "_verb": "movewindow",
+          "_param": "u",
+          "_mods": "Super+Shift",
+          "_mainKey": "UP"
+        },
+        {
+          "keys": "Super + Shift + DOWN",
+          "desc": "movewindow d",
+          "_verb": "movewindow",
+          "_param": "d",
+          "_mods": "Super+Shift",
+          "_mainKey": "DOWN"
+        },
+        {
+          "keys": "Super + Ctrl + LEFT",
+          "desc": "resizeactive -20 0",
+          "_verb": "resizeactive",
+          "_param": "-20 0",
+          "_mods": "Super+Ctrl",
+          "_mainKey": "LEFT"
+        },
+        {
+          "keys": "Super + Ctrl + RIGHT",
+          "desc": "resizeactive 20 0",
+          "_verb": "resizeactive",
+          "_param": "20 0",
+          "_mods": "Super+Ctrl",
+          "_mainKey": "RIGHT"
+        },
+        {
+          "keys": "Super + Ctrl + UP",
+          "desc": "resizeactive 0 -20",
+          "_verb": "resizeactive",
+          "_param": "0 -20",
+          "_mods": "Super+Ctrl",
+          "_mainKey": "UP"
+        },
+        {
+          "keys": "Super + Ctrl + DOWN",
+          "desc": "resizeactive 0 20",
+          "_verb": "resizeactive",
+          "_param": "0 20",
+          "_mods": "Super+Ctrl",
+          "_mainKey": "DOWN"
+        },
+        {
+          "keys": "Super + 1-9",
+          "desc": "workspace 1-9",
+          "_verb": "workspace",
+          "_mods": "Super",
+          "_mainKey": "1-9",
+          "_merged": true
+        },
+        {
+          "keys": "Super + 0",
+          "desc": "workspace 10",
+          "_verb": "workspace",
+          "_param": "10",
+          "_mods": "Super",
+          "_mainKey": "0"
+        },
+        {
+          "keys": "Super + Alt + 1-9",
+          "desc": "workspace 1-9",
+          "_verb": "workspace",
+          "_mods": "Super+Alt",
+          "_mainKey": "1-9",
+          "_merged": true
+        },
+        {
+          "keys": "Super + Alt + 0",
+          "desc": "workspace 20",
+          "_verb": "workspace",
+          "_param": "20",
+          "_mods": "Super+Alt",
+          "_mainKey": "0"
+        },
+        {
+          "keys": "Super + TAB",
+          "desc": "workspace e+1",
+          "_verb": "workspace",
+          "_param": "e+1",
+          "_mods": "Super",
+          "_mainKey": "TAB"
+        },
+        {
+          "keys": "Super + Ctrl + TAB",
+          "desc": "workspace e-1",
+          "_verb": "workspace",
+          "_param": "e-1",
+          "_mods": "Super+Ctrl",
+          "_mainKey": "TAB"
+        },
+        {
+          "keys": "Super + Shift + 1-9",
+          "desc": "movetoworkspace 1-9",
+          "_verb": "movetoworkspace",
+          "_mods": "Super+Shift",
+          "_mainKey": "1-9",
+          "_merged": true
+        },
+        {
+          "keys": "Super + Shift + 0",
+          "desc": "movetoworkspace 10",
+          "_verb": "movetoworkspace",
+          "_param": "10",
+          "_mods": "Super+Shift",
+          "_mainKey": "0"
+        },
+        {
+          "keys": "Super + Shift + Alt + 1-9",
+          "desc": "movetoworkspace 1-9",
+          "_verb": "movetoworkspace",
+          "_mods": "Super+Shift+Alt",
+          "_mainKey": "1-9",
+          "_merged": true
+        },
+        {
+          "keys": "Super + Shift + Alt + 0",
+          "desc": "movetoworkspace 20",
+          "_verb": "movetoworkspace",
+          "_param": "20",
+          "_mods": "Super+Shift+Alt",
+          "_mainKey": "0"
+        },
+        {
+          "keys": "Super + Left Click",
+          "desc": "movewindow",
+          "_verb": "movewindow",
+          "_param": "",
+          "_mods": "Super",
+          "_mainKey": "MOUSE:272"
+        },
+        {
+          "keys": "Super + Right Click",
+          "desc": "resizewindow",
+          "_verb": "resizewindow",
+          "_param": "",
+          "_mods": "Super",
+          "_mainKey": "MOUSE:273"
+        },
+        {
+          "keys": "Super + Scroll Down",
+          "desc": "workspace e+1",
+          "_verb": "workspace",
+          "_param": "e+1",
+          "_mods": "Super",
+          "_mainKey": "MOUSE_DOWN"
+        },
+        {
+          "keys": "Super + Scroll Up",
+          "desc": "workspace e-1",
+          "_verb": "workspace",
+          "_param": "e-1",
+          "_mods": "Super",
+          "_mainKey": "MOUSE_UP"
+        }
+      ]
+    }
+  ],
+  "detectedCompositor": "hyprland",
+  "windowWidth": 1400,
+  "windowHeight": 850,
+  "autoHeight": true,
+  "columnCount": 3,
+  "modKeyVariable": "$mod",
+  "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
+  "hyprlandLuaConfigPath": "~/.config/hypr/hyprland.lua",
+  "hyprlandParserMode": "auto",
+  "niriConfigPath": "~/.config/niri/config.kdl",
+  "mangoConfigPath": "~/.config/mango/config.conf",
+  "mergeSequentialBinds": true,
+  "showUndescribedBinds": true,
+  "splitLargeWorkspaceCategory": true,
+  "workspaceSplitThreshold": 12,
+  "keyColorAlt": "#FF6B6B",
+  "keyColorXF86": "#4ECDC4",
+  "keyColorPrint": "#95E1D3",
+  "keyColorNumeric": "#A8DADC",
+  "keyColorMouse": "#F38181",
+  "keyColorSuper": "",
+  "keyColorCtrl": "",
+  "keyColorShift": "",
+  "keyColorDefault": "#6C757D",
+  "keyLabelColor": "#FFFFFF",
+  "keyTextSuper": "",
+  "keyTextCtrl": "",
+  "keyTextShift": "",
+  "keyTextAlt": "",
+  "keyTextXF86": "",
+  "keyTextPrint": "",
+  "keyTextNumeric": "",
+  "keyTextMouse": "",
+  "keyTextDefault": "",
+  "descriptionTextColor": "",
+  "bindOverrides": {}
+}

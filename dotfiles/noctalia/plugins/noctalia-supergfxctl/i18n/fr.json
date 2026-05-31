@@ -1,0 +1,41 @@
+{
+  "action": {
+    "AsusEgpuDisable": "Désactiver d'abord l'eGPU ASUS.",
+    "SwitchToIntegrated": "Passez d'abord au GPU intégré."
+  },
+  "context-menu": {
+    "refresh": "Actualiser l'état"
+  },
+  "gpu": "GPU",
+  "mode": {
+    "AsusEgpu": "eGPU Asus",
+    "AsusMuxDgpu": "Asus dGPU MUX",
+    "Hybrid": "Hybride",
+    "Integrated": "Intégré(e)",
+    "NvidiaNoModeset": "Nvidia pas de modeset",
+    "Vfio": "Transfert direct VFIO"
+  },
+  "settings": {
+    "debug": {
+      "description": "Afficher des informations de débogage dans la console.",
+      "label": "Mode débogage"
+    },
+    "rogcc": {
+      "listenToNotifications": {
+        "description": "Réagir aux notifications de changement de mode GPU provenant du centre de contrôle ROG.",
+        "label": "Écouter les notifications de changement de mode."
+      }
+    },
+    "supergfxctl": {
+      "patchPending": {
+        "description": "Devinez l'action requise au lieu de vous fier à la sortie de supergfxctl.",
+        "label": "Action de repli de la prédiction"
+      },
+      "polling": {
+        "description": "Interroger périodiquement le processus supergfxctl pour obtenir des mises à jour d'état. Attention : cela peut entraîner le blocage de supergfxctl !",
+        "label": "Sondage"
+      }
+    }
+  },
+  "unknown": "Inconnu(e)"
+}

@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "lang": "zh-TW",
+    "name": "繁體中文",
+    "author": "Ximo & AI"
+  },
+  "widget": {
+    "tooltip": "Hyprland 視覺編輯器",
+    "menu_settings": "外掛程式設定"
+  },
+  "panel": {
+    "header_title": "Hyprland 視覺",
+    "header_subtitle": "美學控制中心",
+    "tabs": {
+      "home": "首頁",
+      "animations": "動畫",
+      "borders": "邊框",
+      "effects": "效果"
+    }
+  },
+  "welcome": {
+    "toast": {
+      "enabled": "視覺編輯器已啟用",
+      "disabled": "視覺編輯器已停用"
+    },
+    "activation_title": "系統啟動",
+    "system_active": "系統正在運作。視覺效果由 HVE 安全管理。",
+    "system_inactive": "系統已停止。需要接受持久性合約才能繼續。",
+    "enable_label": "啟用視覺編輯器",
+    "warning": {
+      "title": "安全持久性合約",
+      "text": "啟動後，HVE 將部署<b>守護盾牌</b>並向您的 <code>hyprland.conf</code> 注入安全路徑。如果您從 Shell 中卸載外掛程式，系統將在下次重新啟動時自動清理，而不會導致 Hyprland 錯誤。"
+    },
+    "features": {
+      "title": "功能與優勢",
+      "description": "Hyprland 視覺編輯器是您桌面的美學進化。",
+      "list": {
+        "fluid_anim": "✨ <b>流暢動畫</b>",
+        "smart_borders": "🎨 <b>智慧邊框</b>",
+        "realtime_shaders": "🕶️ <b>即時著色器</b>",
+        "non_destructive": "🛡️ <b>非破壞性</b>"
+      }
+    },
+    "docs": {
+      "title": "架構與文件",
+      "description": "發現 HVE 的內部工作原理。",
+      "summary": "<b>Hyprland 視覺編輯器</b> 使用即時<i>片段與組裝</i>系統。它永遠不會觸碰您的主配置檔案。所有內容都在隔離的 <code>overlay.conf</code> 主檔案中安全生成。",
+      "btn_readme": "閱讀完整手冊",
+      "btn_folder": "瀏覽檔案"
+    },
+    "credits": {
+      "title": "致謝",
+      "description": "特別感謝 <b>HyDE 專案</b>。",
+      "btn_hyde": "受 HyDE 專案啟發",
+      "ai_title": "AI 協同編程",
+      "ai_desc": "QML 架構和路徑除錯由 Gemini (Google) 協助。"
+    }
+  },
+  "animations": {
+    "header_title": "運動庫",
+    "header_subtitle": "為您的桌面選擇動畫風格",
+    "presets": {
+      "01_relampago": {
+        "title": "閃電",
+        "desc": "最大視覺響應。"
+      },
+      "02_inercia_elastica": {
+        "title": "彈性慣性",
+        "desc": "有機運動。視窗在退出時獲得動量，在進入時彈跳。"
+      },
+      "03_seda_minimalista": {
+        "title": "極簡絲綢",
+        "desc": "絕對流暢。沒有彈跳，只有完美的 macOS 風格著陸。"
+      },
+      "04_minimalismo_snappy": {
+        "title": "敏捷極簡",
+        "desc": "針對最大速度優化。僅視窗和工作區管理。"
+      },
+      "05_material_moderno": {
+        "title": "現代材質",
+        "desc": "Google Pixel 美學。有機動畫、微妙縮放和觸覺響應。"
+      },
+      "06_impacto_clasico": {
+        "title": "經典衝擊",
+        "desc": "\"果凍\"效果。進入時彈性彈跳，退出時預期。"
+      },
+      "07_lineal": {
+        "title": "線性",
+        "desc": "數學精度。持續運動，\"科幻 HUD\"風格。"
+      },
+      "08_cristal": {
+        "title": "玻璃",
+        "desc": "空靈滑行。無摩擦漂浮的玻璃感。"
+      },
+      "09_seda_silk": {
+        "title": "絲綢",
+        "desc": "精緻的 JaKooLit 風格。充滿活力的進入、短暫的退出和穩定的工作區。"
+      },
+      "10_retro_arcade": {
+        "title": "復古街機",
+        "desc": "\"卡通/街機\"效果。視窗跳躍和誇張彈跳。"
+      },
+      "11_futurista": {
+        "title": "未來主義",
+        "desc": "全息介面。數位精度，零彈跳，垂直數據流。"
+      },
+      "12_rebote": {
+        "title": "彈跳",
+        "desc": "垂直彈簧物理。視窗打開時落下並彈跳。"
+      },
+      "13_organico": {
+        "title": "有機",
+        "desc": "\"發芽\"運動。平滑垂直生長和緩慢淡出。"
+      },
+      "14_elastico": {
+        "title": "彈性",
+        "desc": "橡皮筋物理。視窗到達、拉伸並垂直彈跳。"
+      },
+      "15_desvanecido": {
+        "title": "淡入",
+        "desc": "光譜物質化。視窗平滑出現，幾乎沒有移動。"
+      },
+      "16_dinamico": {
+        "title": "動態",
+        "desc": "有機節奏。速度與平滑沉降的結合。"
+      },
+      "17_sutil": {
+        "title": "微妙",
+        "desc": "零干擾。沒有彈跳或突然移動的絕對流暢。"
+      },
+      "18_energico": {
+        "title": "充滿活力",
+        "desc": "最大視覺衝擊。誇張彈跳 (56%) 和反彈退出。"
+      }
+    }
+  },
+  "borders": {
+    "geometry": {
+      "title": "邊框厚度",
+      "desc": "定義線條粗細 (0-5px)"
+    },
+    "header_title": "視覺風格",
+    "header_subtitle": "定義視窗的個性",
+    "presets": {
+      "01_cascade": {
+        "title": "層疊",
+        "desc": "50% 處的柔和垂直漸變。"
+      },
+      "02_diagonal": {
+        "title": "對角線",
+        "desc": "動態角度淡出。"
+      },
+      "03_duo": {
+        "title": "雙色對比",
+        "desc": "強烈的主/次對比。"
+      },
+      "04_tri": {
+        "title": "三叉戟",
+        "desc": "帶金色的三色優雅。"
+      },
+      "05_spectrum": {
+        "title": "光譜",
+        "desc": "四種顏色以實現最大可見性。"
+      },
+      "06_pulse": {
+        "title": "脈衝",
+        "desc": "選擇視窗時旋轉一次。"
+      },
+      "07_infinity": {
+        "title": "無限",
+        "desc": "持續顏色旋轉。"
+      },
+      "08_neon": {
+        "title": "霓虹呼吸",
+        "desc": "緩慢放鬆的振盪。"
+      },
+      "09_glitch": {
+        "title": "賽博故障",
+        "desc": "激進、快速和錯誤顏色。"
+      },
+      "10_golden": {
+        "title": "金色奢華",
+        "desc": "金色金屬反射。"
+      },
+      "11_toxic": {
+        "title": "毒綠",
+        "desc": "熒光綠金屬反射。"
+      },
+      "12_neon_cyberpunk": {
+        "title": "霓虹賽博光 (雙)",
+        "desc": "使用白/紫光基礎模擬雙色亮度。"
+      },
+      "13_the_joker": {
+        "title": "小丑",
+        "desc": "小丑美學：酸綠色和深紫色帶電光。"
+      }
+    }
+  },
+  "shaders": {
+    "header_title": "螢幕濾鏡",
+    "header_subtitle": "即時影像後處理",
+    "presets": {
+      "01_night": {
+        "title": "夜燈",
+        "desc": "保護視力的暖色濾鏡。"
+      },
+      "02_mono": {
+        "title": "單色",
+        "desc": "用於專注的灰階。"
+      },
+      "03_vibrant": {
+        "title": "鮮豔",
+        "desc": "智慧增強顏色。"
+      },
+      "04_sharp": {
+        "title": "HD 銳度",
+        "desc": "改善邊框和文字定義。"
+      },
+      "05_ink": {
+        "title": "電子墨水紙",
+        "desc": "棕褐色電子紙紋理。"
+      },
+      "06_invert": {
+        "title": "反轉",
+        "desc": "反轉所有顏色。"
+      },
+      "07_oled": {
+        "title": "OLED 模式",
+        "desc": "純黑和戲劇性對比。"
+      },
+      "08_vision": {
+        "title": "夜視",
+        "desc": "軍綠色磷光效果。"
+      },
+      "09_hybrid": {
+        "title": "混合",
+        "desc": "校正與風格之間的平衡。"
+      }
+    }
+  },
+  "settings": {
+    "preview_label": "預覽",
+    "change_icon_button": "更改小部件圖標",
+    "icon_color_label": "圖標顏色",
+    "autoapply_label": "自動應用",
+    "autoapply_description": "保存時立即重新加載 Hyprland",
+    "path_label": "配置路徑",
+    "path_desc": "衛星配置檔案的絕對路徑。"
+  }
+}
