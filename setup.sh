@@ -71,7 +71,7 @@ if [[ $inst =~ ^[Nn]$ ]]; then
 
 if [[ $INST == "Y" || $INST == "y" ]]; then
 
-    git_pkgs="grimblast-git waybar-git"
+    git_pkgs="grimblast-git noctalia-shell"
     hypr_pkgs="hyprland hyprpicker hypridle hyprlock"    
     font_pkgs="ttf-nerd-fonts-symbols-common otf-firamono-nerd inter-font otf-sora ttf-fantasque-nerd noto-fonts noto-fonts-emoji ttf-comfortaa"
     font_pkgs2="ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd adobe-source-code-pro-fonts ttf-firacode-nerd"
@@ -119,7 +119,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland
-    chmod +x ~/.config/waybar/scripts/*
+    chmod +x ~/.config/hypr/scripts/*
 fi
 
 ### Enable SDDM Autologin ###
