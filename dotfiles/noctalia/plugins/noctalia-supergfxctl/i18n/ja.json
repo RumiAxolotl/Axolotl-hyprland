@@ -1,0 +1,41 @@
+{
+  "action": {
+    "AsusEgpuDisable": "まずASUS eGPUを無効にしてください。",
+    "SwitchToIntegrated": "まず、内蔵GPUに切り替えてください。"
+  },
+  "context-menu": {
+    "refresh": "ステータスを更新"
+  },
+  "gpu": "GPU",
+  "mode": {
+    "AsusEgpu": "Asus eGPU",
+    "AsusMuxDgpu": "Asus MUX dGPU",
+    "Hybrid": "ハイブリッド",
+    "Integrated": "統合された",
+    "NvidiaNoModeset": "Nvidia modeset 無効",
+    "Vfio": "VFIOパススルー"
+  },
+  "settings": {
+    "debug": {
+      "description": "デバッグ情報をコンソールに出力する。",
+      "label": "デバッグモード"
+    },
+    "rogcc": {
+      "listenToNotifications": {
+        "description": "rog-control-centerからのGPUモード変更通知に対応する。",
+        "label": "モード変更の通知をリッスンする"
+      }
+    },
+    "supergfxctl": {
+      "patchPending": {
+        "description": "supergfxctlの出力を頼るのではなく、必要な操作を推測してください。",
+        "label": "推測フォールバックアクション"
+      },
+      "polling": {
+        "description": "supergfxctl プロセスの状態更新を定期的にポーリングします。警告: これにより、supergfxctl がハングアップする可能性があります。",
+        "label": "投票"
+      }
+    }
+  },
+  "unknown": "不明"
+}

@@ -1,0 +1,41 @@
+{
+  "action": {
+    "AsusEgpuDisable": "首先禁用华硕eGPU。",
+    "SwitchToIntegrated": "首先切换到集成显卡。"
+  },
+  "context-menu": {
+    "refresh": "刷新状态"
+  },
+  "gpu": "图形处理器",
+  "mode": {
+    "AsusEgpu": "华硕 eGPU",
+    "AsusMuxDgpu": "华硕 MUX 独显直连",
+    "Hybrid": "混合",
+    "Integrated": "集成的",
+    "NvidiaNoModeset": "英伟达无模式设置",
+    "Vfio": "VFIO 直通"
+  },
+  "settings": {
+    "debug": {
+      "description": "将调试信息打印到控制台。",
+      "label": "调试模式"
+    },
+    "rogcc": {
+      "listenToNotifications": {
+        "description": "响应来自 ROG 控制中心的 GPU 模式更改通知。",
+        "label": "监听模式更改通知"
+      }
+    },
+    "supergfxctl": {
+      "patchPending": {
+        "description": "猜测所需的动作，而不是依赖 supergfxctl 的输出。",
+        "label": "猜测回退操作"
+      },
+      "polling": {
+        "description": "定期轮询 supergfxctl 进程以获取状态更新。警告：这可能会导致 supergfxctl 挂起！",
+        "label": "民意调查"
+      }
+    }
+  },
+  "unknown": "未知"
+}

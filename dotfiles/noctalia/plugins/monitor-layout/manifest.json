@@ -1,0 +1,38 @@
+{
+  "id": "monitor-layout",
+  "name": "Monitor Layout",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.6.6",
+  "author": "Mathew-D",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Arrange multiple displays visually and change their resolutions from a Noctalia panel.",
+  "tags": [
+    "Bar",
+    "Panel",
+    "System",
+    "Utility",
+    "Sway",
+    "Hyprland"
+  ],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml",
+    "controlCenterWidget": "ControlCenterWidget.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "backend": "auto",
+      "swayCommand": "swaymsg",
+      "hyprctlCommand": "hyprctl",
+      "snapToGrid": true,
+      "gridSize": 40,
+      "iconColor": "primary"
+    }
+  }
+}

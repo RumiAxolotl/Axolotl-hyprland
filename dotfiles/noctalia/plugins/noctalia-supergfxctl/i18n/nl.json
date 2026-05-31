@@ -1,0 +1,41 @@
+{
+  "action": {
+    "AsusEgpuDisable": "Schakel eerst ASUS eGPU uit.",
+    "SwitchToIntegrated": "Schakel eerst over naar de geïntegreerde GPU."
+  },
+  "context-menu": {
+    "refresh": "Status vernieuwen"
+  },
+  "gpu": "GPU",
+  "mode": {
+    "AsusEgpu": "Asus eGPU",
+    "AsusMuxDgpu": "Asus MUX dGPU",
+    "Hybrid": "Hybride",
+    "Integrated": "Geïntegreerd",
+    "NvidiaNoModeset": "Nvidia geen modeset",
+    "Vfio": "VFIO Passthrough"
+  },
+  "settings": {
+    "debug": {
+      "description": "Print debug-informatie naar de console.",
+      "label": "Debugmodus"
+    },
+    "rogcc": {
+      "listenToNotifications": {
+        "description": "Reageer op meldingen over GPU-moduswijzigingen van rog-control-center.",
+        "label": "Luister naar meldingen over moduswijzigingen."
+      }
+    },
+    "supergfxctl": {
+      "patchPending": {
+        "description": "Raad de vereiste actie in plaats van te vertrouwen op de output van supergfxctl.",
+        "label": "Gok-terugvalactie"
+      },
+      "polling": {
+        "description": "Peil periodiek de supergfxctl-proces voor statusupdates. Waarschuwing: dit kan ervoor zorgen dat supergfxctl vastloopt!",
+        "label": "Peilingen"
+      }
+    }
+  },
+  "unknown": "Onbekend"
+}

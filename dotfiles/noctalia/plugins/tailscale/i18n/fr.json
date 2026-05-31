@@ -1,0 +1,115 @@
+{
+  "settings": {
+    "title": "Paramètres Tailscale",
+    "description": "Configurer l'affichage et le comportement du statut Tailscale",
+    "refresh-interval": "Intervalle de rafraîchissement",
+    "refresh-interval-desc": "Fréquence de vérification du statut Tailscale",
+    "display-options": "Options d'affichage",
+    "compact-mode": "Mode compact",
+    "compact-mode-desc": "Afficher uniquement l'icône dans la barre",
+    "show-ip": "Afficher l'adresse IP",
+    "show-ip-desc": "Afficher l'IP Tailscale dans le widget de la barre",
+    "show-peers": "Afficher le nombre de pairs",
+    "show-peers-desc": "Afficher le nombre d'appareils connectés dans la barre",
+    "hide-disconnected": "Masquer les pairs déconnectés",
+    "hide-disconnected-desc": "Afficher uniquement les pairs en ligne dans le panneau",
+    "hide-mullvad-exit-nodes": "Masquer les nœuds de sortie Mullvad",
+    "hide-mullvad-exit-nodes-desc": "Masquer les nœuds de sortie Mullvad VPN de la liste des pairs",
+    "show-search-bar": "Afficher la barre de recherche",
+    "show-search-bar-desc": "Afficher un champ de recherche au-dessus de la liste des nœuds du panneau",
+    "terminal": "Configuration du terminal",
+    "terminal-command": "Commande du terminal",
+    "terminal-command-desc": "Commande pour lancer le terminal pour SSH/ping (ex : 'ghostty', 'alacritty', 'kitty')",
+    "ssh-username": "Nom d'utilisateur SSH",
+    "ssh-username-desc": "Nom d'utilisateur pour les connexions SSH. Laissez vide pour utiliser le nom d'utilisateur par défaut de votre hôte.",
+    "ssh-username-placeholder": "ex. pi, ubuntu, admin",
+    "ping-count": "Nombre de pings",
+    "ping-count-desc": "Nombre de paquets ping à envoyer lors du test de connectivité",
+    "peer-action": "Action au clic sur un pair",
+    "default-peer-action": "Action par défaut",
+    "default-peer-action-desc": "Action lors du clic sur un pair dans le panneau",
+    "taildrop": "Taildrop",
+    "taildrop-enabled": "Activer Taildrop",
+    "taildrop-enabled-desc": "Autoriser l'envoi et la réception de fichiers via Taildrop",
+    "taildrop-download-dir": "Répertoire de téléchargement",
+    "taildrop-download-dir-desc": "Répertoire où les fichiers reçus sont enregistrés (ex. ~/Downloads)",
+    "taildrop-receive-mode": "Mode de réception",
+    "taildrop-receive-mode-desc": "Comment exécuter 'tailscale file get'. Le mode opérateur ne nécessite pas de confirmation si vous avez exécuté 'sudo tailscale set --operator $USER'.",
+    "taildrop-receive-mode-operator": "Opérateur (sans confirmation)",
+    "taildrop-receive-mode-pkexec": "pkexec (confirmation à chaque fois)",
+    "authentication": "Authentification",
+    "login-server": "Serveur de connexion",
+    "login-server-desc": "URL du serveur de connexion personnalisé (ex. Headscale). Laisser vide pour le serveur Tailscale par défaut."
+  },
+  "actions": {
+    "widget-settings": "Paramètres du widget"
+  },
+  "context": {
+    "connect": "Connecter",
+    "disconnect": "Déconnecter",
+    "not-installed": "Tailscale n'est pas installé",
+    "settings": "Paramètres",
+    "copy-ip": "Copier l'IP",
+    "copy-fqdn": "Copier le FQDN",
+    "ssh": "SSH vers l'hôte",
+    "ping": "Ping l'hôte",
+    "use-exit-node": "Utiliser comme nœud de sortie",
+    "send-file": "Envoyer un fichier",
+    "login": "Se connecter"
+  },
+  "toast": {
+    "title": "Tailscale",
+    "connected": "Tailscale connecté",
+    "disconnected": "Tailscale déconnecté",
+    "exit-node-enabled": "Nœud de sortie activé",
+    "exit-node-disabled": "Nœud de sortie désactivé",
+    "ip-copied": {
+      "title": "IP copiée"
+    },
+    "fqdn-copied": {
+      "title": "FQDN copié"
+    },
+    "terminal-not-configured": {
+      "title": "Terminal non configuré",
+      "message": "Veuillez définir une commande de terminal dans les paramètres du plugin"
+    },
+    "login-browser-opened": "Page d'authentification ouverte dans le navigateur",
+    "login-failed": "Échec de la connexion"
+  },
+  "panel": {
+    "title": "Réseau Tailscale",
+    "peers": "pairs",
+    "not-connected": "Non connecté",
+    "not-authenticated": "Non authentifié",
+    "no-peers": "Aucun pair connecté",
+    "search-placeholder": "Rechercher des nœuds...",
+    "no-search-results": "Aucun nœud ne correspond à votre recherche",
+    "admin-console": "Console d'administration",
+    "terminal-warning": {
+      "title": "Terminal non configuré",
+      "message": "Définissez une commande de terminal dans les paramètres pour activer SSH et ping"
+    },
+    "exit-node": {
+      "active": "Nœud de sortie actif",
+      "online": "En ligne",
+      "offline": "Hors ligne",
+      "disable": "Désactiver le nœud de sortie"
+    },
+    "taildrop": {
+      "receive": "Recevoir via Taildrop"
+    }
+  },
+  "taildrop": {
+    "toast": {
+      "no-files": "Aucun fichier n'a été reçu",
+      "sent": "Fichiers envoyés avec succès"
+    },
+    "error": {
+      "unknown": "Une erreur inattendue s'est produite",
+      "file-exists": "Le fichier existe déjà dans le répertoire de téléchargement"
+    }
+  },
+  "file-picker": {
+    "title": "Sélectionner un fichier à envoyer via Taildrop"
+  }
+}

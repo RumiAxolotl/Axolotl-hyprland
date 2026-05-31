@@ -26,7 +26,7 @@ FOLDERS=(
     "pipewire"
     "rofi"
     "rog"
-    "waybar"
+    "noctalia"
     "wlogout"
     "xfce4"
     "zathura"

@@ -1,0 +1,78 @@
+{
+  "widget": {
+    "tooltip": "Display layout editor"
+  },
+  "menu": {
+    "settings": "Monitor Layout Settings"
+  },
+  "actions": {
+    "refresh": "Refresh",
+    "reset": "Reset",
+    "apply": "Apply",
+    "copyConfig": "Copy to Clipboard"
+  },
+  "panel": {
+    "tabControl": "Control",
+    "tabConfiguration": "Configuration",
+    "canvasTitle": "Arrangement",
+    "dragHint": "Drag a display tile to change its position. The selected tile can also have its resolution changed from the inspector.",
+    "inspectorTitle": "Inspector",
+    "selectionHint": "Select a display from the arrangement area to inspect and edit it.",
+    "resolution": "Resolution",
+    "position": "Position",
+    "positionX": "X",
+    "positionY": "Y",
+    "setPosition": "Set position",
+    "scale": "Scale",
+    "scaleDesc": "Output scale factor",
+    "setScale": "Set scale",
+    "transform": "Transform",
+    "backend": "Backend",
+    "pendingChanges": "There are unapplied layout changes.",
+    "empty": "No displays were returned by the backend.",
+    "configTitle": "Configuration Scripts",
+    "configDescription": "Copy the configuration command for your compositor below. Add it to your config file to make your display layout permanent."
+  },
+  "settings": {
+    "backend": {
+      "label": "Backend",
+      "desc": "Choose how Layout Mon should talk to the compositor.",
+      "auto": "Auto detect",
+      "sway": "Sway",
+      "hyprland": "Hyprland"
+    },
+    "swayCommand": {
+      "label": "Sway command",
+      "desc": "Command used to read and apply output configuration."
+    },
+    "hyprctlCommand": {
+      "label": "Hyprctl command",
+      "desc": "Command used to read and apply output configuration."
+    },
+    "snapToGrid": {
+      "label": "Snap dragged displays to a grid"
+    },
+    "gridSize": {
+      "label": "Grid size",
+      "desc": "Grid size in layout pixels when snapping is enabled."
+    },
+    "iconColor": {
+      "label": "Icon color",
+      "desc": "Bar icon color key."
+    }
+  },
+  "status": {
+    "refreshing": "Refreshing outputs...",
+    "ready": "Loaded {count} outputs.",
+    "dirty": "Draft layout updated.",
+    "reset": "Draft layout reset.",
+    "applying": "Applying display layout...",
+    "applied": "Display layout applied.",
+    "configCopied": "Configuration script copied to clipboard!"
+  },
+  "errors": {
+    "fetchFailed": "Failed to read output state from the compositor.",
+    "applyFailed": "Failed to apply the display layout.",
+    "unsupportedBackend": "This backend is not implemented yet."
+  }
+}

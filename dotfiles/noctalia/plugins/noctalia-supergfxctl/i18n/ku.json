@@ -1,0 +1,41 @@
+{
+  "action": {
+    "AsusEgpuDisable": "Pêşî ASUS eGPU neçalak bike.",
+    "SwitchToIntegrated": "Pêşî derbasî GPU ya yekbûyî bibe."
+  },
+  "context-menu": {
+    "refresh": "Rewşa nû bike"
+  },
+  "gpu": "GPU",
+  "mode": {
+    "AsusEgpu": "Asus eGPU",
+    "AsusMuxDgpu": "Asus MUX dGPU",
+    "Hybrid": "Hîbrîd",
+    "Integrated": "Têkelkirî",
+    "NvidiaNoModeset": "Nvidia no modeset",
+    "Vfio": "VFIO Derbasbûn"
+  },
+  "settings": {
+    "debug": {
+      "description": "Agahiyên çewtiyan li ser konsolê çap bike.",
+      "label": "Rewşa çewtiyan rast bike"
+    },
+    "rogcc": {
+      "listenToNotifications": {
+        "description": "Li ser guherîna moda GPUyê ya ji rog-control-centerê re bertek nîşan bide.",
+        "label": "Guhdarî notîfîkasyonên guherîna modê bike"
+      }
+    },
+    "supergfxctl": {
+      "patchPending": {
+        "description": "Bila li ser encama supergfxctlê nesekine, texmîn bike ka divê çi were kirin.",
+        "label": "Texmîna kiryarê paşveçûnê"
+      },
+      "polling": {
+        "description": "Bi demkî ji pêvajoya supergfxctl re anket bike ji bo nûkirinên statûyê. Hişyarî: ev dikare bibe sedem ku supergfxctl daleqandî bimîne!",
+        "label": "Anketî"
+      }
+    }
+  },
+  "unknown": "Nenas"
+}
