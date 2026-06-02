@@ -10,6 +10,6 @@
 
 @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-lavender.theme.css");
 
-:root{
-    --font-primary: 'Consolas', 'Courier New', monospace; /* font for the entire theme */
+:root {
+    --font-primary: "Maple Mono NF", monospace; /* font for the entire theme */
 }
