@@ -25,7 +25,7 @@
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
-        "viewMode": "grid"
+        "viewMode": "list"
     },
     "audio": {
         "mprisBlacklist": [
@@ -43,7 +43,7 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 0.93,
-        "barType": "simple",
+        "barType": "floating",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
         "contentPadding": 2,
@@ -102,11 +102,11 @@
                     "useDistroLogo": true
                 },
                 {
-                    "characterCount": 2,
+                    "characterCount": 1,
                     "colorizeIcons": false,
-                    "emptyColor": "secondary",
+                    "emptyColor": "none",
                     "enableScrollWheel": true,
-                    "focusedColor": "primary",
+                    "focusedColor": "tertiary",
                     "followFocusedScreen": false,
                     "fontWeight": "bold",
                     "groupedBorderOpacity": 1,
@@ -114,8 +114,8 @@
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "index",
-                    "occupiedColor": "secondary",
-                    "pillSize": 0.6,
+                    "occupiedColor": "primary",
+                    "pillSize": 0.5,
                     "showApplications": false,
                     "showApplicationsHover": false,
                     "showBadge": true,
@@ -149,15 +149,17 @@
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
+                        "Keyboard - English (US)",
+                        "Unikey"
                     ]
                 },
                 {
-                    "hideWhenZero": false,
+                    "hideWhenZero": true,
                     "hideWhenZeroUnread": false,
-                    "iconColor": "secondary",
+                    "iconColor": "primary",
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
-                    "unreadBadgeColor": "none"
+                    "unreadBadgeColor": "tertiary"
                 },
                 {
                     "compactMode": true,
@@ -166,10 +168,10 @@
                     "id": "SystemMonitor",
                     "showCpuCores": false,
                     "showCpuFreq": false,
-                    "showCpuTemp": true,
+                    "showCpuTemp": false,
                     "showCpuUsage": true,
                     "showDiskAvailable": false,
-                    "showDiskUsage": false,
+                    "showDiskUsage": true,
                     "showDiskUsageAsPercent": false,
                     "showGpuTemp": false,
                     "showLoadAverage": false,
@@ -184,11 +186,20 @@
                 {
                     "clockColor": "secondary",
                     "customFont": "Maple Mono NF",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatHorizontal": "HH:mm:ss",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": true
+                },
+                {
+                    "deviceNativePath": "__default__",
+                    "displayMode": "graphic-clean",
+                    "hideIfIdle": false,
+                    "hideIfNotDetected": true,
+                    "id": "Battery",
+                    "showNoctaliaPerformance": false,
+                    "showPowerProfiles": false
                 }
             ]
         }
@@ -265,7 +276,7 @@
                     "id": "Bluetooth"
                 },
                 {
-                    "id": "WallpaperSelector"
+                    "id": "AirplaneMode"
                 },
                 {
                     "id": "NoctaliaPerformance"
@@ -279,7 +290,7 @@
                     "id": "PowerProfile"
                 },
                 {
-                    "id": "KeepAwake"
+                    "id": "DarkMode"
                 },
                 {
                     "id": "NightLight"
@@ -347,7 +358,7 @@
         "dimmerOpacity": 0,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
-        "enableLockScreenMediaControls": false,
+        "enableLockScreenMediaControls": true,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
         "iRadiusRatio": 1,
@@ -377,7 +388,7 @@
         },
         "language": "",
         "lockOnSuspend": true,
-        "lockScreenAnimations": false,
+        "lockScreenAnimations": true,
         "lockScreenBlur": 0,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
@@ -400,8 +411,8 @@
     },
     "hooks": {
         "colorGeneration": "",
-        "darkModeChange": "",
-        "enabled": false,
+        "darkModeChange": "~/.config/hypr/scripts/theme --switch ",
+        "enabled": true,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
         "screenLock": "",
@@ -425,7 +436,7 @@
         "suspendTimeout": 1800
     },
     "location": {
-        "analogClockInCalendar": false,
+        "analogClockInCalendar": true,
         "autoLocate": true,
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
@@ -443,9 +454,9 @@
     "network": {
         "bluetoothAutoConnect": true,
         "bluetoothDetailsViewMode": "grid",
-        "bluetoothHideUnnamedDevices": false,
+        "bluetoothHideUnnamedDevices": true,
         "bluetoothRssiPollIntervalMs": 60000,
-        "bluetoothRssiPollingEnabled": false,
+        "bluetoothRssiPollingEnabled": true,
         "disableDiscoverability": false,
         "networkPanelView": "ethernet",
         "wifiDetailsViewMode": "grid"
@@ -460,8 +471,8 @@
         "nightTemp": "4000"
     },
     "noctaliaPerformance": {
-        "disableDesktopWidgets": true,
-        "disableWallpaper": true
+        "disableDesktopWidgets": false,
+        "disableWallpaper": false
     },
     "notifications": {
         "backgroundOpacity": 1,
@@ -502,7 +513,8 @@
         "enabledTypes": [
             0,
             1,
-            2
+            2,
+            3
         ],
         "location": "top_right",
         "monitors": [
@@ -510,7 +522,7 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false,
+        "autoUpdate": true,
         "notifyUpdates": true
     },
     "sessionMenu": {
@@ -586,7 +598,7 @@
         "batteryWarningThreshold": 20,
         "cpuCriticalThreshold": 90,
         "cpuWarningThreshold": 80,
-        "criticalColor": "",
+        "criticalColor": "#f38ba8",
         "diskAvailCriticalThreshold": 10,
         "diskAvailWarningThreshold": 20,
         "diskCriticalThreshold": 90,
@@ -601,8 +613,8 @@
         "swapWarningThreshold": 80,
         "tempCriticalThreshold": 90,
         "tempWarningThreshold": 80,
-        "useCustomColors": false,
-        "warningColor": ""
+        "useCustomColors": true,
+        "warningColor": "#c6a0f6"
     },
     "templates": {
         "activeTemplates": [

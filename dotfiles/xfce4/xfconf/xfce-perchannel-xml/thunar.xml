@@ -12,6 +12,6 @@
   </property>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
   <property name="last-details-view-column-widths" type="string" value="50,50,135,50,50,512,50,50,514,50,50,88,50,1136"/>
-  <property name="last-window-width" type="int" value="910"/>
-  <property name="last-window-height" type="int" value="1018"/>
+  <property name="last-window-width" type="int" value="772"/>
+  <property name="last-window-height" type="int" value="1020"/>
 </channel>
