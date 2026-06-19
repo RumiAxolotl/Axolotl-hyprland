@@ -15,7 +15,7 @@ hl.bind(mainMod .. " + C",          hl.dsp.exec_cmd('kitty "nvim"'))
 hl.bind(mainMod .. " + O",          hl.dsp.exec_cmd("obsidian"))
 hl.bind(mainMod .. " + Return",     hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + E",          hl.dsp.exec_cmd("thunar"))
-hl.bind(mainMod .. " + W",          hl.dsp.exec_cmd("killall qs || qs -c noctalia-shell"))
+hl.bind(mainMod .. " + W",          hl.dsp.exec_cmd("killall noctalia || noctalia"))
 hl.bind(mainMod .. " + D",          hl.dsp.exec_cmd("killall -35 nwg-dock-hyprland"))
 hl.bind(mainMod .. " + M",          hl.dsp.exec_cmd("killall spotify || spotify"))
 
@@ -85,7 +85,7 @@ hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd(
 
 hl.bind(mainMod .. " + SHIFT + X",       hl.dsp.exec_cmd("hyprpicker -a -n"))
 hl.bind(mainMod .. " + SHIFT + K",       hl.dsp.exec_cmd("hyprctl kill"))
-hl.bind(mainMod .. " + L",               hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + L",               hl.dsp.exec_cmd("noctalia msg session lock"))
 hl.bind(mainMod .. " + R",               hl.dsp.exec_cmd("killall rofi || rofi -show drun"))
 hl.bind(mainMod .. " + period",          hl.dsp.exec_cmd("killall rofi || rofi -show emoji"))
 hl.bind(mainMod .. " + SHIFT + Escape",  hl.dsp.exit())
