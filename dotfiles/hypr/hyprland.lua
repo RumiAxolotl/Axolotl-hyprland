@@ -24,7 +24,7 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
 ------------------
 
 -- monitor=DP-1,1920x1080@60,0x0,1  (disabled)
-hl.monitor({ output = "eDP-1",    mode = "1920x1080@144", position = "0x1080", scale = 1 })
+hl.monitor({ output = "eDP-2",    mode = "1920x1080@144", position = "0x1080", scale = 1 })
 hl.monitor({ output = "HDMI-A-1", mode = "1920x1080@75",  position = "1920x0", scale = 1, transform = 1 })
 
 
@@ -146,3 +146,6 @@ end)
 -- Also apply on initial load
 os.execute("hyprctl source /home/rumi/.config/hypr/noctalia/noctalia-colors.conf &")
 os.execute("hyprctl source /home/rumi/.cache/noctalia/HVE/overlay.conf &")
+
+-- For Noctalia Color templates
+require("noctalia")

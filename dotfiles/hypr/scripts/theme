@@ -26,7 +26,7 @@ set_theme() {
         color_scheme="prefer-dark"
         cursor_theme="Catppuccin-Mocha-Light"
         hypr_cursor="catppuccin-mocha-light-cursors"
-        hypr_conf="mocha.conf"
+        hypr_conf="mocha.lua"
         kitty_theme="Catppuccin-Mocha"
         rofi_conf="dark.rasi"
         vencord_theme="Mocha.theme.css"
@@ -37,7 +37,7 @@ set_theme() {
         color_scheme="prefer-light"
         cursor_theme="Catppuccin-Latte-Dark"
         hypr_cursor="catppuccin-latte-dark-cursors"
-        hypr_conf="latte.conf"
+        hypr_conf="latte.lua"
         kitty_theme="Catppuccin-Latte"
         rofi_conf="light.rasi"
         vencord_theme="Latte.theme.css"
@@ -53,7 +53,7 @@ set_theme() {
     
     # Set Hyprland cursor and theme
     hyprctl setcursor "$hypr_cursor" 24
-    cp -f ~/.config/hypr/"$hypr_conf" ~/.config/hypr/style.conf
+    cp -f ~/.config/hypr/"$hypr_conf" ~/.config/hypr/style.lua
     
     # Set hyprlock background to match theme wallpaper
     sed -i "s|path = .*|path = $HOME/Pictures/wallpapers/$wall_img|" ~/.config/hypr/hyprlock.conf

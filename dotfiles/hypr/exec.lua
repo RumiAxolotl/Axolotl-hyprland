@@ -28,7 +28,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hypridle -q")
 
     -- Shell & UI
-    hl.exec_cmd("qs -c noctalia-shell")
+    hl.exec_cmd("noctalia")
     hl.exec_cmd("~/.config/waybar/scripts/touchpad")
     hl.exec_cmd("rog-control-center")
     hl.exec_cmd('nwg-dock-hyprland -r -p bottom -a center -mb 15 -ml 15 -mr 15 -i 36 -c "rofi -show drun"')
