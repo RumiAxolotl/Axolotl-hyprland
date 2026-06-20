@@ -75,7 +75,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     hypr_pkgs="hyprland hyprpicker hypridle hyprlock"    
     font_pkgs="ttf-nerd-fonts-symbols-common otf-firamono-nerd inter-font otf-sora ttf-fantasque-nerd noto-fonts noto-fonts-emoji ttf-comfortaa"
     font_pkgs2="ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd adobe-source-code-pro-fonts ttf-firacode-nerd"
-    app_pkgs="brightnessctl dunst awww kitty sddm wl-clipboard wf-recorder wlsunset rofi rofi-emoji wlogout"
+    app_pkgs="brightnessctl dunst kitty sddm wl-clipboard wf-recorder wlsunset rofi rofi-emoji wlogout"
     app_pkgs2="nwg-look qt5ct btop jq gvfs ffmpegthumbs mousepad mpv  playerctl pamixer noise-suppression-for-voice xarchiver wttr"
     app_pkgs3="polkit-gnome ffmpeg neovim viewnior pavucontrol thunar ffmpegthumbnailer tumbler thunar-archive-plugin xdg-user-dirs"
     
