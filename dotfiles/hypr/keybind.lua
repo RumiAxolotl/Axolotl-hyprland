@@ -11,7 +11,7 @@ local SCRIPT  = "~/.config/hypr/scripts"
 
 hl.bind(mainMod .. " + BackSpace",  hl.dsp.exec_cmd("~/.config/hypr/keybind"))
 hl.bind(mainMod .. " + B",          hl.dsp.exec_cmd("xdg-open https://rumiaxolotl.github.io/newtab/"))
-hl.bind(mainMod .. " + C",          hl.dsp.exec_cmd('kitty "nvim"'))
+hl.bind(mainMod .. " + C",          hl.dsp.exec_cmd('code'))
 hl.bind(mainMod .. " + O",          hl.dsp.exec_cmd("obsidian"))
 hl.bind(mainMod .. " + Return",     hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + E",          hl.dsp.exec_cmd("thunar"))
