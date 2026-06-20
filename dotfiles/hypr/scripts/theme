@@ -1,0 +1,94 @@
+#!/bin/bash
+
+state_file="$HOME/.config/hypr/scripts/.theme-mode"
+
+get_current_mode() {
+    if [ -f "$state_file" ]; then
+        cat "$state_file"
+        return
+    fi
+
+    current_scheme=$(gsettings get org.gnome.desktop.interface color-scheme 2>/dev/null | tr -d "'")
+    if [ "$current_scheme" = "prefer-light" ]; then
+        echo "light"
+    else
+        echo "dark"
+    fi
+}
+
+set_theme() {
+    local mode="$1"
+    
+    # Define variables based on the selected mode
+    if [ "$mode" == "dark" ]; then
+        gtk_theme="catppuccin-mocha-lavender-standard+default"
+        icon_theme="Reversal-purple-dark"
+        color_scheme="prefer-dark"
+        cursor_theme="Catppuccin-Mocha-Light"
+        hypr_cursor="catppuccin-mocha-light-cursors"
+        hypr_conf="mocha.lua"
+        kitty_theme="Catppuccin-Mocha"
+        rofi_conf="dark.rasi"
+        vencord_theme="Mocha.theme.css"
+        zathura_conf="catppuccin-mocha"
+    else
+        gtk_theme="catppuccin-latte-lavender-standard+default"
+        icon_theme="Reversal-purple"
+        color_scheme="prefer-light"
+        cursor_theme="Catppuccin-Latte-Dark"
+        hypr_cursor="catppuccin-latte-dark-cursors"
+        hypr_conf="latte.lua"
+        kitty_theme="Catppuccin-Latte"
+        rofi_conf="light.rasi"
+        vencord_theme="Latte.theme.css"
+        zathura_conf="catppuccin-latte"
+    fi
+    
+    # Set the GTK theme
+    gsettings set org.gnome.desktop.interface gtk-theme "$gtk_theme"
+    gsettings set org.gnome.desktop.interface icon-theme "$icon_theme"
+    gsettings set org.gnome.desktop.interface color-scheme "$color_scheme"
+    gsettings set org.gnome.desktop.interface cursor-theme "$cursor_theme"
+    gsettings set org.gnome.desktop.interface cursor-size 24
+    
+    # Set Hyprland cursor and theme
+    hyprctl setcursor "$hypr_cursor" 24
+    cp -f ~/.config/hypr/"$hypr_conf" ~/.config/hypr/style.lua
+    
+    # Set hyprlock background to match theme wallpaper
+    sed -i "s|path = .*|path = $HOME/Pictures/wallpapers/$wall_img|" ~/.config/hypr/hyprlock.conf
+    
+    # Set the kitty theme
+    kitty +kitten themes --reload-in=all "$kitty_theme"
+    
+    # Set rofi theme
+    cp -f ~/.config/rofi/"$rofi_conf" ~/.config/rofi/config.rasi
+    
+    # Set Discord css theme
+    cp -f ~/.config/Vencord/themes/"$vencord_theme" ~/.config/Vencord/themes/Catppuccin.theme.css
+    
+    # Set Zathura theme
+    cp -f ~/.config/zathura/"$zathura_conf" ~/.config/zathura/zathurarc
+
+    printf '%s\n' "$mode" > "$state_file"
+    
+
+}
+
+# Execute based on arguments
+if [ "$1" == "--dark" ]; then
+    set_theme "dark"
+elif [ "$1" == "--light" ]; then
+    set_theme "light"
+elif [ "$1" == "--switch" ]; then
+    current_mode=$(get_current_mode)
+
+    if [ "$current_mode" == "dark" ]; then
+        set_theme "light"
+    else
+        set_theme "dark"
+    fi
+else
+    echo "Usage: $0 [--dark|--light|--switch]"
+    exit 1
+fi
