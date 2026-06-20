@@ -1,38 +1,38 @@
 -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
--- ┃   Catppuccin Mocha — Color Palette    ┃
+-- ┃   Catppuccin Latte — Color Palette    ┃
 -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 local M = {}
 
-M.rosewater = "f5e0dc"
-M.flamingo  = "f2cdcd"
-M.pink      = "f5c2e7"
-M.mauve     = "cba6f7"
-M.red       = "f38ba8"
-M.maroon    = "eba0ac"
-M.peach     = "fab387"
-M.yellow    = "f9e2af"
-M.green     = "a6e3a1"
-M.teal      = "94e2d5"
-M.sky       = "89dceb"
-M.sapphire  = "74c7ec"
-M.blue      = "89b4fa"
-M.lavender  = "b4befe"
+M.rosewater = "dc8a78"
+M.flamingo  = "dd7878"
+M.pink      = "ea76cb"
+M.mauve     = "8839ef"
+M.red       = "d20f39"
+M.maroon    = "e64553"
+M.peach     = "fe640b"
+M.yellow    = "df8e1d"
+M.green     = "40a02b"
+M.teal      = "179299"
+M.sky       = "04a5e5"
+M.sapphire  = "209fb5"
+M.blue      = "1e66f5"
+M.lavender  = "7287fd"
 
-M.text      = "cdd6f4"
-M.subtext1  = "bac2de"
-M.subtext0  = "a6adc8"
+M.text      = "4c4f69"
+M.subtext1  = "5c5f77"
+M.subtext0  = "6c6f85"
 
-M.overlay2  = "9399b2"
-M.overlay1  = "7f849c"
-M.overlay0  = "6c7086"
+M.overlay2  = "7c7f93"
+M.overlay1  = "8c8fa1"
+M.overlay0  = "9ca0b0"
 
-M.surface2  = "585b70"
-M.surface1  = "45475a"
-M.surface0  = "313244"
+M.surface2  = "acb0be"
+M.surface1  = "bcc0cc"
+M.surface0  = "ccd0da"
 
-M.base      = "1e1e2e"
-M.mantle    = "181825"
-M.crust     = "11111b"
+M.base      = "eff1f5"
+M.mantle    = "e6e9ef"
+M.crust     = "dce0e8"
 
 return M
