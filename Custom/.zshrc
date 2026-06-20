@@ -113,10 +113,6 @@ source $ZSH/oh-my-zsh.sh
 # General aliases
 alias cls='clear'
 
-# Theme aliases
-alias turndark='~/.config/waybar/scripts/theme --dark'
-alias turnlight='~/.config/waybar/scripts/theme --light'
-
 # Tunnels
 alias agent_tunnel="ssh -fNTD 127.0.0.1:22021 root@agent"
 alias tech_tunnel="ssh -fNTD 127.0.0.1:22022 root@techgate"
@@ -124,3 +120,10 @@ alias mirror_tunnel="ssh -fNTD 127.0.0.1:22023 root@mirror"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# fnm
+FNM_PATH="/home/rumi/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell zsh)"
+fi
