@@ -16,7 +16,7 @@ require("nvidia")
 ---- ENVIRONMENT ------
 -----------------------
 
-hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 
 ------------------
@@ -73,8 +73,8 @@ hl.config({
 
     decoration = {
         rounding         = 8,
-        active_opacity   = 0.8,
-        inactive_opacity = 0.6,
+        active_opacity   = 1.0,
+        inactive_opacity = 0.8,
 
         blur = {
             enabled       = true,
