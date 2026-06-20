@@ -1,0 +1,9 @@
+{
+  "isSystemActive": true,
+  "borderSize": 2,
+  "overlayPath": "~/.cache/noctalia/HVE/overlay.conf",
+  "autoApply": true,
+  "activeAnimFile": "01_relampago.conf",
+  "activeBorderFile": "01_cascade.conf",
+  "activeShaderFile": ""
+}

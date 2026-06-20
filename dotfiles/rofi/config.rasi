@@ -2,10 +2,10 @@
 
 configuration {
   show-icons: true;
-  icon-theme: "Reversal-purple-dark";
+  icon-theme: "Reversal-purple";
   display-drun: " ";
   display-window: " ";
   display-combi: " ";
 }
-@theme "themes/catppuccin-mocha.rasi"
+@theme "themes/catppuccin-latte.rasi"
 

@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "lang": "en",
+    "name": "English",
+    "author": "Ximo & AI"
+  },
+  "widget": {
+    "tooltip": "Hyprland Visual Editor",
+    "menu_settings": "Plugin Settings"
+  },
+  "panel": {
+    "header_title": "Hyprland Visual",
+    "header_subtitle": "Aesthetic Control Center",
+    "tabs": {
+      "home": "Home",
+      "animations": "Animations",
+      "borders": "Borders",
+      "effects": "Effects"
+    }
+  },
+  "welcome": {
+    "toast": {
+    "enabled": "Visual Editor Enabled",
+    "disabled": "Visual Editor Disabled"
+    },
+    "activation_title": "System Activation",
+    "system_active": "The system is operational. Visual effects are safely managed by HVE.",
+    "system_inactive": "System halted. Requires acceptance of the persistence contract to continue.",
+    "enable_label": "Enable Visual Editor",
+    "warning": {
+      "title": "SECURE PERSISTENCE CONTRACT",
+      "text": "Upon activation, HVE will deploy a <b>guardian shield</b> and inject a secure path into your <code>hyprland.conf</code>. If you uninstall the plugin from the Shell, the system will self-clean on the next reboot without causing Hyprland errors."
+    },
+    "features": {
+      "title": "Features & Benefits",
+      "description": "Hyprland Visual Editor is the aesthetic evolution of your desktop.",
+      "list": {
+        "fluid_anim": "✨ <b>Fluid Animations</b>",
+        "smart_borders": "🎨 <b>Smart Borders</b>",
+        "realtime_shaders": "🕶️ <b>Real-Time Shaders</b>",
+        "non_destructive": "🛡️ <b>Non-Destructive</b>"
+      }
+    },
+    "docs": {
+      "title": "Architecture & Documentation",
+      "description": "Discover how HVE works under the hood.",
+      "summary": "<b>Hyprland Visual Editor</b> uses a real-time <i>Fragments and Assembly</i> system. It never touches your main configuration. Everything is safely generated in an isolated <code>overlay.conf</code> master file.",
+      "btn_readme": "Read Full Manual",
+      "btn_folder": "Browse Files"
+    },
+    "credits": {
+      "title": "Credits",
+      "description": "Special thanks to the <b>HyDE Project</b>.",
+      "btn_hyde": "Inspired by HyDE Project",
+      "ai_title": "AI Co-Programmed",
+      "ai_desc": "QML Architecture and path debugging assistance by Gemini (Google)."
+    }
+  },
+  "animations": {
+    "header_title": "Motion Library",
+    "header_subtitle": "Select the animation style for your desktop",
+    "presets": {
+      "01_relampago": {
+        "title": "Lightning",
+        "desc": "Maximum visual response."
+      },
+      "02_inercia_elastica": {
+        "title": "Elastic Inertia",
+        "desc": "Organic movement. Windows gain momentum on exit and bounce on entry."
+      },
+      "03_seda_minimalista": {
+        "title": "Minimalist Silk",
+        "desc": "Absolute smoothness. No bounces, just perfect macOS-style landings."
+      },
+      "04_minimalismo_snappy": {
+        "title": "Snappy Minimalism",
+        "desc": "Optimized for maximum speed. Window and workspace management only."
+      },
+      "05_material_moderno": {
+        "title": "Modern Material",
+        "desc": "Google Pixel aesthetic. Organic animations, subtle scaling, and tactile response."
+      },
+      "06_impacto_clasico": {
+        "title": "Classic Impact",
+        "desc": "\"Jelly\" effect. Elastic bounce on entry and anticipation on exit."
+      },
+      "07_lineal": {
+        "title": "Linear",
+        "desc": "Mathematical precision. Constant motion, \"Sci-Fi HUD\" style."
+      },
+      "08_cristal": {
+        "title": "Glass",
+        "desc": "Ethereal glide. Feeling of glass floating without friction."
+      },
+      "09_seda_silk": {
+        "title": "Silk",
+        "desc": "Refined JaKooLit style. Energetic entries, fleeting exits, and stable workspaces."
+      },
+      "10_retro_arcade": {
+        "title": "Retro Arcade",
+        "desc": "\"Toon/Arcade\" effect. Windows jump and bounce exaggeratedly."
+      },
+      "11_futurista": {
+        "title": "Futuristic",
+        "desc": "Holographic interface. Digital precision, zero bounces, and vertical data flow."
+      },
+      "12_rebote": {
+        "title": "Bounce",
+        "desc": "Vertical spring physics. Windows fall and bounce upon opening."
+      },
+      "13_organico": {
+        "title": "Organic",
+        "desc": "\"Sprout\" movement. Smooth vertical growth and slow fades."
+      },
+      "14_elastico": {
+        "title": "Elastic",
+        "desc": "Rubber band physics. Windows arrive, stretch, and bounce vertically."
+      },
+      "15_desvanecido": {
+        "title": "Fade",
+        "desc": "Spectral materialization. Windows appear smoothly with barely any movement."
+      },
+      "16_dinamico": {
+        "title": "Dynamic",
+        "desc": "Organic rhythm. Combination of speed and smooth settling."
+      },
+      "17_sutil": {
+        "title": "Subtle",
+        "desc": "Zero distractions. Absolute smoothness without bounces or abrupt movements."
+      },
+      "18_energico": {
+        "title": "Energetic",
+        "desc": "Maximum visual impact. Exaggerated bounces (56%) and kickback exits."
+      }
+    }
+  },
+  "borders": {
+    "geometry": {
+      "title": "Border Thickness",
+      "desc": "Define line thickness (0-5px)"
+    },
+    "header_title": "Visual Styles",
+    "header_subtitle": "Define your windows' personality",
+    "presets": {
+      "01_cascade": {
+        "title": "Cascade",
+        "desc": "Soft vertical gradient at 50%."
+      },
+      "02_diagonal": {
+        "title": "Diagonal",
+        "desc": "Dynamic angle fade."
+      },
+      "03_duo": {
+        "title": "Duo Contrast",
+        "desc": "Strong Primary/Secondary contrast."
+      },
+      "04_tri": {
+        "title": "Trident",
+        "desc": "Tricolor elegance with gold."
+      },
+      "05_spectrum": {
+        "title": "Spectrum",
+        "desc": "Four colors for maximum visibility."
+      },
+      "06_pulse": {
+        "title": "Pulse",
+        "desc": "Rotates once when selecting window."
+      },
+      "07_infinity": {
+        "title": "Infinity",
+        "desc": "Constant color rotation."
+      },
+      "08_neon": {
+        "title": "Neon Breath",
+        "desc": "Slow and relaxing oscillation."
+      },
+      "09_glitch": {
+        "title": "Cyber Glitch",
+        "desc": "Aggressive, fast, and error colors."
+      },
+      "10_golden": {
+        "title": "Golden Luxury",
+        "desc": "Gold metallic reflections."
+      },
+      "11_toxic": {
+        "title": "Toxic Green",
+        "desc": "Fluor green metallic reflections."
+      },
+      "12_neon_cyberpunk": {
+        "title": "Neon Cyber-Glow (Dual)",
+        "desc": "Simulation of bicolor brightness using a white/violet light base."
+      },
+      "13_the_joker": {
+        "title": "The Joker",
+        "desc": "Joker aesthetic: Acid green and deep purple with an electric glow."
+      }
+    }
+  },
+  "shaders": {
+    "header_title": "Screen Filters",
+    "header_subtitle": "Real-time image post-processing",
+    "presets": {
+      "01_night": {
+        "title": "Night Light",
+        "desc": "Warm filter to protect eyesight."
+      },
+      "02_mono": {
+        "title": "Monochrome",
+        "desc": "Grayscale for concentration."
+      },
+      "03_vibrant": {
+        "title": "Vibrant",
+        "desc": "Intelligently enhances colors."
+      },
+      "04_sharp": {
+        "title": "HD Sharpness",
+        "desc": "Improves border and text definition."
+      },
+      "05_ink": {
+        "title": "E-Ink Paper",
+        "desc": "Sepia electronic paper texture."
+      },
+      "06_invert": {
+        "title": "Inverted",
+        "desc": "Inverts all colors."
+      },
+      "07_oled": {
+        "title": "OLED Mode",
+        "desc": "Pure blacks and dramatic contrast."
+      },
+      "08_vision": {
+        "title": "Night Vision",
+        "desc": "Military green phosphor effect."
+      },
+      "09_hybrid": {
+        "title": "Hybrid",
+        "desc": "Balance between correction and style."
+      }
+    }
+  },
+  "settings": {
+    "preview_label": "Preview",
+    "change_icon_button": "Change Widget Icon",
+    "icon_color_label": "Icon Color",
+    "autoapply_label": "Auto Apply",
+    "autoapply_description": "Instantly reload Hyprland when saving",
+    "path_label": "Config Path",
+    "path_desc": "Absolute path for the satellite configuration file."
+  }
+}
