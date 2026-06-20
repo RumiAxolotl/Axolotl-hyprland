@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "lang": "ja",
+    "name": "日本語",
+    "author": "Ximo & AI"
+  },
+  "widget": {
+    "tooltip": "Hyprland Visual Editor",
+    "menu_settings": "プラグイン設定"
+  },
+  "panel": {
+    "header_title": "Hyprland Visual",
+    "header_subtitle": "審美的なコントロールセンター",
+    "tabs": {
+      "home": "ホーム",
+      "animations": "アニメーション",
+      "borders": "枠線",
+      "effects": "エフェクト"
+    }
+  },
+  "welcome": {
+    "toast": {
+      "enabled": "ビジュアルエディターを有効化",
+      "disabled": "ビジュアルエディターを無効化"
+    },
+    "activation_title": "システム起動",
+    "system_active": "システムは稼働中です。視覚効果は HVE によって安全に管理されています。",
+    "system_inactive": "システムが停止しています。継続するには永続化契約の受諾が必要です。",
+    "enable_label": "ビジュアルエディターを有効にする",
+    "warning": {
+      "title": "安全な永続化契約",
+      "text": "アクティブ化時に、HVE は<b>守護者シールド</b>を展開し、<code>hyprland.conf</code>に安全なパスを注入します。Shell からプラグインをアンインストールした場合、システムは次の再起動時に自己クリーンアップを行い、Hyprland エラーを引き起こしません。"
+    },
+    "features": {
+      "title": "機能と利点",
+      "description": "Hyprland Visual Editor は、デスクトップの審美的な進化です。",
+      "list": {
+        "fluid_anim": "✨ <b>滑らかなアニメーション</b>",
+        "smart_borders": "🎨 <b>スマート枠線</b>",
+        "realtime_shaders": "🕶️ <b>リアルタイムシェーダー</b>",
+        "non_destructive": "🛡️ <b>非破壊的</b>"
+      }
+    },
+    "docs": {
+      "title": "アーキテクチャとドキュメント",
+      "description": "HVE の内部動作を発見してください。",
+      "summary": "<b>Hyprland Visual Editor</b> はリアルタイムの<i>フラグメントとアセンブリ</i>システムを使用します。メイン設定には一切触れません。すべてが安全に隔離された<code>overlay.conf</code>マスターファイルで生成されます。",
+      "btn_readme": "完全マニュアルを読む",
+      "btn_folder": "ファイルを閲覧"
+    },
+    "credits": {
+      "title": "クレジット",
+      "description": "<b>HyDE プロジェクト</b>に特別な感謝を。",
+      "btn_hyde": "HyDE プロジェクトからインスピレーション",
+      "ai_title": "AI と共同開発",
+      "ai_desc": "QML アーキテクチャとパスデバッグ支援は Gemini (Google) による。"
+    }
+  },
+  "animations": {
+    "header_title": "モーションライブラリ",
+    "header_subtitle": "デスクトップのアニメーションスタイルを選択",
+    "presets": {
+      "01_relampago": {
+        "title": "雷",
+        "desc": "最大限の視覚的反応。"
+      },
+      "02_inercia_elastica": {
+        "title": "弾性慣性",
+        "desc": "有機的な動き。ウィンドウは退出時に勢いを持ち、進入時に跳ね返ります。"
+      },
+      "03_seda_minimalista": {
+        "title": "ミニマリストシルク",
+        "desc": "絶対的な滑らかさ。跳ね返りなし、macOS 風の完璧な着地のみ。"
+      },
+      "04_minimalismo_snappy": {
+        "title": "スナッピーミニマリズム",
+        "desc": "最大速度に最適化。ウィンドウとワークスペース管理のみ。"
+      },
+      "05_material_moderno": {
+        "title": "モダンマテリアル",
+        "desc": "Google Pixel エステティクス。有機的なアニメーション、繊細なスケーリング、触覚的反応。"
+      },
+      "06_impacto_clasico": {
+        "title": "クラシックインパクト",
+        "desc": "\"Jelly\"効果。進入時の弾性跳ね返りと退出時の予期感。"
+      },
+      "07_lineal": {
+        "title": "線形",
+        "desc": "数学的な精度。一定の動き、\"Sci-Fi HUD\"スタイル。"
+      },
+      "08_cristal": {
+        "title": "ガラス",
+        "desc": "エーテルな滑り。摩擦なしで浮遊するガラスの感覚。"
+      },
+      "09_seda_silk": {
+        "title": "シルク",
+        "desc": "洗練された JaKooLit スタイル。エネルギッシュな進入、一瞬の退出、安定したワークスペース。"
+      },
+      "10_retro_arcade": {
+        "title": "レトロアーケード",
+        "desc": "\"Toon/Arcade\"効果。ウィンドウは誇張して跳ね、跳ね返ります。"
+      },
+      "11_futurista": {
+        "title": "未来的",
+        "desc": "ホログラフィックインターフェース。デジタル精度、ゼロ跳ね返り、垂直データフロー。"
+      },
+      "12_rebote": {
+        "title": "バウンス",
+        "desc": "垂直スプリング物理。ウィンドウは落下し、開く際に跳ね返ります。"
+      },
+      "13_organico": {
+        "title": "有機的",
+        "desc": "\"芽生え\"動き。滑らかな垂直成長とゆっくりとしたフェード。"
+      },
+      "14_elastico": {
+        "title": "弾性",
+        "desc": "ゴムバンド物理。ウィンドウは到着し、伸び、垂直に跳ね返ります。"
+      },
+      "15_desvanecido": {
+        "title": "フェード",
+        "desc": "スペクトラルな物質化。ほとんど動きなしで滑らかに現れます。"
+      },
+      "16_dinamico": {
+        "title": "動的",
+        "desc": "有機的なリズム。速度と滑らかな定着の組み合わせ。"
+      },
+      "17_sutil": {
+        "title": "繊細",
+        "desc": "ゼロの distraction。跳ね返りや急な動きなしの絶対的な滑らかさ。"
+      },
+      "18_energico": {
+        "title": "エネルギッシュ",
+        "desc": "最大限の視覚的インパクト。誇張された跳ね返り (56%) とキックバック退出。"
+      }
+    }
+  },
+  "borders": {
+    "geometry": {
+      "title": "枠線の太さ",
+      "desc": "線の太さを定義 (0-5px)"
+    },
+    "header_title": "視覚スタイル",
+    "header_subtitle": "ウィンドウの個性を定義",
+    "presets": {
+      "01_cascade": {
+        "title": "カスケード",
+        "desc": "50% の柔らかい垂直グラデーション。"
+      },
+      "02_diagonal": {
+        "title": "対角線",
+        "desc": "ダイナミックな角度フェード。"
+      },
+      "03_duo": {
+        "title": "デュオコントラスト",
+        "desc": "強いプライマリ/セカンダリコントラスト。"
+      },
+      "04_tri": {
+        "title": "トライデント",
+        "desc": "ゴールドのトリカラーエレガンス。"
+      },
+      "05_spectrum": {
+        "title": "スペクトラム",
+        "desc": "最大可視性のための 4 色。"
+      },
+      "06_pulse": {
+        "title": "パルス",
+        "desc": "ウィンドウ選択時に 1 回転。"
+      },
+      "07_infinity": {
+        "title": "無限",
+        "desc": "一定のカラー回転。"
+      },
+      "08_neon": {
+        "title": "ネオンブレス",
+        "desc": "ゆっくりとしたリラックスする振動。"
+      },
+      "09_glitch": {
+        "title": "サイバーグリッチ",
+        "desc": "攻撃的、速く、エラーカラー。"
+      },
+      "10_golden": {
+        "title": "ゴールデンラグジュアリー",
+        "desc": "ゴールドメタリック反射。"
+      },
+      "11_toxic": {
+        "title": "トキシックグリーン",
+        "desc": "蛍光グリーンメタリック反射。"
+      },
+      "12_neon_cyberpunk": {
+        "title": "ネオンサイバーグロー（デュアル）",
+        "desc": "白/紫の光ベースを使用したバイカラー明るさのシミュレーション。"
+      },
+      "13_the_joker": {
+        "title": "ザ・ジョーカー",
+        "desc": "ジョーカーエステティクス：酸味のあるグリーンと深いパープルに電気的な輝き。"
+      }
+    }
+  },
+  "shaders": {
+    "header_title": "スクリーンフィルター",
+    "header_subtitle": "リアルタイム画像ポストプロセッシング",
+    "presets": {
+      "01_night": {
+        "title": "ナイトライト",
+        "desc": "視力保護のためのウォームフィルター。"
+      },
+      "02_mono": {
+        "title": "モノクローム",
+        "desc": "集中のためのグレースケール。"
+      },
+      "03_vibrant": {
+        "title": "バイブレント",
+        "desc": "知的に色を強化。"
+      },
+      "04_sharp": {
+        "title": "HD シャープネス",
+        "desc": "枠線とテキストの定義を改善。"
+      },
+      "05_ink": {
+        "title": "E インクペーパー",
+        "desc": "セピア電子ペーパーテクスチャ。"
+      },
+      "06_invert": {
+        "title": "反転",
+        "desc": "すべての色を反転。"
+      },
+      "07_oled": {
+        "title": "OLED モード",
+        "desc": "純粋な黒とドラマチックなコントラスト。"
+      },
+      "08_vision": {
+        "title": "ナイトビジョン",
+        "desc": "軍用グリーンフォスフォール効果。"
+      },
+      "09_hybrid": {
+        "title": "ハイブリッド",
+        "desc": "補正とスタイルのバランス。"
+      }
+    }
+  },
+  "settings": {
+    "preview_label": "プレビュー",
+    "change_icon_button": "ウィジェットアイコンを変更",
+    "icon_color_label": "アイコンの色",
+    "autoapply_label": "自動適用",
+    "autoapply_description": "保存時に Hyprland を即座に再読み込み",
+    "path_label": "設定パス",
+    "path_desc": "サテライト設定ファイルの絶対パス。"
+  }
+}

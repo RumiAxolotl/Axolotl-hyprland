@@ -1,0 +1,117 @@
+{
+  "settings": {
+    "title": "Tailscale-inställningar",
+    "description": "Konfigurera Tailscale-statusvisning och beteende",
+    "refresh-interval": "Uppdateringsintervall",
+    "refresh-interval-desc": "Hur ofta Tailscale-status ska kontrolleras",
+    "display-options": "Visningsalternativ",
+    "compact-mode": "Kompakt läge",
+    "compact-mode-desc": "Visa endast ikon i fältet",
+    "show-ip": "Visa IP-adress",
+    "show-ip-desc": "Visa Tailscale IP i fältwidgeten",
+    "show-peers": "Visa antal peers",
+    "show-peers-desc": "Visa antal anslutna enheter i fältet",
+    "hide-disconnected": "Dölj frånkopplade peers",
+    "hide-disconnected-desc": "Visa endast online peers i panelen",
+    "hide-mullvad-exit-nodes": "Dölj Mullvad-utgångsnoder",
+    "hide-mullvad-exit-nodes-desc": "Dölj Mullvad VPN-utgångsnoder från peer-listan",
+    "show-search-bar": "Visa sökfält",
+    "show-search-bar-desc": "Visa ett sökfält ovanför nodlistan i panelen",
+    "terminal": "Terminalkonfiguration",
+    "terminal-command": "Terminalkommando",
+    "terminal-command-desc": "Kommando för att starta terminal för SSH/ping (t.ex. 'ghostty', 'alacritty', 'kitty')",
+    "ssh-username": "SSH-användarnamn",
+    "ssh-username-desc": "Användarnamn för SSH-anslutningar. Lämna tomt för att använda din värds standardanvändarnamn.",
+    "ssh-username-placeholder": "t.ex. pi, ubuntu, admin",
+    "ping-count": "Antal pingar",
+    "ping-count-desc": "Antal ping-paket att skicka vid anslutningstest",
+    "peer-action": "Peer-klickåtgärd",
+    "default-peer-action": "Standardåtgärd",
+    "default-peer-action-desc": "Åtgärd vid klick på en peer i panelen",
+    "taildrop": "Taildrop",
+    "taildrop-enabled": "Aktivera Taildrop",
+    "taildrop-enabled-desc": "Tillåt att skicka och ta emot filer via Taildrop",
+    "taildrop-download-dir": "Nedladdningsmapp",
+    "taildrop-download-dir-desc": "Mapp där mottagna filer sparas (t.ex. ~/Downloads)",
+    "taildrop-receive-mode": "Mottagningsläge",
+    "taildrop-receive-mode-desc": "Hur 'tailscale file get' körs. Operatörsläget kräver ingen bekräftelse om du har kört 'sudo tailscale set --operator $USER'.",
+    "taildrop-receive-mode-operator": "Operatör (ingen bekräftelse)",
+    "taildrop-receive-mode-pkexec": "pkexec (bekräftelse varje gång)",
+    "authentication": "Autentisering",
+    "login-server": "Inloggningsserver",
+    "login-server-desc": "Anpassad inloggningsserver-URL (t.ex. Headscale). Lämna tomt för standard Tailscale-server."
+  },
+  "actions": {
+    "widget-settings": "Widgetinställningar"
+  },
+  "context": {
+    "connect": "Anslut",
+    "disconnect": "Koppla från",
+    "not-installed": "Tailscale är inte installerad",
+    "settings": "Inställningar",
+    "copy-ip": "Kopiera IP",
+    "copy-fqdn": "Kopiera FQDN",
+    "ssh": "SSH till värd",
+    "ping": "Pinga värd",
+    "use-exit-node": "Använd som utgångsnod",
+    "send-file": "Skicka fil",
+    "login": "Logga in"
+  },
+  "toast": {
+    "title": "Tailscale",
+    "connected": "Tailscale ansluten",
+    "disconnected": "Tailscale frånkopplad",
+    "exit-node-enabled": "Utgångsnod aktiverad",
+    "exit-node-disabled": "Utgångsnod inaktiverad",
+    "ip-copied": {
+      "title": "IP kopierad"
+    },
+    "fqdn-copied": {
+      "title": "FQDN kopierad"
+    },
+    "terminal-not-configured": {
+      "title": "Terminal ej konfigurerad",
+      "message": "Ange ett terminalkommando i plugin-inställningarna"
+    },
+    "login-browser-opened": "Autentiseringssida öppnad i webbläsaren",
+    "login-failed": "Inloggning misslyckades",
+    "account-switched": "Bytte Tailscale-konto",
+    "account-switch-failed": "Kunde inte byta Tailscale-konto"
+  },
+  "panel": {
+    "title": "Tailscale-nätverk",
+    "peers": "peers",
+    "not-connected": "Ej ansluten",
+    "not-authenticated": "Ej autentiserad",
+    "no-peers": "Inga anslutna peers",
+    "search-placeholder": "Sök noder...",
+    "no-search-results": "Inga noder matchar din sökning",
+    "admin-console": "Administrationskonsol",
+    "terminal-warning": {
+      "title": "Terminal ej konfigurerad",
+      "message": "Ange ett terminalkommando i inställningarna för att aktivera SSH och ping"
+    },
+    "exit-node": {
+      "active": "Utgångsnod aktiv",
+      "online": "Online",
+      "offline": "Offline",
+      "disable": "Inaktivera utgångsnod"
+    },
+    "taildrop": {
+      "receive": "Ta emot via Taildrop"
+    }
+  },
+  "taildrop": {
+    "toast": {
+      "no-files": "Inga filer togs emot",
+      "sent": "Filer skickades"
+    },
+    "error": {
+      "unknown": "Ett oväntat fel uppstod",
+      "file-exists": "Filen finns redan i nedladdningsmappen"
+    }
+  },
+  "file-picker": {
+    "title": "Välj fil att skicka via Taildrop"
+  }
+}

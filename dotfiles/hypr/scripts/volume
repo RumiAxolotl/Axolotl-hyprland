@@ -1,0 +1,62 @@
+#!/bin/bash
+
+NOTIFY="notify-send -a Volume -t 1000 -h string:x-canonical-private-synchronous:sys-notify"
+
+# --- Speaker Logic ---
+notify_vol() {
+    vol=$(pamixer --get-volume)
+    mute=$(pamixer --get-mute)
+    
+    if [ "$mute" == "true" ] || [ "$vol" -eq 0 ]; then
+        text="Volume Muted"
+    else
+        text="Volume: ${vol}%"
+    fi
+
+    $NOTIFY -h string:x-dunst-stack-tag:volume_notif -h int:value:"$vol" -u low "$text"
+}
+
+# --- Microphone Logic ---
+notify_mic() {
+    vol=$(pamixer --default-source --get-volume)
+    mute=$(pamixer --default-source --get-mute)
+
+    if [ "$mute" == "true" ] || [ "$vol" -eq 0 ]; then
+        text="Microphone Muted"
+    else
+        text="Mic-Level: ${vol}%"
+    fi
+
+    $NOTIFY -h string:x-dunst-stack-tag:mic_notif -h int:value:"$vol" -u low "$text"
+}
+
+# --- Execute Command ---
+case "$1" in
+    --inc) 
+        vol=$(pamixer --get-volume)
+        new_vol=$(( ((vol + 2) / 5 * 5) + 5 ))
+        [ $new_vol -gt 100 ] && new_vol=100
+        pamixer --set-volume $new_vol 
+        ;;
+    --dec) 
+        vol=$(pamixer --get-volume)
+        new_vol=$(( ((vol + 2) / 5 * 5) - 5 ))
+        [ $new_vol -lt 0 ] && new_vol=0
+        pamixer --set-volume $new_vol
+        ;;
+    --toggle) pamixer -t ;;
+    --mic-inc) 
+        vol=$(pamixer --default-source --get-volume)
+        new_vol=$(( ((vol + 2) / 5 * 5) + 5 ))
+        [ $new_vol -gt 100 ] && new_vol=100
+        pamixer --default-source --set-volume $new_vol 
+        ;;
+    --mic-dec) 
+        vol=$(pamixer --default-source --get-volume)
+        new_vol=$(( ((vol + 2) / 5 * 5) - 5 ))
+        [ $new_vol -lt 0 ] && new_vol=0
+        pamixer --default-source --set-volume $new_vol
+        ;;
+    --toggle-mic) pamixer --default-source -t ;;
+    *) pamixer --get-volume ;;
+esac

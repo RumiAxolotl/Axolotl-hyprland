@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "lang": "de",
+    "name": "Deutsch",
+    "author": "Ximo & AI"
+  },
+  "widget": {
+    "tooltip": "Hyprland Visual Editor",
+    "menu_settings": "Plugin-Einstellungen"
+  },
+  "panel": {
+    "header_title": "Hyprland Visual",
+    "header_subtitle": "Ästhetisches Kontrollzentrum",
+    "tabs": {
+      "home": "Startseite",
+      "animations": "Animationen",
+      "borders": "Ränder",
+      "effects": "Effekte"
+    }
+  },
+  "welcome": {
+    "toast": {
+    "enabled": "Visueller Editor aktiviert",
+    "disabled": "Visueller Editor deaktiviert"
+    },
+    "activation_title": "Systemaktivierung",
+    "system_active": "Das System ist betriebsbereit. Visuelle Effekte werden sicher von HVE verwaltet.",
+    "system_inactive": "System gestoppt. Erfordert die Annahme des Persistenzvertrags, um fortzufahren.",
+    "enable_label": "Visual Editor aktivieren",
+    "warning": {
+      "title": "SICHERER PERSISTENZVERTRAG",
+      "text": "Bei der Aktivierung wird HVE einen <b>Schutzschild</b> einsetzen und einen sicheren Pfad in Ihre <code>hyprland.conf</code> einfügen. Wenn Sie das Plugin deinstallieren, bereinigt sich das System beim nächsten Neustart selbst, ohne Hyprland-Fehler zu verursachen."
+    },
+    "features": {
+      "title": "Funktionen & Vorteile",
+      "description": "Hyprland Visual Editor ist die ästhetische Evolution Ihres Desktops.",
+      "list": {
+        "fluid_anim": "✨ <b>Flüssige Animationen</b>",
+        "smart_borders": "🎨 <b>Intelligente Ränder</b>",
+        "realtime_shaders": "🕶️ <b>Echtzeit-Shader</b>",
+        "non_destructive": "🛡️ <b>Nicht-destruktiv</b>"
+      }
+    },
+    "docs": {
+      "title": "Architektur & Dokumentation",
+      "description": "Entdecken Sie, wie HVE unter der Haube funktioniert.",
+      "summary": "<b>Hyprland Visual Editor</b> verwendet ein Echtzeit-<i>Fragments and Assembly</i>-System. Er berührt niemals Ihre Hauptkonfiguration. Alles wird sicher in einer isolierten <code>overlay.conf</code>-Masterdatei generiert.",
+      "btn_readme": "Handbuch lesen",
+      "btn_folder": "Dateien durchsuchen"
+    },
+    "credits": {
+      "title": "Credits",
+      "description": "Besonderer Dank geht an das <b>HyDE-Projekt</b>.",
+      "btn_hyde": "Inspiriert vom HyDE-Projekt",
+      "ai_title": "KI-Mitprogrammiert",
+      "ai_desc": "QML-Architektur und Pfad-Debugging-Unterstützung durch Gemini (Google)."
+    }
+  },
+  "animations": {
+    "header_title": "Bewegungsbibliothek",
+    "header_subtitle": "Wählen Sie den Animationsstil für Ihren Desktop",
+    "presets": {
+      "01_relampago": {
+        "title": "Blitz",
+        "desc": "Maximale visuelle Reaktion."
+      },
+      "02_inercia_elastica": {
+        "title": "Elastische Trägheit",
+        "desc": "Organische Bewegung. Fenster gewinnen beim Verlassen an Schwung und federn beim Eintritt nach."
+      },
+      "03_seda_minimalista": {
+        "title": "Minimalistische Seide",
+        "desc": "Absolute Sanftheit. Keine Sprünge, nur perfekte Landungen im macOS-Stil."
+      },
+      "04_minimalismo_snappy": {
+        "title": "Snappy Minimalismus",
+        "desc": "Optimiert für maximale Geschwindigkeit. Nur Fenster- und Workspace-Management."
+      },
+      "05_material_moderno": {
+        "title": "Modern Material",
+        "desc": "Google Pixel Ästhetik. Organische Animationen, subtile Skalierung und haptisches Feedback."
+      },
+      "06_impacto_clasico": {
+        "title": "Klassischer Einschlag",
+        "desc": "'Jelly'-Effekt. Elastisches Federn beim Erscheinen und Antizipation beim Schließen."
+      },
+      "07_lineal": {
+        "title": "Linear",
+        "desc": "Mathematische Präzision. Konstante Bewegung im 'Sci-Fi HUD'-Stil."
+      },
+      "08_cristal": {
+        "title": "Glas",
+        "desc": "Ätherisches Gleiten. Das Gefühl von schwebendem Glas ohne Reibung."
+      },
+      "09_seda_silk": {
+        "title": "Seide",
+        "desc": "Raffinierter JaKooLit-Stil. Energetisches Erscheinen, flüchtiges Verschwinden und stabile Workspaces."
+      },
+      "10_retro_arcade": {
+        "title": "Retro Arcade",
+        "desc": "'Toon/Arcade'-Effekt. Fenster springen und hüpfen übertrieben."
+      },
+      "11_futurista": {
+        "title": "Futuristisch",
+        "desc": "Holografische Schnittstelle. Digitale Präzision, kein Nachfedern und vertikaler Datenfluss."
+      },
+      "12_rebote": {
+        "title": "Abprall",
+        "desc": "Vertikale Federphysik. Fenster fallen und springen beim Öffnen."
+      },
+      "13_organico": {
+        "title": "Organisch",
+        "desc": "'Sprout'-Bewegung. Sanftes vertikales Wachstum und langsames Verblassen."
+      },
+      "14_elastico": {
+        "title": "Elastisch",
+        "desc": "Gummiband-Physik. Fenster erscheinen, dehnen sich und federn vertikal."
+      },
+      "15_desvanecido": {
+        "title": "Verblassen",
+        "desc": "Spektrale Materialisierung. Fenster erscheinen sanft mit minimaler Bewegung."
+      },
+      "16_dinamico": {
+        "title": "Dynamisch",
+        "desc": "Organischer Rhythmus. Kombination aus Geschwindigkeit und sanftem Einrasten."
+      },
+      "17_sutil": {
+        "title": "Subtil",
+        "desc": "Keine Ablenkung. Absolute Sanftheit ohne Federn oder abrupte Bewegungen."
+      },
+      "18_energico": {
+        "title": "Energetisch",
+        "desc": "Maximaler visueller Effekt. Übertriebenes Federn (56%) und Kickback-Exits."
+      }
+    }
+  },
+  "borders": {
+    "geometry": {
+      "title": "Rahmenstärke",
+      "desc": "Linienstärke definieren (0-5px)"
+    },
+    "header_title": "Visuelle Stile",
+    "header_subtitle": "Definieren Sie die Persönlichkeit Ihrer Fenster",
+    "presets": {
+      "01_cascade": {
+        "title": "Kaskade",
+        "desc": "Sanfter vertikaler Verlauf bei 50%."
+      },
+      "02_diagonal": {
+        "title": "Diagonal",
+        "desc": "Dynamischer Winkel-Fade."
+      },
+      "03_duo": {
+        "title": "Duo Kontrast",
+        "desc": "Starker Primär-/Sekundär-Kontrast."
+      },
+      "04_tri": {
+        "title": "Dreizack",
+        "desc": "Dreifarbige Eleganz mit Gold."
+      },
+      "05_spectrum": {
+        "title": "Spektrum",
+        "desc": "Vier Farben für maximale Sichtbarkeit."
+      },
+      "06_pulse": {
+        "title": "Puls",
+        "desc": "Rotiert einmal beim Auswählen des Fensters."
+      },
+      "07_infinity": {
+        "title": "Unendlichkeit",
+        "desc": "Konstante Farbrotation."
+      },
+      "08_neon": {
+        "title": "Neon-Odem",
+        "desc": "Langsame und entspannende Oszillation."
+      },
+      "09_glitch": {
+        "title": "Cyber Glitch",
+        "desc": "Aggressiv, schnell und in Fehlerfarben."
+      },
+      "10_golden": {
+        "title": "Goldener Luxus",
+        "desc": "Goldene Metallreflexionen."
+      },
+      "11_toxic": {
+        "title": "Giftgrün",
+        "desc": "Fluoreszierende metallische Reflexionen."
+      },
+      "12_neon_cyberpunk": {
+        "title": "Neon Cyber-Glow (Duo)",
+        "desc": "Simulation von zweifarbigem Leuchten auf weiß/violetter Basis."
+      },
+      "13_the_joker": {
+        "title": "The Joker",
+        "desc": "Joker-Ästhetik: Säuregrün und tiefes Violett mit elektrischem Glühen."
+      }
+    }
+  },
+  "shaders": {
+    "header_title": "Bildschirmfilter",
+    "header_subtitle": "Echtzeit-Bildnachbearbeitung",
+    "presets": {
+      "01_night": {
+        "title": "Nachtlicht",
+        "desc": "Warmer Filter zum Schutz der Augen."
+      },
+      "02_mono": {
+        "title": "Monochrom",
+        "desc": "Graustufen für bessere Konzentration."
+      },
+      "03_vibrant": {
+        "title": "Lebendig",
+        "desc": "Verbessert Farben auf intelligente Weise."
+      },
+      "04_sharp": {
+        "title": "HD-Schärfe",
+        "desc": "Verbessert die Definition von Rändern und Text."
+      },
+      "05_ink": {
+        "title": "E-Ink Papier",
+        "desc": "Sepia-Struktur wie bei elektronischem Papier."
+      },
+      "06_invert": {
+        "title": "Invertiert",
+        "desc": "Invertiert alle Farben."
+      },
+      "07_oled": {
+        "title": "OLED-Modus",
+        "desc": "Echtes Schwarz und dramatischer Kontrast."
+      },
+      "08_vision": {
+        "title": "Nachtsicht",
+        "desc": "Militärischer grüner Phosphor-Effekt."
+      },
+      "09_hybrid": {
+        "title": "Hybrid",
+        "desc": "Balance zwischen Korrektur und Stil."
+      }
+    }
+  },
+  "settings": {
+    "preview_label": "Vorschau",
+    "change_icon_button": "Widget-Icon ändern",
+    "icon_color_label": "Icon-Farbe",
+    "autoapply_label": "Automatisch anwenden",
+    "autoapply_description": "Hyprland sofort neu laden beim Speichern",
+    "path_label": "Konfigurationspfad",
+    "path_desc": "Absoluter Pfad für die Satelliten-Konfigurationsdatei."
+  }
+}

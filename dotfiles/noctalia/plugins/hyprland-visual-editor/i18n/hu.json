@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "lang": "hu",
+    "name": "Magyar",
+    "author": "Ximo & AI"
+  },
+  "widget": {
+    "tooltip": "Hyprland Visual Editor",
+    "menu_settings": "Bővítmény Beállításai"
+  },
+  "panel": {
+    "header_title": "Hyprland Visual",
+    "header_subtitle": "Esztétikai Irányítópult",
+    "tabs": {
+      "home": "Kezdőlap",
+      "animations": "Animációk",
+      "borders": "Szélek",
+      "effects": "Effektek"
+    }
+  },
+  "welcome": {
+    "toast": {
+      "enabled": "Vizuális Szerkesztő Engedélyezve",
+      "disabled": "Vizuális Szerkesztő Letiltva"
+    },
+    "activation_title": "Rendszer Aktiválása",
+    "system_active": "A rendszer működőképes. A vizuális effektek biztonságosan az HVE által kezelik.",
+    "system_inactive": "A rendszer leállt. A folytatáshoz a tartósság szerződés elfogadása szükséges.",
+    "enable_label": "Vizuális Szerkesztő Engedélyezése",
+    "warning": {
+      "title": "BIZTONSÁGOS TARTÓSSÁG SZERZŐDÉS",
+      "text": "Az aktiválás során az HVE egy <b>őrző pajzsot</b> telepít és egy biztonságos útvonalat injektál a <code>hyprland.conf</code> fájlba. Ha a bővítményt a Shellből eltávolítja, a rendszer a következő újraindításkor önmagát tisztítja anélkül, hogy hibákat okozna a Hyprlandben."
+    },
+    "features": {
+      "title": "Funkciók & Előnyök",
+      "description": "A Hyprland Visual Editor az asztal esztétikai evolúciója.",
+      "list": {
+        "fluid_anim": "✨ <b>Folyékony Animációk</b>",
+        "smart_borders": "🎨 <b>Okos Szélek</b>",
+        "realtime_shaders": "🕶️ <b>Valós Idejű Shader</b>",
+        "non_destructive": "🛡️ <b>Nem Megsemmisítő</b>"
+      }
+    },
+    "docs": {
+      "title": "Architektúra & Dokumentáció",
+      "description": "Fedezze fel, hogyan működik az HVE.",
+      "summary": "<b>Hyprland Visual Editor</b> egy valós idejű <i>Fragmentumok és Összeszerelés</i> rendszert használ. Soha nem érinti a fő konfigurációt. Minden biztonságosan generálódik egy izolált <code>overlay.conf</code> fájlból.",
+      "btn_readme": "Teljes Útmutató Olvasása",
+      "btn_folder": "Fájlok Böngészése"
+    },
+    "credits": {
+      "title": "Köszönetnyilvánítás",
+      "description": "Külön köszönet a <b>HyDE Project</b>nek.",
+      "btn_hyde": "A HyDE Project ihlette",
+      "ai_title": "AI-val Együtt Programozva",
+      "ai_desc": "QML architektúra és útvonal hibakeresési támogatás a Gemini (Google) által."
+    }
+  },
+  "animations": {
+    "header_title": "Mozi Könyvtár",
+    "header_subtitle": "Válassza ki az asztal animációs stílusát",
+    "presets": {
+      "01_relampago": {
+        "title": "Villám",
+        "desc": "Maximális vizuális válasz."
+      },
+      "02_inercia_elastica": {
+        "title": "Rugalmas Inercia",
+        "desc": "Organikus mozgás. Az ablakok kilépéskor lendületet kapnak és belépéskor ugranak."
+      },
+      "03_seda_minimalista": {
+        "title": "Minimalista Selyem",
+        "desc": "Abszolút simaság. Nincs ugrás, csak tökéletes macOS stílusú leszállások."
+      },
+      "04_minimalismo_snappy": {
+        "title": "Snappy Minimalizmus",
+        "desc": "Maximális sebességhez optimalizálva. Csak ablak- és munkaterület-kezelés."
+      },
+      "05_material_moderno": {
+        "title": "Modern Anyag",
+        "desc": "Google Pixel esztétika. Organikus animációk, finom skálázás és tapintási válasz."
+      },
+      "06_impacto_clasico": {
+        "title": "Klasszikus Hatás",
+        "desc": "\"Jelly\" hatás. Rugalmas ugrás belépéskor és várakozás kilépéskor."
+      },
+      "07_lineal": {
+        "title": "Lineáris",
+        "desc": "Matematikai pontosság. Állandó mozgás, \"Sci-Fi HUD\" stílus."
+      },
+      "08_cristal": {
+        "title": "Üveg",
+        "desc": "Étérális csúszás. Üveg lebegésének érzése súrlódás nélkül."
+      },
+      "09_seda_silk": {
+        "title": "Selyem",
+        "desc": "Finomított JaKooLit stílus. Energetikus belépések, pillanatnyi kilépések és stabil munkaterületek."
+      },
+      "10_retro_arcade": {
+        "title": "Retro Arcade",
+        "desc": "\"Toon/Arcade\" hatás. Az ablakok túlzottan ugranak és ugarnak."
+      },
+      "11_futurista": {
+        "title": "Futurisztikus",
+        "desc": "Holografikus felület. Digitális pontosság, nulla ugrás és függőleges adatáramlás."
+      },
+      "12_rebote": {
+        "title": "Ugrás",
+        "desc": "Függőleges rugó fizika. Az ablakok lecsúsznak és megnyitásnál ugranak."
+      },
+      "13_organico": {
+        "title": "Organikus",
+        "desc": "\"Hajtás\" mozgás. Sima függőleges növekedés és lassú elhalványulások."
+      },
+      "14_elastico": {
+        "title": "Rugalmas",
+        "desc": "Gumi szalag fizika. Az ablakok megérkeznek, megnyúlnak és függőlegesen ugranak."
+      },
+      "15_desvanecido": {
+        "title": "Elhalványulás",
+        "desc": "Spektrális materializáció. Az ablakok szinte mozgás nélkül simán jelennek meg."
+      },
+      "16_dinamico": {
+        "title": "Dinamikus",
+        "desc": "Organikus ritmus. Sebesség és sima letelepedés kombinációja."
+      },
+      "17_sutil": {
+        "title": "Finom",
+        "desc": "Zavarok nélkül. Abszolút simaság ugrások vagy hirtelen mozgások nélkül."
+      },
+      "18_energico": {
+        "title": "Energetikus",
+        "desc": "Maximális vizuális hatás. Túlzott ugrások (56%) és visszahúzódó kilépések."
+      }
+    }
+  },
+  "borders": {
+    "geometry": {
+      "title": "Szél Vastagsága",
+      "desc": "Vonalvastagság meghatározása (0-5px)"
+    },
+    "header_title": "Vizuális Stílusok",
+    "header_subtitle": "Határozza meg az ablakok személyiségét",
+    "presets": {
+      "01_cascade": {
+        "title": "Kaskád",
+        "desc": "Lágy függőleges gradiens 50%-nál."
+      },
+      "02_diagonal": {
+        "title": "Átlós",
+        "desc": "Dinamikus szög elhalványulás."
+      },
+      "03_duo": {
+        "title": "Duo Kontraszt",
+        "desc": "Erős elsődleges/másodlagos kontraszt."
+      },
+      "04_tri": {
+        "title": "Hármasfog",
+        "desc": "Háromszínes elegancia arannyal."
+      },
+      "05_spectrum": {
+        "title": "Spektrum",
+        "desc": "Négy szín maximális láthatóság érdekében."
+      },
+      "06_pulse": {
+        "title": "Pulzálás",
+        "desc": "Egy körbefordulás ablak kiválasztásakor."
+      },
+      "07_infinity": {
+        "title": "Végtelenség",
+        "desc": "Állandó színforgatás."
+      },
+      "08_neon": {
+        "title": "Neon Lehelet",
+        "desc": "Lassú és nyugtató rezgés."
+      },
+      "09_glitch": {
+        "title": "Cyber Glitch",
+        "desc": "Aggresszív, gyors és hiba színek."
+      },
+      "10_golden": {
+        "title": "Arany Luxus",
+        "desc": "Arany fényes tükröződések."
+      },
+      "11_toxic": {
+        "title": "Toxikus Zöld",
+        "desc": "Fluoreszkáló zöld fényes tükröződések."
+      },
+      "12_neon_cyberpunk": {
+        "title": "Neon Cyber-Glow (Kettős)",
+        "desc": "Kétszínű fényerősség szimuláció fehér/lila fény alapú."
+      },
+      "13_the_joker": {
+        "title": "A Joker",
+        "desc": "Joker esztétika: Savanyú zöld és mély lila villámossággal."
+      }
+    }
+  },
+  "shaders": {
+    "header_title": "Képernyő Szűrők",
+    "header_subtitle": "Valós idejű képfeldolgozás",
+    "presets": {
+      "01_night": {
+        "title": "Éjszakai Fény",
+        "desc": "Meleg szűrő a látás védelmére."
+      },
+      "02_mono": {
+        "title": "Monokróm",
+        "desc": "Szürkeárnyalatok koncentrációhoz."
+      },
+      "03_vibrant": {
+        "title": "Vibráló",
+        "desc": "Okosan erősíti a színeket."
+      },
+      "04_sharp": {
+        "title": "HD Élesség",
+        "desc": "Javítja a szél és szöveg élességét."
+      },
+      "05_ink": {
+        "title": "E-Ink Papír",
+        "desc": "Sépiás elektronikus papír textúra."
+      },
+      "06_invert": {
+        "title": "Invertált",
+        "desc": "Fordítja meg minden színt."
+      },
+      "07_oled": {
+        "title": "OLED Mód",
+        "desc": "Tiszta feketék és drámai kontraszt."
+      },
+      "08_vision": {
+        "title": "Éjszakai Látás",
+        "desc": "Katonai zöld foszfor hatás."
+      },
+      "09_hybrid": {
+        "title": "Hibrid",
+        "desc": "Korrekciónak és stílusnak a kiegyensúlyozása."
+      }
+    }
+  },
+  "settings": {
+    "preview_label": "Előnézet",
+    "change_icon_button": "Widget Ikon Változtatása",
+    "icon_color_label": "Ikon Színe",
+    "autoapply_label": "Automatikus Alkalmazás",
+    "autoapply_description": "Azonnal újratölti a Hyprland-t mentéskor",
+    "path_label": "Konfigurációs Útvonal",
+    "path_desc": "Abszolút útvonal a satelit konfigurációs fájlhoz."
+  }
+}
