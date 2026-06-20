@@ -1,0 +1,43 @@
+{
+  "id": "tailscale",
+  "name": "Tailscale",
+  "version": "1.5.2",
+  "minNoctaliaVersion": "4.0.0",
+  "author": "nineluj",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Show Tailscale status in the menu bar and send/receive files via Taildrop.",
+  "tags": [
+    "Bar",
+    "Network",
+    "Panel"
+  ],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "refreshInterval": 5000,
+      "compactMode": false,
+      "showIpAddress": true,
+      "showPeerCount": true,
+      "hideDisconnected": false,
+      "hideMullvadExitNodes": true,
+      "showSearchBar": false,
+      "terminalCommand": "",
+      "sshUsername": "",
+      "pingCount": 5,
+      "defaultPeerAction": "copy-ip",
+      "taildropEnabled": true,
+      "taildropDownloadDir": "~/Downloads",
+      "taildropReceiveMode": "operator",
+      "loginServer": ""
+    }
+  }
+}

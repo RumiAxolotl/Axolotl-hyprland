@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "lang": "ku",
+    "name": "Kurdî",
+    "author": "Ximo & AI"
+  },
+  "widget": {
+    "tooltip": "Hyprland Visual Editor",
+    "menu_settings": "Taybetmendiyên Pêvekirinê"
+  },
+  "panel": {
+    "header_title": "Hyprland Visual",
+    "header_subtitle": "Navenda Kontrola Estetîk",
+    "tabs": {
+      "home": "Xanî",
+      "animations": "Hêlîn",
+      "borders": "Sînor",
+      "effects": "Bandor"
+    }
+  },
+  "welcome": {
+    "toast": {
+      "enabled": "Redaktora Bîrdeynî ya Bîrdeynî",
+      "disabled": "Redaktora Bîrdeynî ya Bîrdeynî"
+    },
+    "activation_title": "Çalakkirina Sîstemê",
+    "system_active": "Sîstemê xebitandî ye. Bandorên bîrdeynî bi rêkûpêk ji hêla HVE ve têne birêvebirin.",
+    "system_inactive": "Sîstemê rawestiyaye. Ji bo berdewamkirinê, peymanê domdar qebûl bikin.",
+    "enable_label": "Redaktora Bîrdeynî ya Bîrdeynî",
+    "warning": {
+      "title": "PEYMANA DOMDAR A BIŞTÎN",
+      "text": "Piştî çalakkirinê, HVE <b>parêzgehek parastinê</b> dê belav bike û rêyekî parastî dê têxin nav <code>hyprland.conf</code>. Heke hûn pêvekirinê ji Shellê rakirin, sîstem dê di nûvekirina din de xwe paqij bike bêyî ku xira Hyprland çêbike."
+    },
+    "features": {
+      "title": "Taybetmendî û Fêdeyî",
+      "description": "Hyprland Visual Editor ew pêşveçûna estetîk a masîya hûn e.",
+      "list": {
+        "fluid_anim": "✨ <b>Hêlînên Bîrdeynî</b>",
+        "smart_borders": "🎨 <b>Sînorên Akîl</b>",
+        "realtime_shaders": "🕶️ <b>Shadersên Dema Bîrdeynî</b>",
+        "non_destructive": "🛡️ <b>Nekêşkirin</b>"
+      }
+    },
+    "docs": {
+      "title": "Arketektur û Belge",
+      "description": "Dîtina ku HVE çawa dixebite.",
+      "summary": "<b>Hyprland Visual Editor</b> sistemeke <i>Parçeyan û Avakirinê</i> ya dema bîrdeynî bikar tîne. Ew her tim nayê li ser taybetmendiyên sereke. Her tişt bi rêkûpêk di dosyayeke <code>overlay.conf</code> de tê hilberandin.",
+      "btn_readme": "Bikar bînin Manuala Pûl",
+      "btn_folder": "Dosyayan Bîrdeynî"
+    },
+    "credits": {
+      "title": "Credî",
+      "description": "Spasê taybet ji bo <b>Proje HyDE</b>.",
+      "btn_hyde": "Ji hêla Proje HyDE ve",
+      "ai_title": "AI bi AI ve",
+      "ai_desc": "Arketektura QML û alîkariya çareserkirina rêbazan ji hêla Gemini (Google) ve."
+    }
+  },
+  "animations": {
+    "header_title": "Pêkhateya Hêlînê",
+    "header_subtitle": "Tîpa hêlînê ji bo masîya hûn hilbijêre",
+    "presets": {
+      "01_relampago": {
+        "title": "Şêr",
+        "desc": "Bersiva bîrdeynî ya herî zêde."
+      },
+      "02_inercia_elastica": {
+        "title": "Inerciya Elastîk",
+        "desc": "Hêlîna organîk. Pêçik dema derketinê momentumê digirin û dema têketinê vedigerin."
+      },
+      "03_seda_minimalista": {
+        "title": "Silkê Minimalîst",
+        "desc": "Bîrdeynî ya mutleq. Bêyî vedigeran, tenê derketinên mîkro macOS."
+      },
+      "04_minimalismo_snappy": {
+        "title": "Minimalîzmê Snappy",
+        "desc": "Ji bo leza herî zêde optimîze. Tenê rêvebirina pêçikan û cihê karê."
+      },
+      "05_material_moderno": {
+        "title": "Materiyalê Nûjen",
+        "desc": "Estetîka Google Pixel. Hêlînên organîk, mezinbûna hêsan û bersiva hestî."
+      },
+      "06_impacto_clasico": {
+        "title": "Bandora Klasîk",
+        "desc": "Bandora \"Jelly\". Vedigeran elastîk dema têketinê û hêvîkirin dema derketinê."
+      },
+      "07_lineal": {
+        "title": "Xêzikî",
+        "desc": "Rastbûna matematîkî. Hêlîna domdar, \"Sci-Fi HUD\" stîl."
+      },
+      "08_cristal": {
+        "title": "Şîşe",
+        "desc": "Derbasbûna etîrî. Hestê şîşeyê bêyî friction."
+      },
+      "09_seda_silk": {
+        "title": "Silk",
+        "desc": "Stîla JaKooLit a hêsan. Têketinên enerjîk, derketinên kurt û cihên karê sabît."
+      },
+      "10_retro_arcade": {
+        "title": "Retro Arcade",
+        "desc": "Bandora \"Toon/Arcade\". Pêçik vedigerin û vedigerin."
+      },
+      "11_futurista": {
+        "title": "Pêşeroj",
+        "desc": "Rûbera holografîk. Rastbûna dîjîtal, sifir vedigeran û axaftina daneyên vertîkal."
+      },
+      "12_rebote": {
+        "title": "Vediger",
+        "desc": "Fîzîka xêzikî ya vertîkal. Pêçik diçin û dema vekirinê vedigerin."
+      },
+      "13_organico": {
+        "title": "Organîk",
+        "desc": "Hêlîna \"Sprout\". Mezinbûna vertîkal a hêsan û fade-yên hêsan."
+      },
+      "14_elastico": {
+        "title": "Elastîk",
+        "desc": "Fîzîka bandora gumî. Pêçik tên, dirêj dibin û vertîkal vedigerin."
+      },
+      "15_desvanecido": {
+        "title": "Fade",
+        "desc": "Materîzekirina spektral. Pêçik bi hêsanî xuya dibin bêyî hêla hêsan."
+      },
+      "16_dinamico": {
+        "title": "Dînî",
+        "desc": "Rîtma organîk. Kombînasyona lez û hêsanbûna hêsan."
+      },
+      "17_sutil": {
+        "title": "Hêsan",
+        "desc": "Sifirê belavbûnê. Bîrdeynî ya mutleq bêyî vedigeran an hêla hêsan."
+      },
+      "18_energico": {
+        "title": "Enerjîk",
+        "desc": "Bandora bîrdeynî ya herî zêde. Vedigeranên hêsan (56%) û derketinên kickback."
+      }
+    }
+  },
+  "borders": {
+    "geometry": {
+      "title": "Tîrbûna Sînorê",
+      "desc": "Tîrbûna xêzê diyar bikin (0-5px)"
+    },
+    "header_title": "Stîlên Bîrdeynî",
+    "header_subtitle": "Şexsiyeta pêçikan diyar bikin",
+    "presets": {
+      "01_cascade": {
+        "title": "Kaskad",
+        "desc": "Gradyantê vertîkal a hêsan li 50%."
+      },
+      "02_diagonal": {
+        "title": "Diagonal",
+        "desc": "Fade-yê kûçikê dînîk."
+      },
+      "03_duo": {
+        "title": "Duo Kontrast",
+        "desc": "Kontrastê sereke/duyemîn a hêsan."
+      },
+      "04_tri": {
+        "title": "Trîdent",
+        "desc": "Elegansa sêrîngî bi zêrîn."
+      },
+      "05_spectrum": {
+        "title": "Spektrum",
+        "desc": "Sêrîngî ji bo bîrdeynî ya herî zêde."
+      },
+      "06_pulse": {
+        "title": "Pulse",
+        "desc": "Yek car digere dema pêçik hilbijartî ye."
+      },
+      "07_infinity": {
+        "title": "Bêdawî",
+        "desc": "Çerxê rengê domdar."
+      },
+      "08_neon": {
+        "title": "Neon Breath",
+        "desc": "Oscîlasyona hêsan û hêsan."
+      },
+      "09_glitch": {
+        "title": "Cyber Glitch",
+        "desc": "Agresîf, lez û rengên xira."
+      },
+      "10_golden": {
+        "title": "Zêrîn Luxury",
+        "desc": "Tîrêjên zêrîn metalîk."
+      },
+      "11_toxic": {
+        "title": "Zêrîn Tîks",
+        "desc": "Tîrêjên zêrîn metalîk."
+      },
+      "12_neon_cyberpunk": {
+        "title": "Neon Cyber-Glow (Dual)",
+        "desc": "Sîmûlasyona ronahiyê ya du-rêjeyî bi bingeha ronahiyê ya spî/vîyole."
+      },
+      "13_the_joker": {
+        "title": "The Joker",
+        "desc": "Estetîka Joker: Zêrîn asîdî û vîyolekî kûr bi ronahiya elektrîkî."
+      }
+    }
+  },
+  "shaders": {
+    "header_title": "Fîltreya Ekrana",
+    "header_subtitle": "Post-proseskirina wêneyê dema bîrdeynî",
+    "presets": {
+      "01_night": {
+        "title": "Ronahiya Şevê",
+        "desc": "Fîltreya germ ji bo parastina çav."
+      },
+      "02_mono": {
+        "title": "Monokrom",
+        "desc": "Grayscale ji bo konsantre."
+      },
+      "03_vibrant": {
+        "title": "Vibrant",
+        "desc": "Rengên bi awayekî akîl baştir dike."
+      },
+      "04_sharp": {
+        "title": "HD Sharpness",
+        "desc": "Sînor û pênaseya nivîsê baştir dike."
+      },
+      "05_ink": {
+        "title": "E-Ink Paper",
+        "desc": "Tekstûra pîşeya elektronîkî ya sepîya."
+      },
+      "06_invert": {
+        "title": "Invert",
+        "desc": "Hemû rengan vedigerîne."
+      },
+      "07_oled": {
+        "title": "Mode OLED",
+        "desc": "Siyahên safî û kontrastê dramatîk."
+      },
+      "08_vision": {
+        "title": "Night Vision",
+        "desc": "Bandora fosforê ya vertîkal a leşkerî."
+      },
+      "09_hybrid": {
+        "title": "Hîbrîd",
+        "desc": "Têkiliya di navbera rastkirin û stîlê de."
+      }
+    }
+  },
+  "settings": {
+    "preview_label": "Pêşdîtin",
+    "change_icon_button": "Guherîna Îkonê Widgetê",
+    "icon_color_label": "Rêjeya Îkonê",
+    "autoapply_label": "Bikaranîna Oto",
+    "autoapply_description": "Hyprland bi lez nû荷load bike dema ku were hilanîn",
+    "path_label": "Rêya Konfigirasyonê",
+    "path_desc": "Rêya mutleq a barê konfigirasyonê ya satelîtî."
+  }
+}
