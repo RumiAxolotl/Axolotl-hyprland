@@ -1,0 +1,9 @@
+{
+  "enableCross": true,
+  "enableWindowsSelection": true,
+  "screenshotEditor": "swappy",
+  "keepSourceScreenshot": false,
+  "savePath": "~/Pictures/Screenshots",
+  "recordingSavePath": "~/Videos",
+  "recordingNotifications": true
+}
