@@ -1,0 +1,62 @@
+#!/bin/bash
+
+get_current_mode() {
+    current_scheme=$(gsettings get org.gnome.desktop.interface color-scheme 2>/dev/null | tr -d "'")
+    if [ "$current_scheme" = "prefer-light" ]; then
+        echo "light"
+    else
+        echo "dark"
+    fi
+}
+
+set_theme() {
+    local mode="$1"
+    
+    # Define variables based on the selected mode
+    if [ "$mode" == "dark" ]; then
+        gtk_theme="catppuccin-mocha-lavender-standard+default"
+        icon_theme="Reversal-purple-dark"
+        color_scheme="prefer-dark"
+        cursor_theme="Catppuccin-Mocha-Light"
+        hypr_cursor="catppuccin-mocha-light-cursors"
+        wallpaper="$HOME/Pictures/wallpapers/Landscape/dark/mocha-unix.png"
+    else
+        gtk_theme="catppuccin-latte-lavender-standard+default"
+        icon_theme="Reversal-purple"
+        color_scheme="prefer-light"
+        cursor_theme="Catppuccin-Latte-Dark"
+        hypr_cursor="catppuccin-latte-dark-cursors"
+        wallpaper="$HOME/Pictures/wallpapers/Landscape/light/latte-unix.png"
+    fi
+    
+    # Set the GTK theme
+    gsettings set org.gnome.desktop.interface gtk-theme "$gtk_theme"
+    gsettings set org.gnome.desktop.interface icon-theme "$icon_theme"
+    gsettings set org.gnome.desktop.interface color-scheme "$color_scheme"
+    gsettings set org.gnome.desktop.interface cursor-theme "$cursor_theme"
+    gsettings set org.gnome.desktop.interface cursor-size 24
+    
+    # Set Hyprland cursor and theme
+    hyprctl setcursor "$hypr_cursor" 24
+
+    # Set wallpaper
+    noctalia msg wallpaper-set "$wallpaper"
+}
+
+# Execute based on arguments
+if [ "$1" == "--dark" ]; then
+    set_theme "dark"
+elif [ "$1" == "--light" ]; then
+    set_theme "light"
+elif [ "$1" == "--switch" ]; then
+    current_mode=$(get_current_mode)
+
+    if [ "$current_mode" == "dark" ]; then
+        set_theme "light"
+    else
+        set_theme "dark"
+    fi
+else
+    echo "Usage: $0 [--dark|--light|--switch]"
+    exit 1
+fi
