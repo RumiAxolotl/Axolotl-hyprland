@@ -1,4 +1,62 @@
-config_file=~/.config/hypr/keybind.conf
-keybinds=$(grep -oP '(?<=bind = ).*' $config_file)
-keybinds=$(echo "$keybinds" | sed 's/,\([^,]*\)$/ = \1/' | sed 's/, exec//g' | sed 's/^,//g')
-rofi -dmenu -p "Keybinds" -theme ~/.config/rofi/themes/catppuccin-mocha.rasi <<< "$keybinds"
+#!/usr/bin/env python3
+import re
+import os
+import subprocess
+
+# 1. Đường dẫn file Lua của bạn
+config_file = os.path.expanduser("~/.config/hypr/keybind.lua")
+
+with open(config_file, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+# 2. Quét và lưu trữ tự động các biến (local name = "value" hoặc [[value]])
+variables = {'mainMod': 'SUPER'}
+var_pattern = re.compile(r'local\s+([a-zA-Z0-9_]+)\s*=\s*(?:\[\[(.*?)\]\]|"([^"]*)")', re.DOTALL)
+for m in var_pattern.finditer(content):
+    name = m.group(1)
+    val = m.group(2) if m.group(2) is not None else m.group(3)
+    variables[name] = val
+
+# 3. Phân tích từng lệnh hl.bind
+lines_out = []
+blocks = content.split('hl.bind(')[1:] # Tách file theo từng khối lệnh bind
+
+for block in blocks:
+    if ',' not in block: continue
+    
+    # Tách phần Phím tắt và phần Hành động
+    key_part, rest = block.split(',', 1)
+    if 'hl.dsp.' not in rest: continue
+    
+    action_part = rest.split('hl.dsp.')[1]
+    
+    # Lấy tên lệnh (exec_cmd, window.close, focus...) và tham số bên trong
+    cmd_match = re.search(r'([a-zA-Z_]+(?:\.[a-zA-Z_]+)*)\s*\((.*?)\)', action_part, re.DOTALL)
+    if not cmd_match: continue
+    
+    cmd_type = cmd_match.group(1)
+    cmd_args = cmd_match.group(2)
+    
+    # Dịch ngược biến và dọn dẹp chuỗi Key
+    key = key_part
+    for v, val in variables.items():
+        key = re.sub(rf'\b{v}\b', val, key)
+    key = key.replace('..', '').replace('"', '').replace("'", "").strip()
+    key = " ".join(key.split()) 
+    
+    # Dịch ngược biến và dọn dẹp chuỗi Action
+    action = cmd_args
+    for v, val in variables.items():
+        action = re.sub(rf'\b{v}\b', val, action)
+    action = action.replace('[[', '').replace(']]', '').replace('..', '').replace('"', '').replace("'", "").strip()
+    action = " ".join(action.split()) 
+    
+    # Phân loại lệnh: Nếu không phải exec_cmd, thêm tag để dễ nhận biết (VD: [focus], [window.close])
+    if cmd_type != "exec_cmd":
+        action = f"[{cmd_type}] {action}"
+        
+    lines_out.append(f"{key:<30} ->  {action}")
+
+# 4. Đẩy danh sách hoàn chỉnh ra Rofi
+rofi_input = "\n".join(lines_out)
+subprocess.run(['rofi', '-dmenu', '-i', '-p', 'Keybinds'], input=rofi_input.encode('utf-8'))
