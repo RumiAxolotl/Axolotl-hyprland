@@ -72,16 +72,21 @@ if [[ $inst =~ ^[Nn]$ ]]; then
 if [[ $INST == "Y" || $INST == "y" ]]; then
 
     git_pkgs="grimblast-git noctalia-git"
-    hypr_pkgs="hyprland hyprpicker hypridle hyprlock"    
-    font_pkgs="ttf-nerd-fonts-symbols-common otf-firamono-nerd inter-font otf-sora ttf-fantasque-nerd noto-fonts noto-fonts-emoji ttf-comfortaa"
-    font_pkgs2="ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd adobe-source-code-pro-fonts ttf-firacode-nerd"
-    app_pkgs="brightnessctl dunst kitty sddm wl-clipboard wf-recorder wlsunset rofi rofi-emoji wlogout"
-    app_pkgs2="nwg-look qt5ct btop jq gvfs ffmpegthumbs mousepad mpv  playerctl pamixer noise-suppression-for-voice xarchiver wttr"
-    app_pkgs3="polkit-gnome ffmpeg neovim viewnior pavucontrol thunar ffmpegthumbnailer tumbler thunar-archive-plugin xdg-user-dirs"
-    
+    hypr_pkgs="hyprland hyprpicker"
+    font_pkgs="inter-font maplemono-nf-cn-unhinted maplemono-nf-unhinted maplemono-ttf noto-fonts noto-fonts-emoji polkit-gnome ttf-nerd-fonts-symbols-common"
+    # Core desktop — needed first to get into and use the system
+    app_pkgs="dunst fcitx5-im fcitx5-unikey kitty rofi rofi-emoji sddm wl-clipboard wlogout"
+    # System utilities — hardware control, audio, monitoring, recording
+    app_pkgs2="brightnessctl btop jq noise-suppression-for-voice pamixer playerctl wf-recorder wttr"
+    # Appearance — theming and Qt/GTK configurators
+    app_pkgs3="font-manager lxappearance-qt nwg-look qt5ct qt6ct"
+    # File management & media — file manager, thumbnails, media apps, editor
+    app_pkgs4="ffmpeg ffmpegthumbnailer ffmpegthumbs gvfs mpv neovim pavucontrol rar thunar thunar-archive-plugin tumbler unzip viewnior xarchiver xdg-user-dirs zip"
+    # Daily use apps
+    app_pkgs5="discord spotify visual-studio-code-bin zen-browser-bin"
 
 
-    if ! yay -S --noconfirm $git_pkgs $hypr_pkgs $font_pkgs $font_pkgs2 $app_pkgs $app_pkgs2 $app_pkgs3 2>&1 | tee -a $LOG; then
+    if ! yay -S --noconfirm $git_pkgs $hypr_pkgs $font_pkgs $app_pkgs $app_pkgs2 $app_pkgs3 $app_pkgs4 $app_pkgs5 2>&1 | tee -a $LOG; then
         print_error " Failed to install additional packages - please check the install.log \n"
         exit 1
     fi
@@ -147,6 +152,46 @@ if [[ $BLUETOOTH =~ ^[Yy]$ ]]; then
 else
     printf "${YELLOW} No bluetooth packages installed...\n"
 	fi
+
+### Install ZSH ###
+read -n1 -rep "${CAT} Would you like to install ZSH and set it as your default shell? (y,n)" ZSH
+if [[ $ZSH =~ ^[Yy]$ ]]; then
+    printf " Installing ZSH...\n"
+    if ! yay -S --noconfirm zsh zsh-completions 2>&1 | tee -a $LOG; then
+        print_error " Failed to install ZSH - please check the install.log\n"
+    else
+        print_success " ZSH installed successfully."
+        chsh -s $(which zsh)
+        printf "${YELLOW} ZSH set as default shell. Please log out and back in for changes to take effect.\n"
+    fi
+
+    # Install Oh My Zsh
+    printf " Installing Oh My Zsh...\n"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended 2>&1 | tee -a $LOG
+    print_success " Oh My Zsh installed."
+
+    # Install plugins
+    printf " Installing ZSH plugins...\n"
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 2>&1 | tee -a $LOG
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 2>&1 | tee -a $LOG
+    print_success " ZSH plugins installed."
+
+    # Install Powerlevel10k theme
+    printf " Installing Powerlevel10k theme...\n"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k 2>&1 | tee -a $LOG
+    print_success " Powerlevel10k installed."
+
+    # Edit ~/.zshrc — set theme and add plugins
+    printf " Backing up ~/.zshrc...\n"
+    cp ~/.zshrc ~/.zshrc.bak
+    print_success " ~/.zshrc backed up to ~/.zshrc.bak"
+    printf " Configuring ~/.zshrc...\n"
+    sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
+    sed -i 's/^plugins=(\(.*\))/plugins=(\1 zsh-syntax-highlighting zsh-autosuggestions)/' ~/.zshrc
+    print_success " ~/.zshrc configured."
+else
+    printf "${YELLOW} ZSH not installed.\n"
+fi
 
 ### Script is done ###
 printf "\n${GREEN} Installation Completed.\n"
