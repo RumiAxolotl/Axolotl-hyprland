@@ -3,9 +3,6 @@
 -- ┃               Migrated from hyprlang to Lua                   ┃
 -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
--- Load color palette
-local colors = require("style")
-
 -- Load modules
 require("exec")
 require("keybind")
@@ -62,11 +59,6 @@ hl.config({
         border_size = 2,
 
         -- Monochrome borders (defaults, may be overridden by Noctalia)
-        col = {
-            active_border   = "rgba(" .. colors.text .. "ff)",
-            inactive_border = "rgba(" .. colors.surface0 .. "ff)",
-        },
-
         layout           = "dwindle",
         resize_on_border = true,
     },
@@ -144,12 +136,12 @@ hl.config({
 -- These are loaded via hyprctl at startup since hl.source() is not available.
 
 hl.on("config.reloaded", function()
+
     -- Apply Noctalia colors on each reload
     os.execute("hyprctl source /home/rumi/.config/hypr/noctalia/noctalia-colors.conf &")
     os.execute("hyprctl source /home/rumi/.cache/noctalia/HVE/overlay.conf &")
 end)
 
--- Also apply on initial load
 os.execute("hyprctl source /home/rumi/.config/hypr/noctalia/noctalia-colors.conf &")
 os.execute("hyprctl source /home/rumi/.cache/noctalia/HVE/overlay.conf &")
 

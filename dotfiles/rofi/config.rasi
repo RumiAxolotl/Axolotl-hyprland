@@ -2,10 +2,9 @@
 
 configuration {
   show-icons: true;
-  icon-theme: "Reversal-purple-dark";
   display-drun: " ";
   display-window: " ";
   display-combi: " ";
 }
-@theme "themes/catppuccin-mocha.rasi"
+@import "~/.config/rofi/noctalia.rasi"
 

@@ -14,18 +14,8 @@ hl.on("hyprland.start", function()
     -- Authentication
     hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
-
-    -- Notifications
-    hl.exec_cmd("systemctl --user start dunst.service")
-
     -- Input method
     hl.exec_cmd("fcitx5 -d")
-
-    -- Night light
-    hl.exec_cmd("wlsunset -S 6:00 -s 18:00 -t 4500 -T 5500 -d 1800")
-
-    -- Idle daemon
-    hl.exec_cmd("hypridle -q")
 
     -- Shell & UI
     hl.exec_cmd("noctalia")
