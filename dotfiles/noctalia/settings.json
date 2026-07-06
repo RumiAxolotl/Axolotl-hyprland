@@ -620,7 +620,7 @@
         "activeTemplates": [
             {
                 "enabled": true,
-                "id": "hyprland"
+                "id": "niri"
             }
         ],
         "enableUserTheming": false

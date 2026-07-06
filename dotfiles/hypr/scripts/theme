@@ -19,14 +19,12 @@ set_theme() {
         color_scheme="prefer-dark"
         cursor_theme="Catppuccin-Mocha-Light"
         hypr_cursor="catppuccin-mocha-light-cursors"
-        wallpaper="$HOME/Pictures/wallpapers/Landscape/dark/mocha-unix.png"
     else
         gtk_theme="catppuccin-latte-lavender-standard+default"
         icon_theme="Reversal-purple"
         color_scheme="prefer-light"
         cursor_theme="Catppuccin-Latte-Dark"
         hypr_cursor="catppuccin-latte-dark-cursors"
-        wallpaper="$HOME/Pictures/wallpapers/Landscape/light/latte-unix.png"
     fi
     
     # Set the GTK theme
@@ -39,8 +37,8 @@ set_theme() {
     # Set Hyprland cursor and theme
     hyprctl setcursor "$hypr_cursor" 24
 
-    # Set wallpaper
-    noctalia msg wallpaper-set "$wallpaper"
+    # # Set wallpaper
+    # noctalia msg wallpaper-set "$wallpaper"
 }
 
 # Execute based on arguments

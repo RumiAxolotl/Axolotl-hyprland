@@ -21,7 +21,7 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 ------------------
 
 -- monitor=DP-1,1920x1080@60,0x0,1  (disabled)
-hl.monitor({ output = "eDP-2",    mode = "1920x1080@144", position = "0x1080", scale = 1 })
+hl.monitor({ output = "eDP-2",    mode = "1920x1080@144", position = "0x840", scale = 1 })
 hl.monitor({ output = "HDMI-A-1", mode = "1920x1080@75",  position = "1920x0", scale = 1, transform = 1 })
 
 
@@ -39,12 +39,24 @@ hl.config({
             natural_scroll = true,
         },
     },
+    
 })
+
 
 -- Touchpad device
 hl.device({
     name = "asup1205:00-093a:2008-touchpad",
     enabled = true,
+})
+
+------------------
+---- GESTURES ----
+------------------
+
+hl.gesture({
+    fingers = 3,
+    direction = "horizontal",
+    action = "workspace",
 })
 
 
@@ -65,7 +77,7 @@ hl.config({
 
     decoration = {
         rounding         = 8,
-        active_opacity   = 1.0,
+        active_opacity   = 0.95,
         inactive_opacity = 0.8,
 
         blur = {
