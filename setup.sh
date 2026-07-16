@@ -106,17 +106,22 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "Copying config files...\n"
     # Copy all files from dotfiles directory to ~/.config/
     cp -R ./dotfiles/* ~/.config/ 2>&1 | tee -a $LOG
-    # Create fonts directory if it doesn't exist
-    mkdir -p ~/.local/share/fonts
 
-    # Copy fonts
-    if [ -d "./fonts" ]; then
-        cp -R ./fonts/* ~/.local/share/fonts/ 2>&1 | tee -a $LOG
-        # Update font cache
-        fc-cache -fv 2>&1 | tee -a $LOG
-        echo "Fonts copied to ~/.local/share/fonts"
+    read -n1 -rep 'Would you like to set up fonts from the repository/submodule? (y,n)' FONTS
+    echo
+    if [[ $FONTS == "Y" || $FONTS == "y" ]]; then
+        echo -e "Preparing fonts...\n"
+        if [ -d "./fonts" ]; then
+            if [ -z "$(find ./fonts -mindepth 1 -maxdepth 1 2>/dev/null)" ]; then
+                echo "Fonts directory is empty. Initializing submodule..."
+                git submodule update --init --recursive 2>&1 | tee -a $LOG
+            fi
+            echo "Fonts will be managed from the repository/submodule. No files were copied."
+        else
+            echo "No fonts directory found. Fonts will be handled separately."
+        fi
     else
-        echo "No fonts directory found to copy"
+        echo "Skipping font setup."
     fi
 
     cp -R ./wallpapers ~/Pictures/
